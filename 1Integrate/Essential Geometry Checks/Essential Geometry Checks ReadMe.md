@@ -6,4 +6,5 @@ For instructions on restoring a backup please refer to the following [documentat
 Checks for two features within the same class (aka Feature Class) that has the same geometry 
 ### Rule Syntax
 Check for objects all that there are no objects duplicate features for which :duplicate features.geometry equals :all.geometry and class(:duplicate features) equals class(:all) and :duplicate features does not equal :all
+![Alt text](img/DuplicateFeaturesRule.png?raw=true "Title")
 
