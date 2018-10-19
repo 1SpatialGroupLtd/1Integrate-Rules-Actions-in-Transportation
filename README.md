@@ -5,7 +5,7 @@ Example Rules and Actions files for 1Integrate for US Transportation customers i
 
 * [1Spatial](https://1spatial.com/)
 * [1Integrate Help](https://1spatial.com/documentation/1integrate/v2_3)
-* [1Integrate for ArcGIS Help] (https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Getting_Started.htm)
+* [1Integrate for ArcGIS Help](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Getting_Started)
 
 ## Issues
 
@@ -16,7 +16,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Anyone and everyone is welcome to contribute. :)
 
 ## Licensing
-Copyright 2012 Esri
+Copyright 2012 1Spatial
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
