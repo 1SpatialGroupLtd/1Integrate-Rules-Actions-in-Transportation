@@ -5,13 +5,13 @@ For instructions on restoring a backup please refer to the following [documentat
 ## [Fix Duplicate Features](FixDuplicateFeatureAction.xml)
 Identifies duplicate features (Checks for two features within the same class (aka Feature Class) that has the same geometry) and then deletes each duplicate.  NOTE: This action is configured to only look at duplicate geometries.  The action can be configured to also look at duplicate geometries and attributes. 
 ### Action Syntax
-For objects ALL: if (there is at least 1 object ALL2 for which :ALL.geometry equals :ALL2.geometry and :ALL does not equal :ALL2 and class(:ALL) equals class(:ALL2)) then delete object :ALL
+For objects ALL: if (there is at least 1 object ALL2 for which :ALL.geometry equals :ALL2.geometry and :ALL does not equal :ALL2 and class(:ALL) equals class(:ALL2)) then delete object :ALL  
 ![Alt text](img/RemoveDuplicateFeatureAction.png?raw=true "Remove Duplicate Features Action")
 
 ## [Fix Duplicate Vertices](FixDuplicateVerticiesAction.xml)
 Identifies and then deletes all duplicate Verticies.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not.  Then the built-in function remove_duplicates() removes all duplicate verticies within a geometry.
 ### Action Syntax
-For objects ALL: if (has_duplicates(:ALL.geometry) equals true) then let :ALL.geometry = remove_duplicates(:ALL.geometry)
+For objects ALL: if (has_duplicates(:ALL.geometry) equals true) then let :ALL.geometry = remove_duplicates(:ALL.geometry)  
 ![Alt text](img/RemoveDuplicateVertexAction.png?raw=true "Remove Duplicate Vertex Action")
 
 ## [Fix Kickbacks](FixKickbacksAction.xml)
@@ -20,7 +20,7 @@ This rule uses a 12 degree tolerance.
 ![Alt text](img/KickbackFix.png?raw=true "Kickback Fixup Example")
 
 ### Action Syntax
-For objects ALL: if (has_kickbacks(:ALL.geometry,sin(to_radians(12))) equals true) then let :ALL.geometry = remove_kickbacks(:ALL.geometry,sin(to_radians(12)))
+For objects ALL: if (has_kickbacks(:ALL.geometry,sin(to_radians(12))) equals true) then let :ALL.geometry = remove_kickbacks(:ALL.geometry,sin(to_radians(12)))  
 ![Alt text](img/RemoveKickbacksAction.png?raw=true "Kickback Fix Action")
 
 
@@ -31,5 +31,5 @@ This rule uses a 6 degree tolerance.
 ![Alt text](SpikeFix.png?raw=true "Spike Fixup Example")
 
 ### Action Syntax
-For objects ALL: if (has_spikes(:ALL.geometry,sin(to_radians(6))) equals true) then let :ALL.geometry = remove_spikes(:ALL.geometry,sin(to_radians(6)))
+For objects ALL: if (has_spikes(:ALL.geometry,sin(to_radians(6))) equals true) then let :ALL.geometry = remove_spikes(:ALL.geometry,sin(to_radians(6)))  
 ![Alt text](img/RemoveSpikesAction.png?raw=true "Spike Fix Action")
