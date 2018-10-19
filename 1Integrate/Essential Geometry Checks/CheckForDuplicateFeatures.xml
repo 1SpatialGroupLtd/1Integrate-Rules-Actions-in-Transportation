@@ -37,11 +37,13 @@
                 <Item id="RULE://Standard/Essential Geometric Checks/Check for Duplicate Features">
                     <Metadata>
                         <Name>Check for Duplicate Features</Name>
+                        <Description>Checks for two features within the same class (aka Feature Class) that has the same geometry .\n\nCheck for objects all that there are no objects duplicate features for which  [Invalid property 'geometry'] equals [Invalid property 'geometry'] and class(:duplicate features) equals class(:all) and :duplicate features does not equal :all</Description>
+                        <Comments></Comments>
                         <Created>
                             <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
                         </Created>
                         <LastEdited>
-                            <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                            <UserDate date="2018-10-06T08:48:42.000Z" user="1Spatial"/>
                         </LastEdited>
                     </Metadata>
                     <IsShortcut>false</IsShortcut>
