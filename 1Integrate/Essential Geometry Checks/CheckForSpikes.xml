@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Essential Geometric Checks</Name>
+                    <Description>1Spatial's standard Essential Geometric Checks</Description>
+                    <Created>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Essential Geometric Checks/Check for Spikes">
+                    <Metadata>
+                        <Name>Check for Spikes</Name>
+                        <Description>Checks whether a geometry has any spikes.  A spike is defined to be three consecutive points (A, B, C) such that: 1) The distance AB is less than the distance BC. 2) The sine of the angle ABC is less than a maximum value which may be specified by the second parameter. 3) (Optionally) the distance AB is less than a maximum "length" value specified by the third parameter.  This rule uses the has_spikes() built-in function which has the following parameters.  1) The geometry to test. 2) (optional) The maximum value for the sine of the angle in the spike (a real number in the range [0, 1]). Note: If omitted, this defaults to the sine of 1 degree (approximately 0.017). 3) (optional) The maximum length of the spike.\n\nThis rule uses a 6 degree tolerance.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-06T00:43:53.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="" objLabel="all">
+                            <RelationalPredicate>
+                                <BuiltinFnValue fnName="has_spikes">
+                                    <DynamicValue classRef="" objRef="all" propName="geometry"/>
+                                    <BuiltinFnValue fnName="sin">
+                                        <BuiltinFnValue fnName="to_radians">
+                                            <StaticValue datatype="integer" value="6"/>
+                                        </BuiltinFnValue>
+                                    </BuiltinFnValue>
+                                </BuiltinFnValue>
+                                <EqualsRelation/>
+                                <StaticValue datatype="boolean" value="false"/>
+                            </RelationalPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>
