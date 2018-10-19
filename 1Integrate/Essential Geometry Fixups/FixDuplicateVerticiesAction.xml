@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <ActionFolder>
+        <Metadata>
+            <Name>ACTION</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <ActionFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-03-03T09:46:55.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-03T09:47:03.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <ActionFolder>
+                <Metadata>
+                    <Name>Essential Geometry Fixups</Name>
+                    <Created>
+                        <UserDate/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-11-04T08:15:40.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="ACTION://Standard/Essential Geometry Fixups/Remove_Duplicate_Points">
+                    <Metadata>
+                        <Name>Remove_Duplicate_Points</Name>
+                        <Description>Identifies and then deletes all duplicate Verticies.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not.  Then the built-in function remove_duplicates() removes all duplicate verticies within a geometry.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-11-06T07:50:49.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-06T03:47:27.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Action>
+                        <RootOperation classLabel="" objLabel="ALL">
+                            <ConditionalOperation>
+                                <RelationalPredicate>
+                                    <BuiltinFnValue fnName="has_duplicates">
+                                        <DynamicValue classRef="" objRef="ALL" propName="geometry"/>
+                                    </BuiltinFnValue>
+                                    <EqualsRelation/>
+                                    <StaticValue datatype="boolean" value="true"/>
+                                </RelationalPredicate>
+                                <AssignmentOperation>
+                                    <DynamicValue classRef="" objRef="ALL" propName="geometry"/>
+                                    <BuiltinFnValue fnName="remove_duplicates">
+                                        <DynamicValue classRef="" objRef="ALL" propName="geometry"/>
+                                    </BuiltinFnValue>
+                                </AssignmentOperation>
+                            </ConditionalOperation>
+                        </RootOperation>
+                    </Action>
+                </Item>
+            </ActionFolder>
+        </ActionFolder>
+    </ActionFolder>
+</Backup>

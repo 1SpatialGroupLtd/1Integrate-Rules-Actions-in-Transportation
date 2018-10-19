@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <ActionFolder>
+        <Metadata>
+            <Name>ACTION</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <ActionFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-03-03T09:46:55.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-03T09:47:03.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <ActionFolder>
+                <Metadata>
+                    <Name>Essential Geometry Fixups</Name>
+                    <Created>
+                        <UserDate/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-11-04T08:15:40.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="ACTION://Standard/Essential Geometry Fixups/Remove_Dup_Feature">
+                    <Metadata>
+                        <Name>Remove_Dup_Feature</Name>
+                        <Description>Identifies duplicate features (Checks for two features within the same class (aka Feature Class) that has the same geometry) and then deletes each duplicate.  NOTE: This action is configured to only look at duplicate geometries.  The action can be configured to also look at duplicate geometries and attributes.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-11-06T07:50:59.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-06T03:44:38.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Action>
+                        <RootOperation classLabel="" objLabel="ALL">
+                            <ConditionalOperation>
+                                <ExistsPredicate qualifier="at least" n="1" classLabel="" objLabel="ALL2">
+                                    <AndPredicate>
+                                        <RelationalPredicate>
+                                            <DynamicValue classRef="" objRef="ALL" propName="geometry"/>
+                                            <SpatialEqualsRelation/>
+                                            <DynamicValue classRef="" objRef="ALL2" propName="geometry"/>
+                                        </RelationalPredicate>
+                                        <RelationalPredicate>
+                                            <ObjectValue classRef="" objRef="ALL"/>
+                                            <NotEqualsRelation/>
+                                            <ObjectValue classRef="" objRef="ALL2"/>
+                                        </RelationalPredicate>
+                                        <RelationalPredicate>
+                                            <ClassValue classRef="" objRef="ALL"/>
+                                            <EqualsRelation/>
+                                            <ClassValue classRef="" objRef="ALL2"/>
+                                        </RelationalPredicate>
+                                    </AndPredicate>
+                                </ExistsPredicate>
+                                <DeleteObjectOperation classRef="" objRef="ALL"/>
+                            </ConditionalOperation>
+                        </RootOperation>
+                    </Action>
+                </Item>
+            </ActionFolder>
+        </ActionFolder>
+    </ActionFolder>
+</Backup>
