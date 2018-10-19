@@ -29,4 +29,4 @@ Checks for Multi-Part Geometries.  A multi-part geometry are geometries that con
 
 ### Rule Syntax
 Check for objects all that count_parts(:all.geometry) equals 1
-![Alt text](img/Count-Parts.png?raw=true "Title")
+![Alt text](img/CountPartsRule.png?raw=true "Title")
