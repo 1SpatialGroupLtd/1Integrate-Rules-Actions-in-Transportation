@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Essential Geometric Checks</Name>
+                    <Description>1Spatial's standard Essential Geometric Checks</Description>
+                    <Created>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Essential Geometric Checks/Check for Multipart Geometries">
+                    <Metadata>
+                        <Name>Check for Multipart Geometries</Name>
+                        <Description>Checks for Multi-Part Geometries.  A multi-part geometry are geometries that contain more than one part.  For example, the State of Hawaii, if modeled as one feature in a table, would be a multi-part polygon because it contains multiple polygon geometries for each island within that record.  This rule uses the Count-Parts to determine if there is only 1 part for the geometry.  If the feature has no geometry or has more than 1 part, it will be flagged as a non-conformance.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-06T00:29:03.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="" objLabel="all">
+                            <RelationalPredicate>
+                                <BuiltinFnValue fnName="count_parts">
+                                    <DynamicValue classRef="" objRef="all" propName="geometry"/>
+                                </BuiltinFnValue>
+                                <EqualsRelation/>
+                                <StaticValue datatype="integer" value="1"/>
+                            </RelationalPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>
