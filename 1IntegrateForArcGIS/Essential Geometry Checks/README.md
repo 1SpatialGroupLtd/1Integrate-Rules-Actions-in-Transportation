@@ -1,5 +1,5 @@
 # Essential Geometry Checks
-This repo folder contains the Essential Geometry Checks [Ruleset](Essential Geometry Checks.rules) that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
+This repo folder contains the Essential Geometry Checks [Ruleset]('Essential Geometry Checks.rules') that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
 For instructions on uploading and publishing Rulesets, please refer to the following [documentation](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Rules/Free_Rulesets.htm)
 
 ## Check for Duplicate Features
