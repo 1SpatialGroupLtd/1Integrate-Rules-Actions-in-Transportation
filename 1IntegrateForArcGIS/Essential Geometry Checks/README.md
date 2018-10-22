@@ -39,15 +39,6 @@ Action for all objects ALL: if it is the case that ALL.geometry is not equal to 
 ![Alt text](img/KickbackReportAction.png?raw=true "Kickback Report Action Screenshot")
 
 
-## Check for Multipart Geometries
-Checks for Multi-Part Geometries.  A multi-part geometry are geometries that contain more than one part.  For example, the State of Hawaii, if modeled as one feature in a table, would be a multi-part polygon because it contains multiple polygon geometries for each island within that record.  This rule uses the Count-Parts to determine if there is only 1 part for the geometry.  If the feature has no geometry or has more than 1 part, it will be flagged as a non-conformance.
-![Alt text](img/MultiPartExample.png?raw=true "Multipart Example in Hawaii")
-
-### Rule Syntax
-Check for objects all that count_parts(:all.geometry) equals 1  
-![Alt text](img/CountPartsRule.png?raw=true "Multi-Part Rule Screenshot")
-
-
 ## Check for OGC Simple
 Tests to see if a feature is simple based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
 According to the OGC Specifications, a simple geometry is one that has no anomalous geometric points, such as self intersection or self tangency and primarily refers to 0 or 1-dimensional geometries (i.e. [MULTI]POINT, [MULTI]LINESTRING). Geometry validity, on the other hand, primarily refers to 2-dimensional geometries (i.e. [MULTI]POLYGON) and defines the set of assertions that characterizes a valid polygon. The description of each geometric class includes specific conditions that further detail geometric simplicity and validity.
@@ -82,6 +73,33 @@ Reports on each feature that was reported as a non-conformance from the OGC Vali
 NOTE: Must attach the rule above to report correctly.
 Action for all objects ALL: let isvalidgeom = ALL.geometry and then report on get_point(isvalidgeom)    
 ![Alt text](img/CheckOGCValidReportAction.png?raw=true "Kickback Report Action Screenshot")
+
+
+## Check Self-Intersections
+Checks polylines and polygons for Self-Intersections.  Uses the Built-In Function find_self_intersections which returns a multipart geometry representing each point there is a self-intersection.
+
+### Rule Syntax
+Check for all objects ALL that: if it is the case that (geom_get_type(ALL.geometry) is equal to  1 or geom_get_type(ALL.geometry) is equal to  2) then (geom_find_self_intersections(ALL.geometry) is not equal to null and count_parts(geom_find_self_intersections(ALL.geometry)) is greater than  0)  
+![Alt text](img/CheckSelf-IntersectionRule.png?raw=true "OGC Valid Rule Screenshot")
+
+### Report Action Syntax
+Reports on the exact location of each self-intersecting polyline or polygon.  Uses the Built-In Function find_self_intersections which returns a multipart geometry representing each point location there is a self-intersection.
+Action for all objects ALL: if it is the case that ALL.geometry is not equal to null then let selfintersect = geom_find_self_intersections(ALL.geometry) and then for all objects eachpart in selfintersect do report on eachpart   
+![Alt text](img/CheckSelf-IntersectionReportAction.png?raw=true "Kickback Report Action Screenshot")
+
+
+## Check for Single Part Geometries
+Checks that all geometries are single part and not a Multi-Part Geometries.  A multi-part geometry are geometries that contain more than one part.  For example, the State of Hawaii, if modeled as one feature in a table, would be a multi-part polygon because it contains multiple polygon geometries for each island within that record.  This rule uses the Count-Parts to determine if there is only 1 part for the geometry.  If the feature has no geometry or has more than 1 part, it will be flagged as a non-conformance.
+![Alt text](img/MultiPartExample.png?raw=true "Multipart Example in Hawaii")
+
+### Rule Syntax
+Check for objects all that count_parts(:all.geometry) equals 1  
+![Alt text](img/CountPartsRule.png?raw=true "Multi-Part Rule Screenshot")
+
+### Report Action Syntax
+Reports on each part of a geometry if the geometry does not conform to the "Check Single Part Geometry Check" rule.  NOTE: Must be used in conjunction with the Check_SinglePart_Geometry rule.
+Action for all objects ALL: let simplegeom = ALL.geometry and then for all objects eachpart in simplegeom do report on get_point(eachpart)  
+![Alt text](img/CountPartsReportAction.png?raw=true "Multi-Part Rule Screenshot")
 
 
 ## Check for Spikes
