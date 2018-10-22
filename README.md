@@ -16,7 +16,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 Anyone and everyone is welcome to contribute. :)
 
 ## Licensing
-Copyright 2012 1Spatial
+Copyright © 2018 1Spatial US Patent Number 9542416 B2 (2017-01-10)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
