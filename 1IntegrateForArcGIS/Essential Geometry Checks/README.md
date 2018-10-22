@@ -1,5 +1,5 @@
 # Essential Geometry Checks
-This repo folder contains the Essential Geometry Checks [Ruleset]('Essential Geometry Checks.rules') that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
+This repo folder contains the Essential Geometry Checks [Ruleset](Essential%20Geometry%20Checks.rules) that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
 For instructions on uploading and publishing Rulesets, please refer to the following [documentation](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Rules/Free_Rulesets.htm)
 
 ## Check for Duplicate Features
@@ -19,7 +19,7 @@ Check for objects all that has_duplicates(:all.geometry) equals false
 ![Alt text](img/DuplicateVerticesRule.png?raw=true "Duplicate Vertex Rule Screenshot")
 ### Report Action Syntax
 Reports on each vertex that has a duplicate as defined above.
-Action for all objects ALL: if it is the case that ALL.geometry is not equal to null then let dupPointsCollection = geom_find_duplicates(ALL.geometry, 0) and then for all objects duppoint in dupPointsCollection do report on duppoint
+Action for all objects ALL: if it is the case that ALL.geometry is not equal to null then let dupPointsCollection = geom_find_duplicates(ALL.geometry, 0) and then for all objects duppoint in dupPointsCollection do report on duppoint  
 ![Alt text](img/DuplicateVerticesReportAction.png?raw=true "Duplicate Vertex Action Screenshot")
 
 ## Check for Kickbacks
