@@ -1,5 +1,5 @@
 # Essential Geometry Fixups
-This repo folder contains the Essential Geometry Fixups [Ruleset](Essential%20Geometry%20Checks.rules) that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
+This repo folder contains the Essential Geometry Fixups [Ruleset](Essential%20Geometry%20Fixups.rules) that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).  
 For instructions on uploading and publishing Rulesets, please refer to the following [documentation](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Rules/Free_Rulesets.htm)  
 
 This Ruleset is organized with Rules and Cleanup Actions.  Each rule associates with a cleanup action.  If a feature does not conform to the rule, then that feature is passed to the action.
