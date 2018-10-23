@@ -62,6 +62,13 @@ This rule uses a 6 degree tolerance.
 Check for objects all that has_spikes(:all.geometry,sin(to_radians(6))) equals false  
 ![Alt text](img/SpikeRule.png?raw=true "Spike Rule Screenshot")
 
+## [Check that Features are Topologically Structured](CheckThatFeaturesAreTopologicallyStructured.xml)
+Tests whether an object is topologically structured. It returns a boolean value, true if the object is structured and false otherwise.
+
+### Rule Syntax
+Check for objects all that is_structured(:all.geometry) equals true  
+![Alt text](img/TopologicallyStructuredRule.PNG?raw=true "Topologically Structured Rule Screenshot")
+
 ## Licensing
 Copyright © 2018 1Spatial US Patent Number 9542416 B2 (2017-01-10)
 
