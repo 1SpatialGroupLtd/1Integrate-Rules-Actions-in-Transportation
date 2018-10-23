@@ -23,6 +23,8 @@ Check for Roads objects that for all Road objects other for which Road:other.geo
 
 ## [Roads Must Not Contain Other Roads](RoadsDoNotContainOtherRoads.xml)
 Linear containment occurs when a Road geometry completely contains another Road geometry.
+![Alt text](img/RoadContainmentExample.PNG?raw=true "Linear Containment Example")
+
 ### Rule Syntax
 Check for Road objects that there are no Road objects other for which Road:other.geometry contains Road.geometry and Road:other does not equal Road  
 ![Alt text](img/RoadsDoNotContainOtherRoads_Rule.PNG?raw=true "Road Containment Rule Screenshot")
