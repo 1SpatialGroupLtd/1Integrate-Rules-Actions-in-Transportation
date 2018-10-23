@@ -47,7 +47,7 @@ Check for all objects ALL that: is_simple(ALL.geometry) equals true
 Tests to see if a feature is valid based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
 By definition, a POLYGON is always simple. It is valid if no two rings in the boundary (made up of an exterior ring and interior rings) cross. The boundary of a POLYGON may intersect at a POINT but only as a tangent (i.e. not on a line). A POLYGON may not have cut lines or spikes and the interior rings must be contained entirely within the exterior ring.
 A MULTIPOLYGON is valid if and only if all of its elements are valid and the interiors of no two elements intersect. The boundaries of any two elements may touch, but only at a finite number of POINTs.
-The information on OGC Simple and OGC Valid was pulled from the PostGIS Documentation on [OGC Validity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
+The information on OGC Valid was pulled from the PostGIS Documentation on [OGC Validity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
 
 ### Rule Syntax
 Check for all objects ALL that: is_valid(ALL.geometry) equals true  
