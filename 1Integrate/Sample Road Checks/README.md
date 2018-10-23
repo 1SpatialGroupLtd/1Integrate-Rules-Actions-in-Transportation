@@ -32,7 +32,7 @@ Check for Roads objects that for all Road objects other for which Road:other.geo
 ![Alt text](img/RoadsMustIntersectAtStartAndEndPoints_Rule.PNG?raw=true "Roads Intersect at Ends Rule Screenshot")
 
 ## [Roads Must Not Contain Other Roads](RoadsDoNotContainOtherRoads.xml)
-Linear containment occurs when a Road geometry completely contains another Road geometry.
+Linear containment occurs when a Road geometry completely contains another Road geometry.  
 ![Alt text](img/RoadContainmentExample.PNG?raw=true "Linear Containment Example")
 
 ### Rule Syntax
