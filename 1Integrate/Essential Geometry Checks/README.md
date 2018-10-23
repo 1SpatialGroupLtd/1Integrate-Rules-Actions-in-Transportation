@@ -9,7 +9,7 @@ Check for objects all that there are no objects duplicate features for which :du
 ![Alt text](img/DuplicateFeaturesRule.png?raw=true "Duplicate Feature Rule Screenshot")
 
 ## [Check for Duplicate Vertices](CheckForDuplicateVertices.xml)
-Checks for Duplicate Verticies.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not. 
+Checks for Duplicate Vertices.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not. 
 ### Rule Syntax
 Check for objects all that has_duplicates(:all.geometry) equals false  
 ![Alt text](img/DuplicateVerticesRule.png?raw=true "Duplicate Vertex Rule Screenshot")
