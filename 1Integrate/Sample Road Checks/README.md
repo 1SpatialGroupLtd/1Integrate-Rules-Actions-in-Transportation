@@ -40,7 +40,9 @@ Check for Road objects that for all Road objects other for which Road:other.geom
 ![Alt text](img/RoadsDoNotContainOtherRoads_Rule.PNG?raw=true "Road Containment Rule Screenshot")
 
 ## [Roads Must Not Overlap Other Roads](RoadsDoNotOverlapOtherRoads.xml)
-Overlaps occur when linear start/end points go past one another so a portion of Line A is on top of/underneath a portion of Line B.  This rule checks for those instances while also checking that roads do not self-overlap.
+Overlaps occur when linear start/end points go past one another so a portion of Line A is on top of/underneath a portion of Line B.  This rule checks for those instances while also checking that roads do not self-overlap.  
+![Alt text](img/RoadOverlapExample.PNG?raw=true "Overlap Example")
+
 ### Rule Syntax
 Check for Road objects that there are no Road objects other for which Road:other.geometry overlaps Road.geometry and Road:other does not equal Road  
 ![Alt text](img/RoadsDoNotOverlap_Rule.png?raw=true "Overlapping Roads Rule Screenshot")
