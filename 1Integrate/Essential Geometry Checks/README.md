@@ -41,7 +41,7 @@ The information on OGC Simple was pulled from the PostGIS Documentation on [OGC 
 
 ### Rule Syntax
 Check for all objects ALL that: is_simple(ALL.geometry) equals true  
-![Alt text](img/OGCSimpleRule.png?raw=true "OGC Simple Rule Screenshot")
+![Alt text](img/OGCSimpleRule.PNG?raw=true "OGC Simple Rule Screenshot")
 
 ## [Check for OGC Valid](CheckThatFeaturesAreValid.xml)
 Tests to see if a feature is valid based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
@@ -51,7 +51,7 @@ The information on OGC Valid was pulled from the PostGIS Documentation on [OGC V
 
 ### Rule Syntax
 Check for all objects ALL that: is_valid(ALL.geometry) equals true  
-![Alt text](img/OGCValidRule.png?raw=true "OGC Valid Rule Screenshot")
+![Alt text](img/OGCValidRule.PNG?raw=true "OGC Valid Rule Screenshot")
 
 ## [Check for Spikes](CheckForSpikes.xml)
 Checks whether a geometry has any spikes.  A spike is defined to be three consecutive points (A, B, C) such that: 1) The distance AB is less than the distance BC. 2) The sine of the angle ABC is less than a maximum value which may be specified by the second parameter. 3) (Optionally) the distance AB is less than a maximum "length" value specified by the third parameter.  This rule uses the has_spikes() built-in function which has the following parameters.  1) The geometry to test. 2) (optional) The maximum value for the sine of the angle in the spike (a real number in the range [0, 1]). Note: If omitted, this defaults to the sine of 1 degree (approximately 0.017). 3) (optional) The maximum length of the spike.
