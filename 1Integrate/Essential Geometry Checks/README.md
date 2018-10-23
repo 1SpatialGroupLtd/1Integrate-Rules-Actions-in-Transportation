@@ -31,6 +31,9 @@ Checks for Multi-Part Geometries.  A multi-part geometry are geometries that con
 Check for objects all that count_parts(:all.geometry) equals 1  
 ![Alt text](img/CountPartsRule.png?raw=true "Multi-Part Rule Screenshot")
 
+## [Check for OGC Simple](CheckForKickbacks.xml)
+### Example
+
 ## [Check for Spikes](CheckForSpikes.xml)
 Checks whether a geometry has any spikes.  A spike is defined to be three consecutive points (A, B, C) such that: 1) The distance AB is less than the distance BC. 2) The sine of the angle ABC is less than a maximum value which may be specified by the second parameter. 3) (Optionally) the distance AB is less than a maximum "length" value specified by the third parameter.  This rule uses the has_spikes() built-in function which has the following parameters.  1) The geometry to test. 2) (optional) The maximum value for the sine of the angle in the spike (a real number in the range [0, 1]). Note: If omitted, this defaults to the sine of 1 degree (approximately 0.017). 3) (optional) The maximum length of the spike.
 This rule uses a 6 degree tolerance.  
