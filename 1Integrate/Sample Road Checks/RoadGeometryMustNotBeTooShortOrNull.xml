@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample Road Checks</Name>
+                    <Created>
+                        <UserDate date="2017-02-05T08:11:49.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-02-05T08:12:04.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample Road Checks/Road Geometry must not be too short or NULL">
+                    <Metadata>
+                        <Name>Road Geometry must not be too short or NULL</Name>
+                        <Description>Tests to see if a Road geometry is too short or NULL. For this example, a Road geometry needs to be longer than the data unit of length of 3. This rule uses the built-in function line_length. The line_length built-in function returns the length of a line. If the geometry passed in is a simple point or a simple area, then the length returned will be 0. If it is a complex geometry, the length returned will be the sum of the lengths of each simple line in the complex geometry. Note: This function does not currently fully support 3D geometries. Any 3D geometries will be projected down to 2 dimensions.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2018-10-03T00:36:14.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-03T01:15:37.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Road" objLabel="">
+                            <AndPredicate>
+                                <RelationalPredicate>
+                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                    <NotEqualsRelation/>
+                                    <NullValue/>
+                                </RelationalPredicate>
+                                <RelationalPredicate>
+                                    <BuiltinFnValue fnName="line_length">
+                                        <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                    </BuiltinFnValue>
+                                    <GreaterRelation/>
+                                    <StaticValue datatype="integer" value="3"/>
+                                </RelationalPredicate>
+                            </AndPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>
