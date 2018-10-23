@@ -18,7 +18,7 @@ Check for Road objects that there is at most 1 Road objects other for which Road
 ## [Roads Must Intersect at Start and End Points](RoadsMustIntersectAtStartAndEndPoints.xml)
 Tests to see that Roads intersects other Roads at the start and end only, as opposed to anywhere along its geometry. This rule explicitly checks the four scenarios in which Roads may intersect each other: start to start, start to end, end to start, and end to end.
 ### Rule Syntax
-Tests to see that Roads intersects other Roads at the start and end only, as opposed to anywhere along its geometry. This rule explicitly checks the four scenarios in which Roads may intersect each other: start to start, start to end, end to start, and end to end.  
+Check for Roads objects that for all Road objects other for which Road:other.geometry intersects Road.geometry check that the start_of or end_of Road:other.geometry intersects the start_of or end_of Road.geometry.
 ![Alt text](img/RoadsMustIntersectAtStartAndEndPoints_Rule.PNG?raw=true "Roads Intersect at Ends Rule Screenshot")
 
 ## [Roads Must Not Contain Other Roads](RoadsDoNotContainOtherRoads.xml)
