@@ -12,7 +12,7 @@ Check for Road objects that there are no Road objects other for which Road:other
 ## [Road Network Must Not Contain Bifurcations](RoadNetworkMustNotContainBifurcations.xml)
 Bifurcations are situations where a branch splits into 2 and the splits retain some of the branches attributes.  Check that there is at most only a single segment with the same STREET value intersecting the end points of road segments.
 ### Rule Syntax
-Check for Road objects that there is at most 1 Road objects other for which Road:other.geometry intersects start_of(Road.geometry), Road:other.STREET equals Roads.STREET, and Road:other does not equal Road; AND there is at most 1 Road objects other for which Road:other.geometry intersects end_of(Road.geometry), Road:other.STREET equals Road.STREET, and Road:other does not equal Road.
+Check for Road objects that there is at most 1 Road objects other for which Road:other.geometry intersects start_of(Road.geometry), Road:other.STREET equals Roads.STREET, and Road:other does not equal Road; AND there is at most 1 Road objects other for which Road:other.geometry intersects end_of(Road.geometry), Road:other.STREET equals Road.STREET, and Road:other does not equal Road.  
 ![Alt text](img/RoadNetworkMustNotContainBifurcations_Rule.PNG?raw=true "Bifurcations Rule Screenshot")
 
 ## Licensing
