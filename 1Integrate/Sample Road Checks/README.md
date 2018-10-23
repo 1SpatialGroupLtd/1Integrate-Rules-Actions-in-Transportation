@@ -11,8 +11,7 @@ Check for Road objects that Road.geometry does not equal null and line_length(Ro
 
 ## [Road Network Must Be Void of Overshoots and Undershoots](RoadNetworkMustBeVoidOfOvershootsAndUndershoots.xml)
 Overshoots occur when Roads that should be intersecting at their start or end points go past where they are expected to intersect. Undershoots occur when Roads that should be intersecting at their start or end points come up short of where they are expected to intersect. In this example, a distance less than 5 in data unit length defines an overshoot or undershoot.
-![Alt text](img/RoadOvershootExample.PNG?raw=true "Overshoots Example")
-![Alt text](img/RoadUndershootExample.PNG?raw=true "Undershoots Example")
+![Alt text](img/RoadOvershootUndershootExample.PNG?raw=true "Overshoot and Undershoot Example")
 
 ### Rule Syntax
 Check for Road objects that (if there are no Road objects other for which Road:other.geometry intersects start_of(Road.geometry) and Road:other does not equal Road then there are no Road objects other for which Road:other.geometry is within a distance of 15 of start_of(Road.geometry) and Road:other does not equal Road) and (if there are no Road objects other for which Road:other.geometry intersects end_of(Road.geometry) and Road:other does not equal Road then there are no Road objects other for which Road:other.geometry is within a distance of 15 of end_of(Road.geometry) and Road:other does not equal Road)  
