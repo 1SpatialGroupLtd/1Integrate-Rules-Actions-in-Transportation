@@ -31,7 +31,7 @@ Checks for Multi-Part Geometries.  A multi-part geometry are geometries that con
 Check for objects all that count_parts(:all.geometry) equals 1  
 ![Alt text](img/CountPartsRule.png?raw=true "Multi-Part Rule Screenshot")
 
-## [Check for OGC Simple](CheckForKickbacks.xml)
+## [Check for OGC Simple](CheckThatFeaturesAreSimple.xml)
 Tests to see if a feature is simple based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
 According to the OGC Specifications, a simple geometry is one that has no anomalous geometric points, such as self intersection or self tangency and primarily refers to 0 or 1-dimensional geometries (i.e. [MULTI]POINT, [MULTI]LINESTRING). Geometry validity, on the other hand, primarily refers to 2-dimensional geometries (i.e. [MULTI]POLYGON) and defines the set of assertions that characterizes a valid polygon. The description of each geometric class includes specific conditions that further detail geometric simplicity and validity.
 A POINT is inheritably simple as a 0-dimensional geometry object.
@@ -43,7 +43,7 @@ The information on OGC Simple was pulled from the PostGIS Documentation on [OGC 
 Check for all objects ALL that: is_simple(ALL.geometry) equals true  
 ![Alt text](img/OGCSimpleRule.png?raw=true "OGC Simple Rule Screenshot")
 
-## Check for OGC Valid
+## [Check for OGC Valid](CheckThatFeaturesAreValid.xml)
 Tests to see if a feature is valid based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
 By definition, a POLYGON is always simple. It is valid if no two rings in the boundary (made up of an exterior ring and interior rings) cross. The boundary of a POLYGON may intersect at a POINT but only as a tangent (i.e. not on a line). A POLYGON may not have cut lines or spikes and the interior rings must be contained entirely within the exterior ring.
 A MULTIPOLYGON is valid if and only if all of its elements are valid and the interiors of no two elements intersect. The boundaries of any two elements may touch, but only at a finite number of POINTs.
