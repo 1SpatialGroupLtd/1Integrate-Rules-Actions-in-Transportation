@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample Road Checks</Name>
+                    <Created>
+                        <UserDate date="2017-02-05T08:11:49.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-02-05T08:12:04.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample Road Checks/Roads must intersect at start &amp; end points">
+                    <Metadata>
+                        <Name>Roads must intersect at start &amp; end points</Name>
+                        <Description>Tests to see that Roads intersects other Roads at the start and end only, as opposed to anywhere along its geometry. This rule explicitly checks the four scenarios in which Roads may intersect each other: start to start, start to end, end to start, and end to end.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-02-05T08:11:10.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-03T02:07:40.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Road" objLabel="">
+                            <ForAllPredicate classLabel="Road" objLabel="other">
+                                <RelationalPredicate>
+                                    <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                    <SpatialIntersectsRelation/>
+                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                </RelationalPredicate>
+                                <OrPredicate>
+                                    <RelationalPredicate>
+                                        <BuiltinFnValue fnName="start_of">
+                                            <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <SpatialIntersectsRelation/>
+                                        <BuiltinFnValue fnName="start_of">
+                                            <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                    </RelationalPredicate>
+                                    <RelationalPredicate>
+                                        <BuiltinFnValue fnName="start_of">
+                                            <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <SpatialIntersectsRelation/>
+                                        <BuiltinFnValue fnName="end_of">
+                                            <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                    </RelationalPredicate>
+                                    <RelationalPredicate>
+                                        <BuiltinFnValue fnName="end_of">
+                                            <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <SpatialIntersectsRelation/>
+                                        <BuiltinFnValue fnName="start_of">
+                                            <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                    </RelationalPredicate>
+                                    <RelationalPredicate>
+                                        <BuiltinFnValue fnName="end_of">
+                                            <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <SpatialIntersectsRelation/>
+                                        <BuiltinFnValue fnName="end_of">
+                                            <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                    </RelationalPredicate>
+                                </OrPredicate>
+                            </ForAllPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>

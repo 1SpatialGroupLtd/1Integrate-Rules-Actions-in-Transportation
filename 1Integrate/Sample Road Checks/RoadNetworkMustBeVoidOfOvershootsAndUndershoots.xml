@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample Road Checks</Name>
+                    <Created>
+                        <UserDate date="2017-02-05T08:11:49.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-02-05T08:12:04.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample Road Checks/Road network must be void of overshoots and undershoots">
+                    <Metadata>
+                        <Name>Road network must be void of overshoots and undershoots</Name>
+                        <Description>Overshoots occur when Roads that should be intersecting at their start or end points go past where they are expected to intersect. Undershoots occur when Roads that should be intersecting at their start or end points come up short of where they are expected to intersect. In this example, a distance less than 15 in data unit length defines an overshoot or undershoot.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-02-05T08:11:10.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-03T03:50:31.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Road" objLabel="">
+                            <AndPredicate>
+                                <ConditionalPredicate>
+                                    <ExistsPredicate qualifier="exactly" n="0" classLabel="Road" objLabel="other">
+                                        <AndPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                                <SpatialIntersectsRelation/>
+                                                <BuiltinFnValue fnName="start_of">
+                                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <ObjectValue classRef="Road" objRef="other"/>
+                                                <NotEqualsRelation/>
+                                                <ObjectValue classRef="Road" objRef=""/>
+                                            </RelationalPredicate>
+                                        </AndPredicate>
+                                    </ExistsPredicate>
+                                    <ExistsPredicate qualifier="exactly" n="0" classLabel="Road" objLabel="other">
+                                        <AndPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                                <SpatialWithinDistRelation distance="15.0"/>
+                                                <BuiltinFnValue fnName="start_of">
+                                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <ObjectValue classRef="Road" objRef="other"/>
+                                                <NotEqualsRelation/>
+                                                <ObjectValue classRef="Road" objRef=""/>
+                                            </RelationalPredicate>
+                                        </AndPredicate>
+                                    </ExistsPredicate>
+                                </ConditionalPredicate>
+                                <ConditionalPredicate>
+                                    <ExistsPredicate qualifier="exactly" n="0" classLabel="Road" objLabel="other">
+                                        <AndPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                                <SpatialIntersectsRelation/>
+                                                <BuiltinFnValue fnName="end_of">
+                                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <ObjectValue classRef="Road" objRef="other"/>
+                                                <NotEqualsRelation/>
+                                                <ObjectValue classRef="Road" objRef=""/>
+                                            </RelationalPredicate>
+                                        </AndPredicate>
+                                    </ExistsPredicate>
+                                    <ExistsPredicate qualifier="exactly" n="0" classLabel="Road" objLabel="other">
+                                        <AndPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Road" objRef="other" propName="geometry"/>
+                                                <SpatialWithinDistRelation distance="15.0"/>
+                                                <BuiltinFnValue fnName="end_of">
+                                                    <DynamicValue classRef="Road" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <ObjectValue classRef="Road" objRef="other"/>
+                                                <NotEqualsRelation/>
+                                                <ObjectValue classRef="Road" objRef=""/>
+                                            </RelationalPredicate>
+                                        </AndPredicate>
+                                    </ExistsPredicate>
+                                </ConditionalPredicate>
+                            </AndPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>

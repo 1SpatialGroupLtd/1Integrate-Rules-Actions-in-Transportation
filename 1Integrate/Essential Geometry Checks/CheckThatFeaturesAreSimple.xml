@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Essential Geometric Checks</Name>
+                    <Description>1Spatial's standard Essential Geometric Checks</Description>
+                    <Created>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Essential Geometric Checks/Check that Features are Simple">
+                    <Metadata>
+                        <Name>Check that Features are Simple</Name>
+                        <Description>Tests to see if a feature is simple based on the OGC definition. According to the OGC Specifications, a simple geometry is one that has no anomalous geometric points, such as self intersection or self tangency and primarily refers to 0 or 1-dimensional geometries (i.e. [MULTI]POINT, [MULTI]LINESTRING). Geometry validity, on the other hand, primarily refers to 2-dimensional geometries (i.e. [MULTI]POLYGON) and defines the set of assertions that characterizes a valid polygon. The description of each geometric class includes specific conditions that further detail geometric simplicity and validity. A POINT is inheritably simple as a 0-dimensional geometry object. MULTIPOINTs are simple if no two coordinates (POINTs) are equal (have identical coordinate values). A LINESTRING is simple if it does not pass through the same POINT twice (except for the endpoints, in which case it is referred to as a linear ring and additionally considered closed). The information on OGC Simple was pulled from the PostGIS Documentation on OGC Validity.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-10-03T10:33:23.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="" objLabel="all">
+                            <RelationalPredicate>
+                                <BuiltinFnValue fnName="is_simple">
+                                    <DynamicValue classRef="" objRef="all" propName="geometry"/>
+                                </BuiltinFnValue>
+                                <EqualsRelation/>
+                                <StaticValue datatype="boolean" value="true"/>
+                            </RelationalPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>

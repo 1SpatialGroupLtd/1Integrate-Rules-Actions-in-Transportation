@@ -45,7 +45,7 @@ According to the OGC Specifications, a simple geometry is one that has no anomal
 A POINT is inheritably simple as a 0-dimensional geometry object.
 MULTIPOINTs are simple if no two coordinates (POINTs) are equal (have identical coordinate values).
 A LINESTRING is simple if it does not pass through the same POINT twice (except for the endpoints, in which case it is referred to as a linear ring and additionally considered closed). 
-The information on OGC Simple was pulled from the PostGIS Documentation on [OGC Validity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
+The information on OGC Simple was pulled from the PostGIS Documentation on [OGC Simplicity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
 
 ### Rule Syntax
 Check for all objects ALL that: is_simple(ALL.geometry) is equal to  true  

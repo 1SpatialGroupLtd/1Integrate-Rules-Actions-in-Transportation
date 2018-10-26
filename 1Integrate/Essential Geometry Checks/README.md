@@ -9,7 +9,7 @@ Check for objects all that there are no objects duplicate features for which :du
 ![Alt text](img/DuplicateFeaturesRule.png?raw=true "Duplicate Feature Rule Screenshot")
 
 ## [Check for Duplicate Vertices](CheckForDuplicateVertices.xml)
-Checks for Duplicate Verticies.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not. 
+Checks for Duplicate Vertices.  The Duplicate Vertex checks a geometry (Line or Polygon) that has any consecutive coincident vertices.  This rule uses the Built-In function has_duplicates() that Tests to see if a geometry has any consecutive coincident vertices.  It returns a Boolean value, true if the geometry has any consecutive coincident vertices and false if it does not. 
 ### Rule Syntax
 Check for objects all that has_duplicates(:all.geometry) equals false  
 ![Alt text](img/DuplicateVerticesRule.png?raw=true "Duplicate Vertex Rule Screenshot")
@@ -31,6 +31,28 @@ Checks for Multi-Part Geometries.  A multi-part geometry are geometries that con
 Check for objects all that count_parts(:all.geometry) equals 1  
 ![Alt text](img/CountPartsRule.png?raw=true "Multi-Part Rule Screenshot")
 
+## [Check for OGC Simple](CheckThatFeaturesAreSimple.xml)
+Tests to see if a feature is simple based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
+According to the OGC Specifications, a simple geometry is one that has no anomalous geometric points, such as self intersection or self tangency and primarily refers to 0 or 1-dimensional geometries (i.e. [MULTI]POINT, [MULTI]LINESTRING). Geometry validity, on the other hand, primarily refers to 2-dimensional geometries (i.e. [MULTI]POLYGON) and defines the set of assertions that characterizes a valid polygon. The description of each geometric class includes specific conditions that further detail geometric simplicity and validity.
+A POINT is inheritably simple as a 0-dimensional geometry object.
+MULTIPOINTs are simple if no two coordinates (POINTs) are equal (have identical coordinate values).
+A LINESTRING is simple if it does not pass through the same POINT twice (except for the endpoints, in which case it is referred to as a linear ring and additionally considered closed). 
+The information on OGC Simple was pulled from the PostGIS Documentation on [OGC Simplicity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
+
+### Rule Syntax
+Check for all objects ALL that: is_simple(ALL.geometry) equals true  
+![Alt text](img/OGCSimpleRule.PNG?raw=true "OGC Simple Rule Screenshot")
+
+## [Check for OGC Valid](CheckThatFeaturesAreValid.xml)
+Tests to see if a feature is valid based on the [OGC definition](http://www.opengeospatial.org/standards/sfa).
+By definition, a POLYGON is always simple. It is valid if no two rings in the boundary (made up of an exterior ring and interior rings) cross. The boundary of a POLYGON may intersect at a POINT but only as a tangent (i.e. not on a line). A POLYGON may not have cut lines or spikes and the interior rings must be contained entirely within the exterior ring.
+A MULTIPOLYGON is valid if and only if all of its elements are valid and the interiors of no two elements intersect. The boundaries of any two elements may touch, but only at a finite number of POINTs.
+The information on OGC Valid was pulled from the PostGIS Documentation on [OGC Validity](https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity).  
+
+### Rule Syntax
+Check for all objects ALL that: is_valid(ALL.geometry) equals true  
+![Alt text](img/OGCValidRule.PNG?raw=true "OGC Valid Rule Screenshot")
+
 ## [Check for Spikes](CheckForSpikes.xml)
 Checks whether a geometry has any spikes.  A spike is defined to be three consecutive points (A, B, C) such that: 1) The distance AB is less than the distance BC. 2) The sine of the angle ABC is less than a maximum value which may be specified by the second parameter. 3) (Optionally) the distance AB is less than a maximum "length" value specified by the third parameter.  This rule uses the has_spikes() built-in function which has the following parameters.  1) The geometry to test. 2) (optional) The maximum value for the sine of the angle in the spike (a real number in the range [0, 1]). Note: If omitted, this defaults to the sine of 1 degree (approximately 0.017). 3) (optional) The maximum length of the spike.
 This rule uses a 6 degree tolerance.  
@@ -39,6 +61,13 @@ This rule uses a 6 degree tolerance.
 ### Rule Syntax
 Check for objects all that has_spikes(:all.geometry,sin(to_radians(6))) equals false  
 ![Alt text](img/SpikeRule.png?raw=true "Spike Rule Screenshot")
+
+## [Check that Features are Topologically Structured](CheckThatFeaturesAreTopologicallyStructured.xml)
+Tests whether an object is topologically structured. It returns a boolean value, true if the object is structured and false otherwise.
+
+### Rule Syntax
+Check for objects all that is_structured(:all.geometry) equals true  
+![Alt text](img/TopologicallyStructuredRule.PNG?raw=true "Topologically Structured Rule Screenshot")
 
 ## Licensing
 Copyright © 2018 1Spatial US Patent Number 9542416 B2 (2017-01-10)
