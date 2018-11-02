@@ -1,6 +1,12 @@
 # Sample LRS Checks
 This repo folder contains some Sample LRS or measured geometry checks by Rule that can be used within 1Integrate. 
-LRS aka Linear Reference Systems are used by many transportation agencies for Asset Management.  Instead of storing a geometry associated with an asset, a non-spatial table is used with the Route ID, a Begin LRS, and an End LRS value is stored. The Begin and End LRS Value represents the distance along a route that the asset starts at and where the asset ends. Below is an example LRS Table.  
+
+LRS aka Linear Reference Systems are used by many transportation agencies for Asset Management.  Instead of storing a geometry associated with an asset, a Begin and an End LRS value is stored, which represents the distance along a route that the asset starts at and where the asset ends.  Linear Segments stored in a Transportation departments GIS, also typically stores 'M' aka Measure values.  The 'M' values represent the actual real world distance a particular vertex (or node) has along the line segment.  "M' values are typically used because Route may be generalized or does not contain height information, so that the Geometry Projected Line Length may not be equal to the actual real world distance.
+
+For example, a LRS asset such as a Guardrail may exist on Route 66 from mile 6.12 to 6.26.  In the asset management system there will be a Guardrail table with a record saying on Route 66, the begin LRS = 6.12 and the end LRS = 6.26.  Then in the GIS there should be a route that is at least 6.26 miles long with 'M' values ranging likely from 0 all the way up at least 6.26.
+
+Within 1Integrate we have the ability to validate multiple sources, in this case an asset management system and a GIS   
+Below is an example LRS Table.    
 ![Alt text](img/ExampleLRSTable.png?raw=true "Example LRS Table")   
 These LRS checks are used by a number of State DOT's using 1Spatial's 1Integrate software.  
 For instructions on restoring a backup please refer to the following [documentation](https://1spatial.com/documentation/1integrate/v2_3/Topics/Backup_Restore.htm?Highlight=Restore%20Backup%20Rules)
