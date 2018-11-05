@@ -38,68 +38,71 @@
                 <Item id="RULE://Standard/Sample Centerline Boundary Integration Checks/03. Check Right Left Boundary">
                     <Metadata>
                         <Name>03. Check Right Left Boundary</Name>
-                        <Description>This checks that if the street segment shares the edge of a boundary, then the Streets Left Boundary value must equal the Boundary Name that is on the digitized left side of the street segment and conversely the Streets Right Boundary value must equal the Boundary Name that is on the digitized right side of the street segment. \n\nThe check uses the built_in_function is_boundary_left() and is_boundary_right().  Which tests whether a line and an area have the boundary left\-right relationship. That is, the area is on the left\-right of the line, and the line is contained in the boundary of the area. \n\nThis check will only work if the topology is correct.  A centerline must fully share the edge of a boundary.\n\nThis check has been optimized. A simpler check would be by checking that if a street segment is within the boundary(boundary geometry) then check is_boundary_left or is_boundary_right.</Description>
+                        <Description>This checks that if the street segment shares the edge of a boundary, then the Streets Left Boundary value must equal the Boundary Name that is on the digitized left side of the street segment and conversely the Streets Right Boundary value must equal the Boundary Name that is on the digitized right side of the street segment.  If the street is fully contained (meaning not sharing the edge) within a boundary then the street right\-left boundary should both equal the boundary it is fully contained within.\n\nThe check uses the built_in_function is_boundary_left() and is_boundary_right().  Which tests whether a line and an area have the boundary left\-right relationship. That is, the area is on the left\-right of the line, and the line is contained in the boundary of the area. \n\nThis check will only work if the topology is correct.  A centerline must fully share the edge of a boundary.\n\nThis check has been optimized. A simpler check would be by checking that if a street segment is within the boundary(boundary geometry) then check is_boundary_left or is_boundary_right.</Description>
                         <Comments></Comments>
                         <Created>
                             <UserDate date="2018-11-06T09:02:32.000Z" user="1Spatial"/>
                         </Created>
                         <LastEdited>
-                            <UserDate date="2018-11-02T07:17:39.000Z" user="1Spatial"/>
+                            <UserDate date="2018-11-02T02:38:18.000Z" user="1Spatial"/>
                         </LastEdited>
                     </Metadata>
                     <IsShortcut>false</IsShortcut>
                     <Rule>
                         <RootPredicate classLabel="Street Segment" objLabel="">
-                            <ConditionalPredicate>
-                                <ExistsPredicate qualifier="exactly" n="2" classLabel="Boundary" objLabel="">
-                                    <RelationalPredicate>
-                                        <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
-                                        <SpatialIntersectsRelation/>
+                            <ForAllPredicate classLabel="Boundary" objLabel="">
+                                <RelationalPredicate>
+                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                    <SpatialIntersectsRelation/>
+                                    <BuiltinFnValue fnName="boundary">
                                         <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
-                                    </RelationalPredicate>
-                                </ExistsPredicate>
-                                <ForAllPredicate classLabel="Boundary" objLabel="">
-                                    <RelationalPredicate>
-                                        <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
-                                        <SpatialIntersectsRelation/>
-                                        <BuiltinFnValue fnName="boundary">
-                                            <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
-                                        </BuiltinFnValue>
-                                    </RelationalPredicate>
+                                    </BuiltinFnValue>
+                                </RelationalPredicate>
+                                <XorPredicate>
+                                    <ConditionalPredicate>
+                                        <RelationalPredicate>
+                                            <BuiltinFnValue fnName="is_boundary_left">
+                                                <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                                <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                            </BuiltinFnValue>
+                                            <EqualsRelation/>
+                                            <StaticValue datatype="boolean" value="true"/>
+                                        </RelationalPredicate>
+                                        <RelationalPredicate>
+                                            <DynamicValue classRef="Street Segment" objRef="" propName="LeftBoundaryName"/>
+                                            <EqualsRelation/>
+                                            <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                        </RelationalPredicate>
+                                    </ConditionalPredicate>
+                                    <ConditionalPredicate>
+                                        <RelationalPredicate>
+                                            <BuiltinFnValue fnName="is_boundary_right">
+                                                <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                                <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                            </BuiltinFnValue>
+                                            <EqualsRelation/>
+                                            <StaticValue datatype="boolean" value="true"/>
+                                        </RelationalPredicate>
+                                        <RelationalPredicate>
+                                            <DynamicValue classRef="Street Segment" objRef="" propName="RightBoundaryName"/>
+                                            <EqualsRelation/>
+                                            <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                        </RelationalPredicate>
+                                    </ConditionalPredicate>
                                     <AndPredicate>
-                                        <ConditionalPredicate>
-                                            <RelationalPredicate>
-                                                <BuiltinFnValue fnName="is_boundary_left">
-                                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
-                                                    <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
-                                                </BuiltinFnValue>
-                                                <EqualsRelation/>
-                                                <StaticValue datatype="boolean" value="true"/>
-                                            </RelationalPredicate>
-                                            <RelationalPredicate>
-                                                <DynamicValue classRef="Street Segment" objRef="" propName="LeftBoundaryName"/>
-                                                <EqualsRelation/>
-                                                <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
-                                            </RelationalPredicate>
-                                        </ConditionalPredicate>
-                                        <ConditionalPredicate>
-                                            <RelationalPredicate>
-                                                <BuiltinFnValue fnName="is_boundary_right">
-                                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
-                                                    <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
-                                                </BuiltinFnValue>
-                                                <EqualsRelation/>
-                                                <StaticValue datatype="boolean" value="true"/>
-                                            </RelationalPredicate>
-                                            <RelationalPredicate>
-                                                <DynamicValue classRef="Street Segment" objRef="" propName="RightBoundaryName"/>
-                                                <EqualsRelation/>
-                                                <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
-                                            </RelationalPredicate>
-                                        </ConditionalPredicate>
+                                        <RelationalPredicate>
+                                            <DynamicValue classRef="Street Segment" objRef="" propName="LeftBoundaryName"/>
+                                            <EqualsRelation/>
+                                            <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                        </RelationalPredicate>
+                                        <RelationalPredicate>
+                                            <DynamicValue classRef="Street Segment" objRef="" propName="RightBoundaryName"/>
+                                            <EqualsRelation/>
+                                            <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                        </RelationalPredicate>
                                     </AndPredicate>
-                                </ForAllPredicate>
-                            </ConditionalPredicate>
+                                </XorPredicate>
+                            </ForAllPredicate>
                         </RootPredicate>
                     </Rule>
                 </Item>

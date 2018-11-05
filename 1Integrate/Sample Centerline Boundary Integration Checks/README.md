@@ -9,7 +9,7 @@ For instructions on restoring a backup please refer to the following [documentat
 ## [Streets Within Boundary](StreetsWithinBoundary.xml)
 Checks that a street does not cross over a boundary. 
 ### Rule Syntax
-Check for Street Segment objects that there are no Boundary objects for which Street Segment.geometry crosses Boundary.geometry
+Check for Street Segment objects that there are no Boundary objects for which Street Segment.geometry crosses Boundary.geometry  
 ![Alt text](img/StreetsWithinBoundary_RULE.png?raw=true "Streets within boundary Screenshot")
 
 
@@ -19,18 +19,20 @@ Checks that if a street is fully contained within a boundary (By fully contained
 For this check, because a line is contained within a boundary even if it shares the edge, we need to make sure to add a clause to ignore street segments that are contained within the perimeter aka the built_in_function boundary().   
 
 ### Rule Syntax
-Check for Street Segment objects that for all Boundary objects for which Street Segment.geometry is contained within Boundary.geometry check that Street Segment.LeftBoundaryName equals Boundary.NAME and Street Segment.RightBoundaryName equals Boundary.NAME and it is not the case that (boundary(Boundary.geometry) contains Street Segment.geometry)  
+Check for Street Segment objects that for all Boundary objects for which Street Segment.geometry is contained within Boundary.geometry check that Street Segment.LeftBoundaryName equals Boundary.NAME and Street Segment.RightBoundaryName equals Boundary.NAME and it is not the case that (boundary(Boundary.geometry) contains Street Segment.geometry)   
 ![Alt text](img/StreetsWithinCorrectBoundary_RULE.png?raw=true "Within Correct Rule Screenshot")
 
 
 ## [Check Right Left Boundary](CheckRightLeftBoundary.xml)
-This checks that if the street segment shares the edge of a boundary, then the Streets Left Boundary value must equal the Boundary Name that is on the digitized left side of the street segment and conversely the Streets Right Boundary value must equal the Boundary Name that is on the digitized right side of the street segment.  
+This checks that if the street segment shares the edge of a boundary, then the Streets Left Boundary value must equal the Boundary Name that is on the digitized left side of the street segment and conversely the Streets Right Boundary value must equal the Boundary Name that is on the digitized right side of the street segment.  If the street is fully contained (meaning not sharing the edge) within a boundary then the street right\left boundary should both equal the boundary it is fully contained within.
 
-The check uses the built_in_function is_boundary_left() and is_boundary_right().  Which tests whether a line and an area have the boundary left\right relationship. That is, the area is on the left\right of the line, and the line is contained in the boundary of the area.  
+The check uses the built_in_function is_boundary_left() and is_boundary_right().  Which tests whether a line and an area have the boundary left\right relationship. That is, the area is on the left\right of the line, and the line is contained in the boundary of the area. 
 
-This check will only work if the topology is correct.  A centerline must fully share the edge of a boundary.  
+This check will only work if the topology is correct.  A centerline must fully share the edge of a boundary.
+
+This check has been optimized. 
 ### Rule Syntax
-Check for Street Segment objects that if there are exactly 2 Boundary objects for which Street Segment.geometry intersects Boundary.geometry then for all Boundary objects for which Street Segment.geometry intersects boundary(Boundary.geometry) check that (if is_boundary_left(Street Segment.geometry,Boundary.geometry) equals true then Street Segment.LeftBoundaryName equals Boundary.NAME) and (if is_boundary_right(Street Segment.geometry,Boundary.geometry) equals true then Street Segment.RightBoundaryName equals Boundary.NAME)
+Check for Street Segment objects that for all Boundary objects for which Street Segment.geometry intersects boundary(Boundary.geometry) check that (if is_boundary_left(Street Segment.geometry,Boundary.geometry) equals true then Street Segment.LeftBoundaryName equals Boundary.NAME) xor (if is_boundary_right(Street Segment.geometry,Boundary.geometry) equals true then Street Segment.RightBoundaryName equals Boundary.NAME) xor Street Segment.LeftBoundaryName equals Boundary.NAME and Street Segment.RightBoundaryName equals Boundary.NAME  
 ![Alt text](img/CheckLeftRight_RULE.png?raw=true "Check Left Right Rule Screenshot")
 
 
