@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample Centerline Boundary Integration Checks</Name>
+                    <Description>Validates between a boundary dataset such as a township and a centerline.  Typically, centerlines should either share an edge of a boundary or be completely contained within the boundary.</Description>
+                    <Comments></Comments>
+                    <Created>
+                        <UserDate/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2018-11-06T08:57:41.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample Centerline Boundary Integration Checks/03. Check Right Left Boundary">
+                    <Metadata>
+                        <Name>03. Check Right Left Boundary</Name>
+                        <Description>This checks that if the street segment shares the edge of a boundary, then the Streets Left Boundary value must equal the Boundary Name that is on the digitized left side of the street segment and conversely the Streets Right Boundary value must equal the Boundary Name that is on the digitized right side of the street segment. \n\nThe check uses the built_in_function is_boundary_left() and is_boundary_right().  Which tests whether a line and an area have the boundary left\-right relationship. That is, the area is on the left\-right of the line, and the line is contained in the boundary of the area. \n\nThis check will only work if the topology is correct.  A centerline must fully share the edge of a boundary.\n\nThis check has been optimized. A simpler check would be by checking that if a street segment is within the boundary(boundary geometry) then check is_boundary_left or is_boundary_right.</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2018-11-06T09:02:32.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-11-02T07:17:39.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Street Segment" objLabel="">
+                            <ConditionalPredicate>
+                                <ExistsPredicate qualifier="exactly" n="2" classLabel="Boundary" objLabel="">
+                                    <RelationalPredicate>
+                                        <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                        <SpatialIntersectsRelation/>
+                                        <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                    </RelationalPredicate>
+                                </ExistsPredicate>
+                                <ForAllPredicate classLabel="Boundary" objLabel="">
+                                    <RelationalPredicate>
+                                        <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                        <SpatialIntersectsRelation/>
+                                        <BuiltinFnValue fnName="boundary">
+                                            <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                    </RelationalPredicate>
+                                    <AndPredicate>
+                                        <ConditionalPredicate>
+                                            <RelationalPredicate>
+                                                <BuiltinFnValue fnName="is_boundary_left">
+                                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                                    <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                                <EqualsRelation/>
+                                                <StaticValue datatype="boolean" value="true"/>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Street Segment" objRef="" propName="LeftBoundaryName"/>
+                                                <EqualsRelation/>
+                                                <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                            </RelationalPredicate>
+                                        </ConditionalPredicate>
+                                        <ConditionalPredicate>
+                                            <RelationalPredicate>
+                                                <BuiltinFnValue fnName="is_boundary_right">
+                                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                                    <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                                </BuiltinFnValue>
+                                                <EqualsRelation/>
+                                                <StaticValue datatype="boolean" value="true"/>
+                                            </RelationalPredicate>
+                                            <RelationalPredicate>
+                                                <DynamicValue classRef="Street Segment" objRef="" propName="RightBoundaryName"/>
+                                                <EqualsRelation/>
+                                                <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                            </RelationalPredicate>
+                                        </ConditionalPredicate>
+                                    </AndPredicate>
+                                </ForAllPredicate>
+                            </ConditionalPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>
