@@ -5,7 +5,7 @@ For instructions on uploading and publishing Rulesets, please refer to the follo
 ## Check for Duplicate Features
 Checks for two features within the same class (aka Feature Class) that has the same geometry 
 ### Rule Syntax
-Check for objects all that there are no objects duplicate features for which :duplicate features.geometry equals :all.geometry and class(:duplicate features) equals class(:all) and :duplicate features does not equal :all  
+Check for objects ALL that there are no objects ALL2 for which :ALL2.geometry equals :ALL.geometry and class(:ALL2) equals class(:ALL) and :ALL2 does not equal :ALL  
 ![Alt text](img/DuplicateFeaturesRule.png?raw=true "Duplicate Feature Rule Screenshot")
 ### Report Action Syntax
 Reports on a feature that has a duplicate geometry.
