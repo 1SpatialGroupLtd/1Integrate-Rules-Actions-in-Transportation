@@ -6,12 +6,12 @@ For instructions on uploading and publishing Rulesets, please refer to the follo
 Checks for two features within the same class (aka Feature Class) that has the same geometry.
 
 ### Rule Syntax
-Check for objects ALL that there are no objects ALL2 for which :ALL2.geometry equals :ALL.geometry and class(:ALL2) equals class(:ALL) and :ALL2 does not equal :ALL  
+Check for objects ALL that there are no objects ALL2 for which :ALL2.geometry equals :ALL.geometry and class(:ALL2) equals class(:ALL) and :ALL2 does not equal :ALL.  
 ![Alt text](img/DuplicateFeaturesRule.png?raw=true "Duplicate Feature Rule Screenshot")
 
 ### Report Action Syntax
 Reports on a feature that has a duplicate geometry.  
-Action for all objects ALL: If it is the case that :ALL.geometry is not equal to null then let dupfeatgeom = :ALL.geometry and then report on get_point(dupfeatgeom)  
+Action for all objects ALL: if it is the case that :ALL.geometry is not equal to null then let dupfeatgeom = :ALL.geometry and then report on get_point(dupfeatgeom).  
 ![Alt text](img/DuplicateFeaturesReportAction.png?raw=true "Duplicate Feature Report Action Screenshot")
 
 
