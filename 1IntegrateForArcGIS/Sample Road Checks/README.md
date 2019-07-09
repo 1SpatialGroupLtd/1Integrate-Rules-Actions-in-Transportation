@@ -1,7 +1,7 @@
 # Sample Road Checks
-This repo folder contains some Sample Road checks by Rule that can be used within 1Integrate.  
+This repo folder contains a Sample Road Checks [Ruleset](SampleRoadChecks.rules) that can be used within [1Integrate for ArcGIS](https://1spatial.com/products/1integrate-for-arcgis/).
 These road checks are used by a number of State DOT's using 1Spatial's 1Integrate software.  
-For instructions on restoring a backup please refer to the following [documentation](https://1spatial.com/documentation/1integrate/v2_3/Topics/Backup_Restore.htm?Highlight=Restore%20Backup%20Rules) .
+For instructions on uploading and publishing Rulesets, please refer to the following [documentation](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Rules/Free_Rulesets.htm) .
 
 ## [Road Geometry Must Not Be Too Short or NULL](SampleRoadChecks.rules)
 Tests to see if a Road geometry is too short or NULL. For this example, a Road geometry needs to be longer than the data unit of length of 3. This rule uses the built-in function line_length. The line_length built-in function returns the length of a line. If the geometry passed in is a simple point or a simple area, then the length returned will be 0. If it is a complex geometry, the length returned will be the sum of the lengths of each simple line in the complex geometry. Note: This function does not currently fully support 3D geometries. Any 3D geometries will be projected down to 2 dimensions.
