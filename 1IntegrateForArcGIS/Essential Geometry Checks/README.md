@@ -3,7 +3,7 @@ This repo folder contains the Essential Geometry Checks [Ruleset](Essential%20Ge
 For instructions on uploading and publishing Rulesets, please refer to the following [documentation](https://1spatial.com/documentation/1integrate-arcgis/v2/Topics/Rules/Free_Rulesets.htm)
 
 ## Check for Duplicate Features
-Checks for two features within the same class (aka Feature Class) that has the same geometry.
+Checks for two features within the same class (aka Feature Class) that have the same geometry.
 
 ### Rule Syntax
 Check for objects ALL that there are no objects ALL2 for which :ALL2.geometry equals :ALL.geometry and class(:ALL2) equals class(:ALL) and :ALL2 does not equal :ALL.  
