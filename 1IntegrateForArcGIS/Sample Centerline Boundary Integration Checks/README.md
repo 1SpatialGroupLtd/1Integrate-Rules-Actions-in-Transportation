@@ -7,6 +7,7 @@ For instructions on uploading and publishing Rulesets, please refer to the follo
 
 ## [Streets Within Boundary](SampleCenterlineBoundaryIntegrationChecks.rules)
 Checks that a street does not cross over a boundary.  
+![Alt text](img/CrossExample.png?raw=true "Crossing Area-to-line Example")  
 
 ### Rule Syntax
 Check for Street Segment objects that there are no Boundary objects for which Street Segment.geometry crosses Boundary.geometry.  
@@ -17,6 +18,7 @@ Check for Street Segment objects that there are no Boundary objects for which St
 Checks that if a street is fully contained within a boundary (By fully contained, we are saying it does not share the boundary) then the street's left and right boundary names should both equal the boundary's name that the centerline is contained within.  
 
 For this check, because a line is contained within a boundary even if it shares the edge, we need to make sure to add a clause to ignore street segments that are contained within the perimeter aka the built_in_function boundary().   
+![Alt text](img/WithinContainExample.png?raw=true "Within\Contain Area-to-line Example")  
 
 ### Rule Syntax
 Check for Street Segment objects that for all Boundary objects for which Street Segment.geometry is contained within Boundary.geometry check that Street Segment.LeftBoundaryName equals Boundary.NAME and Street Segment.RightBoundaryName equals Boundary.NAME and it is not the case that (boundary(Boundary.geometry) contains Street Segment.geometry)   

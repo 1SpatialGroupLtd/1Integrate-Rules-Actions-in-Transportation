@@ -4,6 +4,7 @@ For instructions on restoring a backup please refer to the following [documentat
 
 ## [Check for Duplicate Features](CheckForDuplicateFeatures.xml)
 Checks for two features within the same class (aka Feature Class) that have the same geometry.  
+![Alt text](img/EqualGeometryExample.png?raw=true "Equal Geometry Example")  
 
 ### Rule Syntax
 Check for objects all that there are no objects duplicate features for which :duplicate features.geometry equals :all.geometry and class(:duplicate features) equals class(:all) and :duplicate features does not equal :all  
