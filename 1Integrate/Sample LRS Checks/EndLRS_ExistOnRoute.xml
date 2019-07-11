@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample LRS Checks</Name>
+                    <Description>Sample Linear Reference System Checks.  LRS aka Linear Reference Systems are used by many transportation agencies for Asset Management.  Instead of storing a geometry associated with an asset, a Begin and an End LRS value is stored, which represents the distance along a route that the asset starts at and where the asset ends.  Linear Segments stored in a Transportation departments GIS, also typically stores 'M' aka Measure values.  The 'M' values represent the actual real world distance a particular vertex (or node) has along the line segment.  "M' values are typically used because Route may be generalized or does not contain height information, so that the Geometry Projected Line Length may not be equal to the actual real world distance.\n\nFor example, a LRS asset such as a Guardrail may exist on Route 66 from mile 6.12 to 6.26.  In the asset management system there will be a Gaurdrail table with a record saying on Route 66, the begin LRS = 6.12 and the end LRS = 6.26.  Then in the GIS there should be a route that is at least 6.26 miles long with 'M' values ranging likely from 0 all the way up at least 6.26.\n\nWithin 1Integrate we have the ability to validate multiple sources, in this case an asset management system and a GIS   \n  </Description>
+                    <Comments></Comments>
+                    <Created>
+                        <UserDate/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2018-10-03T04:10:59.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample LRS Checks/End LRS exist on route">
+                    <Metadata>
+                        <Name>End LRS exist on route</Name>
+                        <Description>Checks that the End LRS value in the LRS Table actually exists within the available measure values of the linear route.  LRS aka Linear Reference Systems are used by many transportation agencies for Asset Management.  Instead of storing a geometry associated with an asset, a Begin and an End LRS value is stored, which represents the distance along a route that the asset starts at and where the asset ends.  This rule uses the built-in function get_measured_minimum and get_measured_maximum.  The get_measured_minimum returns the minimum measure value of a geometry. Measures can be null so the minimum may be null. The minimum value may not necessarily be found at the start/end of the geometry. If the argument passed in is null, the value returned will be null. If the argument passed in is not a measured geometry, an exception will be thrown.  The get_measured_maximum returns the maximum measure value of a geometry.  </Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2018-10-03T01:41:22.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-11-06T08:07:07.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Route" objLabel="">
+                            <ForAllPredicate classLabel="LRS_TABLE" objLabel="">
+                                <RelationalPredicate>
+                                    <DynamicValue classRef="Route" objRef="" propName="ROUTE_ID"/>
+                                    <EqualsRelation/>
+                                    <DynamicValue classRef="LRS_TABLE" objRef="" propName="ROUTE_ID"/>
+                                </RelationalPredicate>
+                                <RangePredicate minInclusive="true" maxInclusive="true">
+                                    <BuiltinFnValue fnName="round">
+                                        <DynamicValue classRef="LRS_TABLE" objRef="" propName="End_LRS"/>
+                                        <StaticValue datatype="integer" value="1"/>
+                                    </BuiltinFnValue>
+                                    <BuiltinFnValue fnName="round">
+                                        <BuiltinFnValue fnName="get_measure_minimum">
+                                            <DynamicValue classRef="Route" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <StaticValue datatype="integer" value="1"/>
+                                    </BuiltinFnValue>
+                                    <BuiltinFnValue fnName="round">
+                                        <BuiltinFnValue fnName="get_measure_maximum">
+                                            <DynamicValue classRef="Route" objRef="" propName="geometry"/>
+                                        </BuiltinFnValue>
+                                        <StaticValue datatype="integer" value="1"/>
+                                    </BuiltinFnValue>
+                                </RangePredicate>
+                            </ForAllPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>

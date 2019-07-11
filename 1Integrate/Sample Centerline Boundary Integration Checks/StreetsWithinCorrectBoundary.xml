@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Backup xmlns="http://schema.onespatial.com/radius/studio/v2" xmlns:gml="http://www.opengis.net/gml">
+    <RuleFolder>
+        <Metadata>
+            <Name>RULE</Name>
+            <Created>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </Created>
+            <LastEdited>
+                <UserDate date="2017-01-06T01:22:42.000Z" user="Radius Studio"/>
+            </LastEdited>
+        </Metadata>
+        <IsShortcut>false</IsShortcut>
+        <RuleFolder>
+            <Metadata>
+                <Name>Standard</Name>
+                <Created>
+                    <UserDate date="2017-01-03T01:13:12.000Z" user="1Spatial"/>
+                </Created>
+                <LastEdited>
+                    <UserDate date="2017-03-05T01:54:42.000Z" user="1Spatial"/>
+                </LastEdited>
+            </Metadata>
+            <IsShortcut>false</IsShortcut>
+            <RuleFolder>
+                <Metadata>
+                    <Name>Sample Centerline Boundary Integration Checks</Name>
+                    <Description>Validates between a boundary dataset such as a township and a centerline.  Typically, centerlines should either share an edge of a boundary or be completely contained within the boundary.</Description>
+                    <Comments></Comments>
+                    <Created>
+                        <UserDate/>
+                    </Created>
+                    <LastEdited>
+                        <UserDate date="2018-11-06T08:57:41.000Z" user="1Spatial"/>
+                    </LastEdited>
+                </Metadata>
+                <IsShortcut>false</IsShortcut>
+                <Item id="RULE://Standard/Sample Centerline Boundary Integration Checks/02. Streets within correct Boundary">
+                    <Metadata>
+                        <Name>02. Streets within correct Boundary</Name>
+                        <Description>Checks that if a street is fully contained within a boundary (By fully contained, we are saying it does not share the boundary) then the street's left and right boundary names should both equal the boundary's name that the centerline is contained within.\n\nFor this check, because a line is contained within a boundary even if it shares the edge, we need to make sure to add a clause to ignore street segments that are contained within the perimeter aka the built_in_function boundary(). \n</Description>
+                        <Comments></Comments>
+                        <Created>
+                            <UserDate date="2018-11-06T09:02:32.000Z" user="1Spatial"/>
+                        </Created>
+                        <LastEdited>
+                            <UserDate date="2018-11-02T07:09:32.000Z" user="1Spatial"/>
+                        </LastEdited>
+                    </Metadata>
+                    <IsShortcut>false</IsShortcut>
+                    <Rule>
+                        <RootPredicate classLabel="Street Segment" objLabel="">
+                            <ForAllPredicate classLabel="Boundary" objLabel="">
+                                <RelationalPredicate>
+                                    <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                    <SpatialWithinRelation/>
+                                    <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                </RelationalPredicate>
+                                <AndPredicate>
+                                    <RelationalPredicate>
+                                        <DynamicValue classRef="Street Segment" objRef="" propName="LeftBoundaryName"/>
+                                        <EqualsRelation/>
+                                        <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                    </RelationalPredicate>
+                                    <RelationalPredicate>
+                                        <DynamicValue classRef="Street Segment" objRef="" propName="RightBoundaryName"/>
+                                        <EqualsRelation/>
+                                        <DynamicValue classRef="Boundary" objRef="" propName="NAME"/>
+                                    </RelationalPredicate>
+                                    <NotPredicate>
+                                        <RelationalPredicate>
+                                            <BuiltinFnValue fnName="boundary">
+                                                <DynamicValue classRef="Boundary" objRef="" propName="geometry"/>
+                                            </BuiltinFnValue>
+                                            <SpatialContainsRelation/>
+                                            <DynamicValue classRef="Street Segment" objRef="" propName="geometry"/>
+                                        </RelationalPredicate>
+                                    </NotPredicate>
+                                </AndPredicate>
+                            </ForAllPredicate>
+                        </RootPredicate>
+                    </Rule>
+                </Item>
+            </RuleFolder>
+        </RuleFolder>
+    </RuleFolder>
+</Backup>
