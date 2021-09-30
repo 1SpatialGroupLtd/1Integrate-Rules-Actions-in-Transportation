@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/41 - FUTURE_AADT (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/41 - FUTURE_AADT (Cross)"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/56 - Report Missing LAST_OVERLAY_THICKNESS",
+    "rule" : "/rules/HPMS/3 - Coverage/56 - LAST_OVERLAY_THICKNESS"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/44 - Report Missing TERRAIN_TYPE",
+    "rule" : "/rules/HPMS/3 - Coverage/44 - TERRAIN_TYPE Must Exist"
+  } ]
+}

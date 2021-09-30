@@ -1,0 +1,79 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "ROUTE_NUMBER objects' Value_Numeric must be a whole number greater than 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "ROUTE_NUMBER",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "ROUTE_NUMBER"
+            }
+          }, {
+            "kind" : "NotEqualsRelation"
+          }, {
+            "kind" : "NullValue"
+          } ]
+        }, {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "ROUTE_NUMBER"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "floor"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "ROUTE_NUMBER"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "ROUTE_NUMBER"
+              }
+            }, {
+              "kind" : "GreaterRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "0"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

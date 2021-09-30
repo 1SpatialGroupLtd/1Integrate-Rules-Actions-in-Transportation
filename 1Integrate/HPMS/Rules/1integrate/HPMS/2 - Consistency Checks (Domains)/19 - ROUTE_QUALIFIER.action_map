@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/19 - ROUTE_QUALIFIER",
+    "rule" : "/rules/HPMS/2 - Domains/19 - ROUTE_QUALIFIER Domain"
+  } ]
+}

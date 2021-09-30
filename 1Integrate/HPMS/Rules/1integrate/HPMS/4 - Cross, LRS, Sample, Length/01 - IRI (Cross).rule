@@ -1,0 +1,42 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "IRI objects must have a Value_Numeric greater than or equal to 30 and less than or equal to 400.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "IRI",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RangePredicate",
+        "attributes" : {
+          "maxInclusive" : "true",
+          "minInclusive" : "true"
+        },
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "IRI"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "30"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "400"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

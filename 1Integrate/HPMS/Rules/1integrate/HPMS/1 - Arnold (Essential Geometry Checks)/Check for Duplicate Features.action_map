@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Duplicate Features\" with ACTION \"Markup Duplicate Features\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Duplicate Features",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Duplicate Features"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/12,13 - Report Missing TURN_LANES_R and TURN_LANES_L",
+    "rule" : "/rules/HPMS/3 - Coverage/12,13 - TURN_LANES_R and TURN_LANES_L Must Exist"
+  } ]
+}

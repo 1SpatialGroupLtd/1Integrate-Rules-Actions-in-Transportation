@@ -1,0 +1,180 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "SPEED_LIMIT",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "attributes" : {
+          "template_num_params" : "1",
+          "template_name" : "Domain Check - Floor() and Range Only",
+          "template_id" : "ACTION://HPMS/Templates/Domain Check - Floor() and Range Only",
+          "template_type" : "Action"
+        },
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "Feature_Class",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "SPEED_LIMIT",
+              "template_param" : "1"
+            }
+          } ]
+        }, {
+          "kind" : "ConditionalOperation",
+          "predicates" : [ {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "SPEED_LIMIT",
+                "template_param" : "1"
+              }
+            }, {
+              "kind" : "NotEqualsRelation"
+            }, {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "floor"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "SPEED_LIMIT",
+                  "template_param" : "1"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "Report",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "SPEED_LIMIT",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Note",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "SummedValue",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "name" : "Feature_Class",
+                      "scope" : "local",
+                      "dataType" : ""
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : " object's Value_Numeric is not a whole number."
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "Report",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "SPEED_LIMIT",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Note",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "SummedValue",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "name" : "Feature_Class",
+                      "scope" : "local",
+                      "dataType" : ""
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : " object's Value_Numeric is not in correct range."
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

@@ -1,0 +1,296 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "tasks" : [ {
+    "kind" : "OpenData",
+    "datastore" : "/datastores/HPMS/Markup Data",
+    "id" : "15d2f9c8-9241-4b69-a934-5fdedae67645",
+    "label" : "",
+    "openedDataBufferDistance" : 0.0,
+    "taskIdentifier" : "15d2f9c8-9241-4b69-a934-5fdedae67645",
+    "topologyEnabled" : true
+  }, {
+    "kind" : "OpenData",
+    "datastore" : "/datastores/HPMS/HPMS Populated Example",
+    "id" : "6f70c1a8-f8e7-4729-9eac-afa23fca20be",
+    "label" : "",
+    "openedDataBufferDistance" : 0.0,
+    "taskIdentifier" : "6f70c1a8-f8e7-4729-9eac-afa23fca20be",
+    "topologyEnabled" : true
+  }, {
+    "kind" : "CheckRules",
+    "id" : "3b9da025-2bba-4201-8deb-78c7b4037328",
+    "label" : "",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Duplicate Features" ],
+    "taskIdentifier" : "3b9da025-2bba-4201-8deb-78c7b4037328"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "81937465-00d3-4d1b-9120-cd90fc178110",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Duplicate Vertices" ],
+    "taskIdentifier" : "81937465-00d3-4d1b-9120-cd90fc178110"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "89d42e2f-9a96-4cae-b1aa-e6b1962f061e",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Kickbacks" ],
+    "taskIdentifier" : "89d42e2f-9a96-4cae-b1aa-e6b1962f061e"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "a9a85ca1-09b7-4549-81a5-4434124002dc",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Multipart Geometries" ],
+    "taskIdentifier" : "a9a85ca1-09b7-4549-81a5-4434124002dc"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "cfb84804-0270-4f7c-b757-d6804a4b3fc6",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Overlap" ],
+    "taskIdentifier" : "cfb84804-0270-4f7c-b757-d6804a4b3fc6"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "c8625748-ea6a-4b45-9a09-8b8600a12b4d",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Self-Intersections" ],
+    "taskIdentifier" : "c8625748-ea6a-4b45-9a09-8b8600a12b4d"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "feb71628-f8f9-4f6a-8e8b-60d565629786",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Spikes" ],
+    "taskIdentifier" : "feb71628-f8f9-4f6a-8e8b-60d565629786"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "e29989ce-dfba-4816-809b-4733391d7d1d",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check that Features are Simple" ],
+    "taskIdentifier" : "e29989ce-dfba-4816-809b-4733391d7d1d"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "ab3f505b-ed59-4600-bb00-6d08f984c745",
+    "rules" : [ "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check that Features are Valid" ],
+    "taskIdentifier" : "ab3f505b-ed59-4600-bb00-6d08f984c745"
+  }, {
+    "kind" : "BuildTopology",
+    "classes" : [ "ARNOLD", "F_SYSTEM", "FACILITY_TYPE", "NHS", "OWNERSHIP", "URBAN_CODE", "AADT" ],
+    "id" : "f2074807-6506-46e3-a8e5-8ed98c289fe9",
+    "label" : "",
+    "model" : "NETWORK",
+    "snappingType" : "EDGES_SPLIT_EDGES",
+    "taskIdentifier" : "f2074807-6506-46e3-a8e5-8ed98c289fe9",
+    "tolerance" : 0.0
+  }, {
+    "kind" : "CheckRules",
+    "id" : "4a060dcd-6196-4482-aae6-fa3a7ea010d8",
+    "rules" : [ "/rules/HPMS/2 - Domains/01 - F_SYSTEM Domain", "/rules/HPMS/2 - Domains/02 - URBAN_CODE Domain", "/rules/HPMS/2 - Domains/03 - FACILITY_TYPE Domain", "/rules/HPMS/2 - Domains/05 - ACCESS_CONTROL Domain", "/rules/HPMS/2 - Domains/06 - OWNERSHIP Domain", "/rules/HPMS/2 - Domains/07 - THROUGH_LANES Domain", "/rules/HPMS/2 - Domains/08 - HOV_TYPE Domain", "/rules/HPMS/2 - Domains/09 - HOV_LANES Domain", "/rules/HPMS/2 - Domains/10 - PEAK_LANES Domain", "/rules/HPMS/2 - Domains/11 - COUNTER_PEAK_LANES Domain", "/rules/HPMS/2 - Domains/12 - TURN_LANES_R Domain", "/rules/HPMS/2 - Domains/13 - TURN_LANES_L Domain", "/rules/HPMS/2 - Domains/14 - SPEED_LIMIT Domain", "/rules/HPMS/2 - Domains/15 - TOLL_CHARGED Domain", "/rules/HPMS/2 - Domains/16 - TOLL_TYPE Domain", "/rules/HPMS/2 - Domains/17 - ROUTE_NUMBER Domain", "/rules/HPMS/2 - Domains/18 - ROUTE_SIGNING Domain", "/rules/HPMS/2 - Domains/19 - ROUTE_QUALIFIER Domain", "/rules/HPMS/2 - Domains/21 - AADT Domain", "/rules/HPMS/2 - Domains/22 - AADT_SINGLE_UNIT Domain", "/rules/HPMS/2 - Domains/23 - PCT_PEAK_SINGLE Domain", "/rules/HPMS/2 - Domains/24 - AADT_COMBINATION Domain", "/rules/HPMS/2 - Domains/25 - PCT_PEAK_COMBINATION Domain", "/rules/HPMS/2 - Domains/26 - K_FACTOR Domain", "/rules/HPMS/2 - Domains/27 - DIR_FACTOR Domain", "/rules/HPMS/2 - Domains/28 - FUTURE_AADT Domain", "/rules/HPMS/2 - Domains/29 - SIGNAL_TYPE Domain", "/rules/HPMS/2 - Domains/30 - PCT_GREEN_TIME Domain", "/rules/HPMS/2 - Domains/31 - NUMBER_SIGNALS Domain", "/rules/HPMS/2 - Domains/32 - STOP_SIGNS Domain", "/rules/HPMS/2 - Domains/33 - AT_GRADE_OTHER Domain", "/rules/HPMS/2 - Domains/34 - LANE_WIDTH Domain", "/rules/HPMS/2 - Domains/35 - MEDIAN_TYPE Domain", "/rules/HPMS/2 - Domains/37 - SHOULDER_TYPE Domain", "/rules/HPMS/2 - Domains/38 - SHOULDER_WIDTH_R Domain", "/rules/HPMS/2 - Domains/39 - SHOULDER_WIDTH_L Domain", "/rules/HPMS/2 - Domains/40 - PEAK_PARKING Domain", "/rules/HPMS/2 - Domains/41 - WIDENING_OBSTACLE Domain", "/rules/HPMS/2 - Domains/42 - WIDENING_POTENTIAL Domain", "/rules/HPMS/2 - Domains/43a - CURVES_A Domain", "/rules/HPMS/2 - Domains/43b - CURVES_B Domain", "/rules/HPMS/2 - Domains/43c - CURVES_C Domain", "/rules/HPMS/2 - Domains/43d - CURVES_D Domain", "/rules/HPMS/2 - Domains/43e - CURVES_E Domain", "/rules/HPMS/2 - Domains/43f - CURVES_F Domain", "/rules/HPMS/2 - Domains/44 - TERRAIN_TYPE Domain", "/rules/HPMS/2 - Domains/45a - GRADES_A Domain", "/rules/HPMS/2 - Domains/45b - GRADES_B Domain", "/rules/HPMS/2 - Domains/45c - GRADES_C Domain", "/rules/HPMS/2 - Domains/45d - GRADES_D Domain", "/rules/HPMS/2 - Domains/45e - GRADES_E Domain", "/rules/HPMS/2 - Domains/45f - GRADES_F Domain", "/rules/HPMS/2 - Domains/46 - PCT_PASSING_SIGHT Domain", "/rules/HPMS/2 - Domains/47 - IRI Domain", "/rules/HPMS/2 - Domains/48 - PSR Domain", "/rules/HPMS/2 - Domains/49 - SURFACE_TYPE Domain", "/rules/HPMS/2 - Domains/50 - RUTTING Domain", "/rules/HPMS/2 - Domains/51 - FAULTING Domain", "/rules/HPMS/2 - Domains/52 - CRACKING_PERCENT Domain", "/rules/HPMS/2 - Domains/54 - YEAR_LAST_IMPROVEMENT Domain", "/rules/HPMS/2 - Domains/55 - YEAR_LAST_CONSTRUCTION Domain", "/rules/HPMS/2 - Domains/56 - LAST_OVERLAY_THICKNESS", "/rules/HPMS/2 - Domains/57 - THICKNESS_RIGID Domain", "/rules/HPMS/2 - Domains/58 - THICKNESS_FLEXIBLE Domain", "/rules/HPMS/2 - Domains/59 - BASE_TYPE Domain", "/rules/HPMS/2 - Domains/60 - BASE_THICKNESS Domain", "/rules/HPMS/2 - Domains/63 - COUNTY_CODE Domain", "/rules/HPMS/2 - Domains/64 - NHS Domain", "/rules/HPMS/2 - Domains/65 - STRAHNET_TYPE Domain", "/rules/HPMS/2 - Domains/66 - TRUCK Domain", "/rules/HPMS/2 - Domains/67 - FUTURE_FACILITY Domain", "/rules/HPMS/2 - Domains/69 - CAPACITY Domain", "/rules/HPMS/2 - Domains/70 - DIR_THROUGH_LANES Domain" ],
+    "taskIdentifier" : "4a060dcd-6196-4482-aae6-fa3a7ea010d8"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "157dc786-29b0-4ff8-af0b-53dd5e8b2f47",
+    "rules" : [ "/rules/HPMS/3 - Coverage/00a - sys_edge Coverage", "/rules/HPMS/3 - Coverage/00b - ARNOLD Coverage", "/rules/HPMS/3 - Coverage/01 - F_SYSTEM Must Exist", "/rules/HPMS/3 - Coverage/02 - URBAN_CODE Must Exist", "/rules/HPMS/3 - Coverage/03 - FACILITY_TYPE Must Exist", "/rules/HPMS/3 - Coverage/05 - ACCESS_CONTROL Must Exist", "/rules/HPMS/3 - Coverage/06 - OWNERSHIP Must Exist", "/rules/HPMS/3 - Coverage/07 - THROUGH_LANES Must Exist", "/rules/HPMS/3 - Coverage/08 - HOV_TYPE Must Exist", "/rules/HPMS/3 - Coverage/09 - HOV_LANES Must Exist", "/rules/HPMS/3 - Coverage/11 - COUNTER_PEAK_LANES Must Exist", "/rules/HPMS/3 - Coverage/12,13 - TURN_LANES_R and TURN_LANES_L Must Exist", "/rules/HPMS/3 - Coverage/15 - TOLL_CHARGED Must Exist", "/rules/HPMS/3 - Coverage/16 - TOLL_TYPE Must Exist", "/rules/HPMS/3 - Coverage/17 - ROUTE_NUMBER - Value_Numeric & Value_Text Must Exist", "/rules/HPMS/3 - Coverage/18 - ROUTE_SIGNING Must Exist", "/rules/HPMS/3 - Coverage/19 - ROUTE_QUALIFIER Must Exist", "/rules/HPMS/3 - Coverage/21 - AADT Must Exist", "/rules/HPMS/3 - Coverage/22,24 - AADT_SINGLE_UNIT and AADT_COMBINATION Must Exist", "/rules/HPMS/3 - Coverage/29 - SIGNAL_TYPE Must Exist", "/rules/HPMS/3 - Coverage/30 - PCT_GREEN_TIME Must Exist", "/rules/HPMS/3 - Coverage/31 - NUMBER_SIGNALS Must Exist", "/rules/HPMS/3 - Coverage/36 - MEDIAN_WIDTH Must Exist", "/rules/HPMS/3 - Coverage/38 - SHOULDER_WIDTH_R Must Exist", "/rules/HPMS/3 - Coverage/39 - SHOULDER_WIDTH_L Must Exist", "/rules/HPMS/3 - Coverage/40 - PEAK_PARKING Must Exist", "/rules/HPMS/3 - Coverage/43,45,72-75 - CURVES_A-F and GRADES_A-F Must Exist", "/rules/HPMS/3 - Coverage/44 - TERRAIN_TYPE Must Exist", "/rules/HPMS/3 - Coverage/46 - PCT_PASS_SIGHT Must Exist", "/rules/HPMS/3 - Coverage/47 - IRI Must Exist", "/rules/HPMS/3 - Coverage/48(a) - PSR Must Exist (Value_Text equals 'A')", "/rules/HPMS/3 - Coverage/48(b) - PSR Must Exist", "/rules/HPMS/3 - Coverage/49 - SURFACE_TYPE Must Exist", "/rules/HPMS/3 - Coverage/50 - RUTTING Must Exist", "/rules/HPMS/3 - Coverage/51 - FAULTING Must Exist", "/rules/HPMS/3 - Coverage/52 - CRACKING_PERCENT Must Exsit", "/rules/HPMS/3 - Coverage/54 - YEAR_LAST_IMPROVEMENT Must Exist", "/rules/HPMS/3 - Coverage/55 - YEAR_LAST_CONSTRUCTION Must Exist", "/rules/HPMS/3 - Coverage/56 - LAST_OVERLAY_THICKNESS", "/rules/HPMS/3 - Coverage/57 - THICKNESS_RIGID Must Exist", "/rules/HPMS/3 - Coverage/58 - THICKNESS_FLEXIBLE Must Exist", "/rules/HPMS/3 - Coverage/59 - BASE_TYPE Must Exist", "/rules/HPMS/3 - Coverage/60 - BASE_THICKNESS Must Exist", "/rules/HPMS/3 - Coverage/63 - COUNTY_CODE Must Exist", "/rules/HPMS/3 - Coverage/64 - NHS Must Exist", "/rules/HPMS/3 - Coverage/70 - DIR_THROUGH_LANES Must Exist" ],
+    "taskIdentifier" : "157dc786-29b0-4ff8-af0b-53dd5e8b2f47"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "abb08f91-032e-4e2c-abbb-c74d0a4dad1a",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/01 - IRI (Cross)" ],
+    "taskIdentifier" : "abb08f91-032e-4e2c-abbb-c74d0a4dad1a"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "a811f47c-210b-4289-98f7-df7ef01df86a",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/01 - IRI (Length)" ],
+    "taskIdentifier" : "a811f47c-210b-4289-98f7-df7ef01df86a"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "2ba692e2-84db-4d03-b67c-03eabdd093be",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/02 - Samples are Invalid on Ramps (Sample)" ],
+    "taskIdentifier" : "2ba692e2-84db-4d03-b67c-03eabdd093be"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "c991970d-b4a1-41e7-bca3-030ebc191d26",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/09 - YEAR_LAST_CONSTRUCTION (Cross)" ],
+    "taskIdentifier" : "c991970d-b4a1-41e7-bca3-030ebc191d26"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "e0499b5b-1c77-44b3-b04e-7420f39ecf91",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/14 - LANE_WIDTH (Cross)" ],
+    "taskIdentifier" : "e0499b5b-1c77-44b3-b04e-7420f39ecf91"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "3139cd1b-18cd-4fef-b9fa-a4234a389732",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/15 - SPEED_LIMIT (Cross)" ],
+    "taskIdentifier" : "3139cd1b-18cd-4fef-b9fa-a4234a389732"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "c8e3d7d8-fb69-45ed-aa15-482d8b8bcce7",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/16 - COUNTER_PEAK_LANES (Cross)" ],
+    "taskIdentifier" : "c8e3d7d8-fb69-45ed-aa15-482d8b8bcce7"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "7f45fbf0-240c-4598-9f02-bb2a8a75565b",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/17 - AADT_SINGLE_UNIT & AADT_COMBINATION (Cross)" ],
+    "taskIdentifier" : "7f45fbf0-240c-4598-9f02-bb2a8a75565b"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "6645ad86-3592-422a-9880-ae506881c602",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/20 - MEDIAN_WIDTH (Cross)" ],
+    "taskIdentifier" : "6645ad86-3592-422a-9880-ae506881c602"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "bf25f808-4cbc-4da0-9d0e-ba24d870e88b",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/22 - MEDIAN_TYPE (Cross)" ],
+    "taskIdentifier" : "bf25f808-4cbc-4da0-9d0e-ba24d870e88b"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "e90a9671-42de-4c19-b852-57723dc68b71",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/23 - WIDENING_OBSTACLES (Cross)" ],
+    "taskIdentifier" : "e90a9671-42de-4c19-b852-57723dc68b71"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "9aa6af95-7d6e-4e22-b9ec-416ac4ba2490",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/39 - DIR_FACTOR (Cross)" ],
+    "taskIdentifier" : "9aa6af95-7d6e-4e22-b9ec-416ac4ba2490"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "11879561-4af6-445d-9848-a2df402d4c5d",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/40 - DIR_FACTOR (Cross)" ],
+    "taskIdentifier" : "11879561-4af6-445d-9848-a2df402d4c5d"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "f0b2d677-19ae-49c1-9309-0de32d16c515",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/41 - FUTURE_AADT (Cross)" ],
+    "taskIdentifier" : "f0b2d677-19ae-49c1-9309-0de32d16c515"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "4522a5c5-0e06-413d-ad17-186e51b944d0",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/42,57 - PCT_PEAK_SINGLE (Cross)" ],
+    "taskIdentifier" : "4522a5c5-0e06-413d-ad17-186e51b944d0"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "2aa2bc52-c66c-4f0c-8648-ba596fadf0fc",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/43,56 - PCT_PEAK_COMBINATION (Cross)" ],
+    "taskIdentifier" : "2aa2bc52-c66c-4f0c-8648-ba596fadf0fc"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "347af134-182f-45b4-9b70-44b819061c37",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/44 - AADT_COMBINATION_UNIT (Cross)" ],
+    "taskIdentifier" : "347af134-182f-45b4-9b70-44b819061c37"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "71e97154-d822-41c9-86d3-b3b89022d489",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/45 - AADT_SINGLE_UNIT (Cross)" ],
+    "taskIdentifier" : "71e97154-d822-41c9-86d3-b3b89022d489"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "da7f1be8-2d8f-4f30-9d57-81db405333de",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/46 - IRI, RUTTING, FAULTING, CRACKING (Cross)" ],
+    "taskIdentifier" : "da7f1be8-2d8f-4f30-9d57-81db405333de"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "3c0d18f5-c896-4188-aab8-c99e4d6d52f7",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/47 - FAULTING (Cross)" ],
+    "taskIdentifier" : "3c0d18f5-c896-4188-aab8-c99e4d6d52f7"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "b1293717-1dfb-47b7-b142-ec734bf4b64e",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/49 - K_FACTOR (Cross)" ],
+    "taskIdentifier" : "b1293717-1dfb-47b7-b142-ec734bf4b64e"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "d3e9d87a-ea8c-4f5e-9094-41f10df73c4e",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/51 - CRACKING_PERCENT (Cross)" ],
+    "taskIdentifier" : "d3e9d87a-ea8c-4f5e-9094-41f10df73c4e"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "356c95e5-c98a-4b69-a17c-d01a10f11b82",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/52 - RUTTING (Cross)" ],
+    "taskIdentifier" : "356c95e5-c98a-4b69-a17c-d01a10f11b82"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "7373ffeb-f0c5-467e-82ef-cbbf3a549993",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/53(a) - THROUGH_LANES (Cross)" ],
+    "taskIdentifier" : "7373ffeb-f0c5-467e-82ef-cbbf3a549993"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "074045f0-713b-4a75-afdc-9db41a3f4c26",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/53(b) - THROUGH_LANES (Cross)" ],
+    "taskIdentifier" : "074045f0-713b-4a75-afdc-9db41a3f4c26"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "116de2da-872c-4cf8-96d2-9ab236a6c946",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/54 - AADT_COMBINATION_UNIT (Cross)" ],
+    "taskIdentifier" : "116de2da-872c-4cf8-96d2-9ab236a6c946"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "6e27aaf6-5571-4afd-ba99-686da19a877c",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/55 - AADT_SINGLE_UNIT (Cross)" ],
+    "taskIdentifier" : "6e27aaf6-5571-4afd-ba99-686da19a877c"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "ca7b3d8a-ee71-4094-a4c5-261b65e3f905",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/60 - SHOULDER_WIDTH_L" ],
+    "taskIdentifier" : "ca7b3d8a-ee71-4094-a4c5-261b65e3f905"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "6f377d0a-9c54-4d2a-942a-34ab893bc54d",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/61 - IRI, RUTTING, FAULTING, CRACKING (Cross)" ],
+    "taskIdentifier" : "6f377d0a-9c54-4d2a-942a-34ab893bc54d"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "9f25f963-de60-486b-918e-f3623c8580ee",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/63 - CRACKING_PERCENT (Cross)" ],
+    "taskIdentifier" : "9f25f963-de60-486b-918e-f3623c8580ee"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "7609a4b9-b81b-41d3-8a0f-16bdb994e6d0",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - CRACKING (Cross)" ],
+    "taskIdentifier" : "7609a4b9-b81b-41d3-8a0f-16bdb994e6d0"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "7bc270f6-35d2-45d3-88f1-663b8f5471a5",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - RUTTING (Cross)" ],
+    "taskIdentifier" : "7bc270f6-35d2-45d3-88f1-663b8f5471a5"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "11499655-f7e6-480e-b517-7d2400d879c1",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - IRI (Cross)" ],
+    "taskIdentifier" : "11499655-f7e6-480e-b517-7d2400d879c1"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "ae424426-2db7-4359-aa16-75fc25849639",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - RUTTING (Cross)" ],
+    "taskIdentifier" : "ae424426-2db7-4359-aa16-75fc25849639"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "9d02daad-fe68-426e-8a8a-0258bcc634ab",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/65 - PSR (Cross) (1.1)" ],
+    "taskIdentifier" : "9d02daad-fe68-426e-8a8a-0258bcc634ab"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "6032453e-892c-494c-b37f-845c277fbab7",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/66 - PSR (Cross)" ],
+    "taskIdentifier" : "6032453e-892c-494c-b37f-845c277fbab7"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "7c5e1800-7c46-4ff2-a1f2-122ab4088b0b",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - CRACKING_PERCENT (Length)" ],
+    "taskIdentifier" : "7c5e1800-7c46-4ff2-a1f2-122ab4088b0b"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "db50755a-f624-4bb6-bf84-4c2b8133b93d",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - FAULTING (Length)" ],
+    "taskIdentifier" : "db50755a-f624-4bb6-bf84-4c2b8133b93d"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "de8da7b3-ab2e-4edb-ab44-88adb7a893a5",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - PSR (Length)" ],
+    "taskIdentifier" : "de8da7b3-ab2e-4edb-ab44-88adb7a893a5"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "5d678989-a378-474c-9af7-3c860363fe32",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - RUTTING (Length)" ],
+    "taskIdentifier" : "5d678989-a378-474c-9af7-3c860363fe32"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "a8aba4d5-34de-4a15-96d1-346b457d13cc",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - SIGNAL_TYPE (Cross)" ],
+    "taskIdentifier" : "a8aba4d5-34de-4a15-96d1-346b457d13cc"
+  }, {
+    "kind" : "CheckRules",
+    "id" : "caf15cf0-b65a-4197-a9b6-fcb963089bb9",
+    "rules" : [ "/rules/HPMS/4 - Cross, LRS, Sample, Length/Null - Sample Crosses Over TOPS (Sample)" ],
+    "taskIdentifier" : "caf15cf0-b65a-4197-a9b6-fcb963089bb9"
+  } ]
+}

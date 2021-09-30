@@ -1,0 +1,86 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "FAULTING objects' Value_Numeric must be greater than or equal to 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "FAULTING",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "FAULTING"
+            }
+          }, {
+            "kind" : "GreaterEqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "real",
+              "value" : "0.0"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "to_integer"
+            },
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "substring"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_string"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Date",
+                    "classRef" : "FAULTING"
+                  }
+                } ]
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "0"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "4"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "LessEqualsRelation"
+          }, {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Year_Record",
+              "classRef" : "FAULTING"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

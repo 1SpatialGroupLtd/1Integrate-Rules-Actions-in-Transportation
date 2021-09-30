@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Multipart Geometries\" with ACTION \"Markup Multipart Geometries\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Multipart Geometries",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Multipart Geometries"
+  } ]
+}

@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/00b - Report missing ARNOLD Coverage",
+    "rule" : "/rules/HPMS/3 - Coverage/00b - ARNOLD Coverage"
+  } ]
+}

@@ -1,0 +1,34 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CURVES_F objects' Value_Numeric must be greater than zero.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "CURVES_F",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "CURVES_F"
+          }
+        }, {
+          "kind" : "GreaterRelation"
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "real",
+            "value" : "0"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

@@ -1,0 +1,40 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "RUTTING objects must not have a LENGTH greater than 0.11 miles.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "RUTTING",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "BuiltinFnValue",
+          "attributes" : {
+            "fnName" : "line_length"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "RUTTING"
+            }
+          } ]
+        }, {
+          "kind" : "LessRelation"
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "real",
+            "value" : "0.11"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

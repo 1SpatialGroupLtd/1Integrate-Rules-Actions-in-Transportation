@@ -1,0 +1,290 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "missingFeature",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "TOLL_CHARGED"
+            }
+          } ]
+        }, {
+          "kind" : "SequenceOperation",
+          "attributes" : {
+            "template_num_params" : "1",
+            "template_name" : "Missing Feature",
+            "template_id" : "ACTION://HPMS/Templates/Missing Feature",
+            "template_type" : "Action"
+          },
+          "predicates" : [ {
+            "kind" : "ReportOperation",
+            "attributes" : {
+              "scope" : "per-object",
+              "label" : "Missing Object"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "sys:edge",
+                "template_param" : "1"
+              }
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "Report",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "sys:edge",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Note",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "SummedValue",
+                  "predicates" : [ {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : "Missing "
+                    }
+                  }, {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "name" : "missingFeature",
+                      "scope" : "local",
+                      "dataType" : ""
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : " Object"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "ForPredicateOperation",
+                "attributes" : {
+                  "classLabel" : "ARNOLD",
+                  "objLabel" : "",
+                  "n" : "0"
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "ARNOLD",
+                    "refName" : "sys:line_to_edge",
+                    "template_param_2" : "1",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "SequenceOperation",
+                  "predicates" : [ {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "BeginMile",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "measure_from_point"
+                      },
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "geometry",
+                          "classRef" : "ARNOLD"
+                        }
+                      }, {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "start_of"
+                        },
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "geometry",
+                            "classRef" : "sys:edge",
+                            "template_param" : "1"
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "EndMile",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "measure_from_point"
+                      },
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "geometry",
+                          "classRef" : "ARNOLD"
+                        }
+                      }, {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "end_of"
+                        },
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "geometry",
+                            "classRef" : "sys:edge",
+                            "template_param" : "1"
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "ConditionalOperation",
+                    "predicates" : [ {
+                      "kind" : "RelationalPredicate",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "BeginMile",
+                          "classRef" : "Report"
+                        }
+                      }, {
+                        "kind" : "GreaterRelation"
+                      }, {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "EndMile",
+                          "classRef" : "Report"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "SequenceOperation",
+                      "predicates" : [ {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "name" : "FlipEM",
+                            "scope" : "local",
+                            "dataType" : ""
+                          }
+                        }, {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "BeginMile",
+                            "classRef" : "Report"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "BeginMile",
+                            "classRef" : "Report"
+                          }
+                        }, {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "EndMile",
+                            "classRef" : "Report"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "EndMile",
+                            "classRef" : "Report"
+                          }
+                        }, {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "name" : "FlipEM",
+                            "scope" : "local",
+                            "dataType" : ""
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

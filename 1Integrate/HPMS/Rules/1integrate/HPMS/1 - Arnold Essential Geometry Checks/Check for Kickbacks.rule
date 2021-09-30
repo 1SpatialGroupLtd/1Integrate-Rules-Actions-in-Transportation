@@ -1,0 +1,57 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Checks the linework of geometries to make sure there are no 'kickbacks'. A kickback is a z shape formed when a segment of line or polygon boundary has two sharp angles less than 12 degrees and one after the other in opposite directions.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "ARNOLD"
+            }
+          }, {
+            "kind" : "NotEqualsRelation"
+          }, {
+            "kind" : "NullValue"
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "has_kickbacks"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "ARNOLD"
+              }
+            } ]
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "boolean",
+              "value" : "false"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

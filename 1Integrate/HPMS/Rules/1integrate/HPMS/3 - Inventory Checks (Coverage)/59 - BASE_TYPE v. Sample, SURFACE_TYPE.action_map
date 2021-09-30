@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/59 - Report Missing BASE_TYPE",
+    "rule" : "/rules/HPMS/3 - Coverage/59 - BASE_TYPE Must Exist"
+  } ]
+}

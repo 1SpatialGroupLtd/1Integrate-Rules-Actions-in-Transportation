@@ -1,0 +1,280 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Creates a markup of the appropriate type (point, line, area) for each non-simple feature. Avoids duplicate markups. Null geometries are processed in the RULE \"Check that Features are Valid\".",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "rule name"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "rule_name"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "class name"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "ARNOLD"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "feat_guid"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "to_string"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "ARNOLD"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "comment"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "Geometry is not simple"
+            }
+          } ]
+        }, {
+          "kind" : "ConditionalOperation",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "MARKUP_LINE",
+              "qualifier" : "exactly",
+              "n" : "0",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "SpatialEqualsRelation"
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "ARNOLD"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "class",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "class name"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "violation",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "rule name"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "MARKUP_LINE",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "class",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "class name"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "violation",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "rule name"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "ARNOLD"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "comment",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "comment"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "feat_guid",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "feat_guid"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "rel_class",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "rel_f_guid",
+                    "classRef" : "MARKUP_LINE"
+                  }
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

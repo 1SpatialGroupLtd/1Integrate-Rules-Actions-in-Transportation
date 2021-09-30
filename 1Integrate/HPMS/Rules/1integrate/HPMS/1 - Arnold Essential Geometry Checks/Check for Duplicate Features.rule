@@ -1,0 +1,81 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Checks all geometries for duplicates within a feature layer (i.e. more than one feature with the same geometry in the same layer). ",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "ARNOLD"
+            }
+          }, {
+            "kind" : "NotEqualsRelation"
+          }, {
+            "kind" : "NullValue"
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "ARNOLD",
+            "qualifier" : "exactly",
+            "n" : "0",
+            "objLabel" : "duplicate"
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "duplicate",
+                  "propName" : "geometry",
+                  "classRef" : "ARNOLD"
+                }
+              }, {
+                "kind" : "SpatialEqualsRelation"
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "ARNOLD"
+                }
+              } ]
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "ObjectValue",
+                "attributes" : {
+                  "objRef" : "duplicate",
+                  "classRef" : "ARNOLD"
+                }
+              }, {
+                "kind" : "NotEqualsRelation"
+              }, {
+                "kind" : "ObjectValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "classRef" : "ARNOLD"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

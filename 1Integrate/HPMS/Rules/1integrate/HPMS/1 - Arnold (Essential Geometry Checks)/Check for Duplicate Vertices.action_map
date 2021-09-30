@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Duplicate Vertices\" with ACTION \"Markup Duplicate Vertices\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Duplicate Vertices",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Duplicate Vertices"
+  } ]
+}

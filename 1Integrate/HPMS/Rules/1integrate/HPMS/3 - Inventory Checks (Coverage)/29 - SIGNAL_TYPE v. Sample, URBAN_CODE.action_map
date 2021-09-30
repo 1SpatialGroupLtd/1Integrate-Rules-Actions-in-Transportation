@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/29 - Report Missing SIGNAL_TYPE",
+    "rule" : "/rules/HPMS/3 - Coverage/29 - SIGNAL_TYPE Must Exist"
+  } ]
+}

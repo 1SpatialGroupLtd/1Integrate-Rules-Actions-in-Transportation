@@ -1,0 +1,120 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "YEAR_LAST_CONSTRUCTION",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "Feature_Class"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "YEAR_LAST_CONSTRUCTION"
+            }
+          } ]
+        }, {
+          "kind" : "CreateObjectOperation",
+          "attributes" : {
+            "classLabel" : "Report",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "YEAR_LAST_CONSTRUCTION"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Note",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "SummedValue",
+                "predicates" : [ {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "Feature_Class"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : " Value_Date is more recent than Year_Record."
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ReportOperation",
+          "attributes" : {
+            "scope" : "per-object",
+            "label" : "substringCheck"
+          },
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "substring"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Date",
+                "classRef" : "YEAR_LAST_CONSTRUCTION"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "0"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "4"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

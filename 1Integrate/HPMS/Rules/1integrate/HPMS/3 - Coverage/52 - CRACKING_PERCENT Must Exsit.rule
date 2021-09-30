@@ -1,0 +1,347 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "FAULTING object's Value_Numeric must exist for all SURFACE_TYPE objects with a Value_Numeric of 2,3,4,5,6,7,8,9,10 and for all FACILITY_TYPE objects with a Value_Numeric of 1,2 and ((for all F_SYSTEM objects with a Value_Numeric of 1 or for all NHS objects or for all Sample objects) or (for all DIR_THROUGH_LANES objects with a Value_Numeric greater than 0 and (for all IRI objects with a Value_Numeric that is not null or for all PSR objects with a Value_Numeric that is not null))).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "SURFACE_TYPE",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "SURFACE_TYPE",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "SURFACE_TYPE"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "2"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "10"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "FACILITY_TYPE",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "FACILITY_TYPE",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "FACILITY_TYPE"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "1"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "2"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "OrPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "F_SYSTEM",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "F_SYSTEM",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "F_SYSTEM"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "1"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "NHS",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "NHS",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "SAMPLE",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "SAMPLE",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "DIR_FACTOR",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "DIR_FACTOR",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "DIR_FACTOR"
+                    }
+                  }, {
+                    "kind" : "GreaterRelation"
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "0"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "OrPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "IRI",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "IRI",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "IRI"
+                      }
+                    }, {
+                      "kind" : "NotEqualsRelation"
+                    }, {
+                      "kind" : "NullValue"
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "PSR",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "PSR",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "PSR"
+                      }
+                    }, {
+                      "kind" : "NotEqualsRelation"
+                    }, {
+                      "kind" : "NullValue"
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "CRACKING_PERCENT",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "CRACKING_PERCENT",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "CRACKING_PERCENT"
+                }
+              }, {
+                "kind" : "NotEqualsRelation"
+              }, {
+                "kind" : "NullValue"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

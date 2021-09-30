@@ -1,0 +1,11 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Includes rules/actions for 48(a) and 48(b).",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/48 - Report Missing PSR",
+    "rule" : "/rules/HPMS/3 - Coverage/48(a) - PSR Must Exist (Value_Text equals 'A')"
+  }, {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/48 - Report Missing PSR",
+    "rule" : "/rules/HPMS/3 - Coverage/48(b) - PSR Must Exist"
+  } ]
+}

@@ -1,0 +1,391 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "ConditionalOperation",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "FACILITY_TYPE",
+              "n" : "0",
+              "objLabel" : "",
+              "qualifier" : "exactly"
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "FACILITY_TYPE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "name" : "missingFeature",
+                  "scope" : "local",
+                  "dataType" : ""
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "FACILITY_TYPE"
+                }
+              } ]
+            }, {
+              "kind" : "SequenceOperation",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Missing Feature on sys_edge",
+                "template_id" : "ACTION://HPMS/3 - Inventory Checks (Coverage)/Missing Feature on sys_edge",
+                "template_type" : "Action"
+              },
+              "predicates" : [ {
+                "kind" : "ReportOperation",
+                "attributes" : {
+                  "scope" : "per-object",
+                  "label" : "Missing Object"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "sys:edge",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "CreateObjectOperation",
+                "attributes" : {
+                  "classLabel" : "Report",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "SequenceOperation",
+                  "predicates" : [ {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "sys:edge",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Note",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "SummedValue",
+                      "predicates" : [ {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : "Missing "
+                        }
+                      }, {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "name" : "missingFeature",
+                          "scope" : "local",
+                          "dataType" : ""
+                        }
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : " on sys:edge"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ConditionalOperation",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "OWNERSHIP",
+              "n" : "0",
+              "objLabel" : "",
+              "qualifier" : "exactly"
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "OWNERSHIP",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "name" : "missingFeature",
+                  "scope" : "local",
+                  "dataType" : ""
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "OWNERSHIP"
+                }
+              } ]
+            }, {
+              "kind" : "SequenceOperation",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Missing Feature on sys_edge",
+                "template_id" : "ACTION://HPMS/3 - Inventory Checks (Coverage)/Missing Feature on sys_edge",
+                "template_type" : "Action"
+              },
+              "predicates" : [ {
+                "kind" : "ReportOperation",
+                "attributes" : {
+                  "scope" : "per-object",
+                  "label" : "Missing Object"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "sys:edge",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "CreateObjectOperation",
+                "attributes" : {
+                  "classLabel" : "Report",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "SequenceOperation",
+                  "predicates" : [ {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "sys:edge",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Note",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "SummedValue",
+                      "predicates" : [ {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : "Missing "
+                        }
+                      }, {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "name" : "missingFeature",
+                          "scope" : "local",
+                          "dataType" : ""
+                        }
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : " on sys:edge"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ConditionalOperation",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "ROUTE_NUMBER",
+              "n" : "0",
+              "objLabel" : "",
+              "qualifier" : "exactly"
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "ROUTE_NUMBER",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "name" : "missingFeature",
+                  "scope" : "local",
+                  "dataType" : ""
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "ROUTE_NUMBER"
+                }
+              } ]
+            }, {
+              "kind" : "SequenceOperation",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Missing Feature on sys_edge",
+                "template_id" : "ACTION://HPMS/3 - Inventory Checks (Coverage)/Missing Feature on sys_edge",
+                "template_type" : "Action"
+              },
+              "predicates" : [ {
+                "kind" : "ReportOperation",
+                "attributes" : {
+                  "scope" : "per-object",
+                  "label" : "Missing Object"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "sys:edge",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "CreateObjectOperation",
+                "attributes" : {
+                  "classLabel" : "Report",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "SequenceOperation",
+                  "predicates" : [ {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "sys:edge",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Note",
+                        "classRef" : "Report"
+                      }
+                    }, {
+                      "kind" : "SummedValue",
+                      "predicates" : [ {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : "Missing "
+                        }
+                      }, {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "name" : "missingFeature",
+                          "scope" : "local",
+                          "dataType" : ""
+                        }
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : " on sys:edge"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

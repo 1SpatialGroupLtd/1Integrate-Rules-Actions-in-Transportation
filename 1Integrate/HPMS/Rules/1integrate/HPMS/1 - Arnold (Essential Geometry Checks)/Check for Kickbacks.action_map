@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Kickbacks\" with ACTION \"Markup Kickbacks\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Kickbacks",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Kickbacks"
+  } ]
+}

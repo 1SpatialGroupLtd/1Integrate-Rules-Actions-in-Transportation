@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/55 - YEAR_LAST_CONSTRUCTION",
+    "rule" : "/rules/HPMS/2 - Domains/55 - YEAR_LAST_CONSTRUCTION Domain"
+  } ]
+}

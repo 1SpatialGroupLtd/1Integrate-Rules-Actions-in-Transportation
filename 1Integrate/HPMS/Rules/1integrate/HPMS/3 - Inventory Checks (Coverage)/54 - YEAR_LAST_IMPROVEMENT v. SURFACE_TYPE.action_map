@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/54 - Report Missing YEAR_LAST_IMPROVEMENT",
+    "rule" : "/rules/HPMS/3 - Coverage/54 - YEAR_LAST_IMPROVEMENT Must Exist"
+  } ]
+}

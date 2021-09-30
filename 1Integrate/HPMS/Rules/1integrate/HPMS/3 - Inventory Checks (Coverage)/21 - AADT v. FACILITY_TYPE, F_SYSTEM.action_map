@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/21 - Report Missing AADT",
+    "rule" : "/rules/HPMS/3 - Coverage/21 - AADT Must Exist"
+  } ]
+}

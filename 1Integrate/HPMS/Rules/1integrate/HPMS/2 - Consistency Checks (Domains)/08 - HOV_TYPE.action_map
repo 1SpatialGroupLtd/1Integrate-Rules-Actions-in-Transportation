@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/08 - HOV_TYPE",
+    "rule" : "/rules/HPMS/2 - Domains/08 - HOV_TYPE Domain"
+  } ]
+}

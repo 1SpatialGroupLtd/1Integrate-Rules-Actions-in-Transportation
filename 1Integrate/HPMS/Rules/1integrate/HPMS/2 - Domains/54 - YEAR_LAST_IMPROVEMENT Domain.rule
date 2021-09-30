@@ -1,0 +1,81 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "YEAR_LAST_IMPROVEMENT objects' Value_Date must be less than or equal to its Year_Record.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "YEAR_LAST_IMPROV",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Date",
+              "classRef" : "YEAR_LAST_IMPROV"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Date",
+                "classRef" : "YEAR_LAST_IMPROV"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Date",
+              "classRef" : "YEAR_LAST_IMPROV"
+            }
+          }, {
+            "kind" : "GreaterEqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "1753"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Date",
+              "classRef" : "YEAR_LAST_IMPROV"
+            }
+          }, {
+            "kind" : "LessEqualsRelation"
+          }, {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Year_Record",
+              "classRef" : "YEAR_LAST_IMPROV"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

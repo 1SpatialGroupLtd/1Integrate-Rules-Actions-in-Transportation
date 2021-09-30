@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/40 - PEAK_PARKING",
+    "rule" : "/rules/HPMS/2 - Domains/40 - PEAK_PARKING Domain"
+  } ]
+}

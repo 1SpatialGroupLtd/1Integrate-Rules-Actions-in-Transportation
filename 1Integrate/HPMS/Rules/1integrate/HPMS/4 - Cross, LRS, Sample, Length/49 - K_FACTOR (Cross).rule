@@ -1,0 +1,42 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "K_FACTOR object's Value_Numeric must be greater than 4 and less than 20.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "K_FACTOR",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RangePredicate",
+        "attributes" : {
+          "maxInclusive" : "true",
+          "minInclusive" : "true"
+        },
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "K_FACTOR"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "5"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "19"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

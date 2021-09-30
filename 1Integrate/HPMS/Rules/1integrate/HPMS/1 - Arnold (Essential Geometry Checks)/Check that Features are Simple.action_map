@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check that Features are Simple\" with ACTION \"Markup non-Simple Features\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup non-Simple Features",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check that Features are Simple"
+  } ]
+}

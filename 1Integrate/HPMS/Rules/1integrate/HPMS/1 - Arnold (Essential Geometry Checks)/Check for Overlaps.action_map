@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Overlaps\" with ACTION \"Markup Overlaps\"",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Overlaps",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Overlap"
+  } ]
+}

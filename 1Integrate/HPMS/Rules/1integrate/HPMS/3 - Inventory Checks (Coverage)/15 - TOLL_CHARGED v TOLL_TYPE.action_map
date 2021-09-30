@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/15 - Report Missing TOLL_CHARGED",
+    "rule" : "/rules/HPMS/3 - Coverage/15 - TOLL_CHARGED Must Exist"
+  } ]
+}

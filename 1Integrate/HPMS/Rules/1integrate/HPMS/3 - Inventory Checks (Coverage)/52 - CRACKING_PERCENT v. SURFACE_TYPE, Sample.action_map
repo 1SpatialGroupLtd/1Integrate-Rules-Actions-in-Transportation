@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/52 - Report Missing CRACKING_PERCENT",
+    "rule" : "/rules/HPMS/3 - Coverage/52 - CRACKING_PERCENT Must Exsit"
+  } ]
+}

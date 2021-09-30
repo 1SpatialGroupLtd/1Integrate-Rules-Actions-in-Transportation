@@ -1,0 +1,17 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/64 - IRI (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - IRI (Cross)"
+  }, {
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/64 - RUTTING (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - RUTTING (Cross)"
+  }, {
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/64 - FAULTING (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - FAULTING (Cross)"
+  }, {
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/64 - CRACKING (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/64 - CRACKING (Cross)"
+  } ]
+}

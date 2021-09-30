@@ -1,0 +1,227 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Creates a MARKUP_POINT at each point of self-intersection.",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "rule name"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "rule_name"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "class name"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "ARNOLD"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "feat_guid"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "to_string"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "ARNOLD"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "comment"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "Location of self-intersection"
+            }
+          } ]
+        }, {
+          "kind" : "ForAllElementsOperation",
+          "attributes" : {
+            "classLabel" : "",
+            "objLabel" : "self intersect"
+          },
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "find_self_intersections"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "ARNOLD"
+              }
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "MARKUP_POINT",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "class",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "class name"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "violation",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "rule name"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "ObjectValue",
+                  "attributes" : {
+                    "objRef" : "self intersect",
+                    "classRef" : ""
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "comment",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "comment"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "feat_guid",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "feat_guid"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "rel_class",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "rel_f_guid",
+                    "classRef" : "MARKUP_POINT"
+                  }
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

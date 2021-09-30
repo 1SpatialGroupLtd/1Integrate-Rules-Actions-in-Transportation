@@ -1,0 +1,472 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "ForPredicateOperation",
+          "attributes" : {
+            "classLabel" : "PCT_PEAK_SINGLE_UNIT",
+            "objLabel" : "",
+            "n" : "0"
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "PCT_PEAK_SINGLE_UNIT",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "ForPredicateOperation",
+            "attributes" : {
+              "classLabel" : "AADT",
+              "objLabel" : "",
+              "n" : "0"
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "AADT",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "ConditionalOperation",
+              "predicates" : [ {
+                "kind" : "NotPredicate",
+                "predicates" : [ {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DivisionValue",
+                    "predicates" : [ {
+                      "kind" : "ProductValue",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                        }
+                      }, {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "AADT"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "100"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "0"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "20"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "SequenceOperation",
+                "predicates" : [ {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "scope" : "local",
+                      "dataType" : "",
+                      "name" : "Percentage"
+                    }
+                  }, {
+                    "kind" : "DivisionValue",
+                    "predicates" : [ {
+                      "kind" : "ProductValue",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                        }
+                      }, {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "AADT"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "100"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "ReportOperation",
+                  "attributes" : {
+                    "scope" : "per-object",
+                    "label" : "Percentage"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "geometry",
+                      "classRef" : "sys:edge"
+                    }
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Begin_Point",
+                      "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                    }
+                  } ]
+                }, {
+                  "kind" : "CreateObjectOperation",
+                  "attributes" : {
+                    "classLabel" : "Report",
+                    "objLabel" : ""
+                  },
+                  "predicates" : [ {
+                    "kind" : "SequenceOperation",
+                    "predicates" : [ {
+                      "kind" : "AssignmentOperation",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "geometry",
+                          "classRef" : "Report"
+                        }
+                      }, {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "geometry",
+                          "classRef" : "sys:edge"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "AssignmentOperation",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "Report"
+                        }
+                      }, {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "scope" : "local",
+                          "dataType" : "",
+                          "name" : "Percentage"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "AssignmentOperation",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Note",
+                          "classRef" : "Report"
+                        }
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "string",
+                          "value" : "PCT_PEAK_SINGLE_UNIT*AADT/100 is not between 0%-20%. See Report's Value_Numeric for value."
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ForPredicateOperation",
+          "attributes" : {
+            "classLabel" : "PCT_PEAK_SINGLE_UNIT",
+            "objLabel" : "",
+            "n" : "0"
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "PCT_PEAK_SINGLE_UNIT",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "ForPredicateOperation",
+            "attributes" : {
+              "classLabel" : "AADT",
+              "objLabel" : "",
+              "n" : "0"
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "AADT",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "ForPredicateOperation",
+              "attributes" : {
+                "classLabel" : "AADT_SINGLE_UNIT",
+                "objLabel" : "",
+                "n" : "0"
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "AADT_SINGLE_UNIT",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "ConditionalOperation",
+                "predicates" : [ {
+                  "kind" : "NotPredicate",
+                  "predicates" : [ {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DivisionValue",
+                      "predicates" : [ {
+                        "kind" : "ProductValue",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                          }
+                        }, {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "AADT"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "integer",
+                          "value" : "100"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "LessEqualsRelation"
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "AADT_SINGLE_UNIT"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "SequenceOperation",
+                  "predicates" : [ {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "TemporaryValue",
+                      "attributes" : {
+                        "scope" : "local",
+                        "dataType" : "",
+                        "name" : "Percentage"
+                      }
+                    }, {
+                      "kind" : "DivisionValue",
+                      "predicates" : [ {
+                        "kind" : "ProductValue",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                          }
+                        }, {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "AADT"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "integer",
+                          "value" : "100"
+                        }
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "AssignmentOperation",
+                    "predicates" : [ {
+                      "kind" : "TemporaryValue",
+                      "attributes" : {
+                        "scope" : "local",
+                        "dataType" : "",
+                        "name" : "AADT_S_U V_N"
+                      }
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "AADT_SINGLE_UNIT"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "ReportOperation",
+                    "attributes" : {
+                      "scope" : "per-object",
+                      "label" : "Percentage"
+                    },
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "geometry",
+                        "classRef" : "sys:edge"
+                      }
+                    }, {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Begin_Point",
+                        "classRef" : "PCT_PEAK_SINGLE_UNIT"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "CreateObjectOperation",
+                    "attributes" : {
+                      "classLabel" : "Report",
+                      "objLabel" : ""
+                    },
+                    "predicates" : [ {
+                      "kind" : "SequenceOperation",
+                      "predicates" : [ {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "geometry",
+                            "classRef" : "Report"
+                          }
+                        }, {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "geometry",
+                            "classRef" : "sys:edge"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "Report"
+                          }
+                        }, {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "scope" : "local",
+                            "dataType" : "",
+                            "name" : "Percentage"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Note",
+                            "classRef" : "Report"
+                          }
+                        }, {
+                          "kind" : "SummedValue",
+                          "predicates" : [ {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "string",
+                              "value" : "PCT_PEAK_SINGLE_UNIT*AADT/100 is not less than or equal to AADT_SINGLE_UNIT object's Value_Numeric ("
+                            }
+                          }, {
+                            "kind" : "TemporaryValue",
+                            "attributes" : {
+                              "scope" : "local",
+                              "dataType" : "",
+                              "name" : "AADT_S_U V_N"
+                            }
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "string",
+                              "value" : "). See Report's Value_Numeric for value."
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}
