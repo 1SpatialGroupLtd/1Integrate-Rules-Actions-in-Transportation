@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/58 - THICKNESS_FLEXIBLE",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/58 - THICKNESS_FLEXIBLE Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/58 - THICKNESS_FLEXIBLE",
+    "rule" : "/rules/HPMS/2 - Domains/58 - THICKNESS_FLEXIBLE Domain"
   } ]
 }

@@ -218,7 +218,7 @@
               "attributes" : {
                 "template_num_params" : "1",
                 "template_name" : "Value_Date is same Year as Year Record 5",
-                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://HPMS/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
                 "template_type" : "Rule"
               },
               "predicates" : [ {
@@ -285,7 +285,7 @@
               "attributes" : {
                 "template_num_params" : "1",
                 "template_name" : "Value_Date is same Year as Year Record 5",
-                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://HPMS/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
                 "template_type" : "Rule"
               },
               "predicates" : [ {
@@ -352,7 +352,7 @@
               "attributes" : {
                 "template_num_params" : "1",
                 "template_name" : "Value_Date is same Year as Year Record 5",
-                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://HPMS/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
                 "template_type" : "Rule"
               },
               "predicates" : [ {
@@ -419,7 +419,7 @@
               "attributes" : {
                 "template_num_params" : "1",
                 "template_name" : "Value_Date is same Year as Year Record 5",
-                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://HPMS/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
                 "template_type" : "Rule"
               },
               "predicates" : [ {

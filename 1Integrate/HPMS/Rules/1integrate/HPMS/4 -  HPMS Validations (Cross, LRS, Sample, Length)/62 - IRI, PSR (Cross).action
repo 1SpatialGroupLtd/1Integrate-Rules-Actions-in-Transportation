@@ -87,7 +87,7 @@
               "attributes" : {
                 "template_num_params" : "2",
                 "template_name" : "Invalid Value Text (sys.edge)",
-                "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Invalid Value Text (sys.edge)",
+                "template_id" : "ACTION://HPMS/Templates/Invalid Value Text (sys.edge)",
                 "template_type" : "Action"
               },
               "predicates" : [ {
@@ -277,7 +277,7 @@
               "attributes" : {
                 "template_num_params" : "2",
                 "template_name" : "Invalid Value Numeric(sys.edge)",
-                "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Invalid Value Numeric(sys.edge)",
+                "template_id" : "ACTION://HPMS/Templates/Invalid Value Numeric(sys.edge)",
                 "template_type" : "Action"
               },
               "predicates" : [ {

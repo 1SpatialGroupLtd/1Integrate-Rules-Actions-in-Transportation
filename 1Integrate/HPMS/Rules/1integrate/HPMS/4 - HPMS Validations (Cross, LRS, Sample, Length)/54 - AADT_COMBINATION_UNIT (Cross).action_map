@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/4 -  HPMS Validations (Cross, LRS, Sample, Length)/54 - AADT_COMBINATION_UNIT (Cross)",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/54 - AADT_COMBINATION_UNIT (Cross)"
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/54 - AADT_COMBINATION_UNIT (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/54 - AADT_COMBINATION_UNIT (Cross)"
   } ]
 }

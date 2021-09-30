@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/43f - CURVES_F",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/43f - CURVES_F Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/43f - CURVES_F",
+    "rule" : "/rules/HPMS/2 - Domains/43f - CURVES_F Domain"
   } ]
 }

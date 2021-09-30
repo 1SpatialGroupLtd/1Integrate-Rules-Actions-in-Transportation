@@ -14,7 +14,7 @@
         "attributes" : {
           "template_num_params" : "1",
           "template_name" : "Domain Check - Floor() and Greater than Zero",
-          "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Domain Check - Floor() and Greater than Zero",
+          "template_id" : "ACTION://HPMS/Templates/Domain Check - Floor() and Greater than Zero",
           "template_type" : "Action"
         },
         "predicates" : [ {

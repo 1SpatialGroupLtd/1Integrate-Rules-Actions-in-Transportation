@@ -3,30 +3,30 @@
   "description" : "",
   "tasks" : [ {
     "kind" : "OpenData",
-    "datastore" : "/datastores/Repositories/con_fhwa_hpms/Ziffel/ARNOLD",
+    "datastore" : "/datastores/HPMS/ARNOLD",
     "id" : "3ecba6f7-324b-4437-b4ca-81814c26c801",
     "openedDataBufferDistance" : 0.0,
     "taskIdentifier" : "3ecba6f7-324b-4437-b4ca-81814c26c801"
   }, {
     "kind" : "OpenData",
-    "datastore" : "/datastores/Repositories/con_fhwa_hpms/Ziffel/Sample",
+    "datastore" : "/datastores/HPMS/Sample",
     "id" : "a5b3a40b-5932-417a-9ba6-079e325b958d",
     "openedDataBufferDistance" : 0.0,
     "taskIdentifier" : "a5b3a40b-5932-417a-9ba6-079e325b958d"
   }, {
     "kind" : "OpenData",
-    "datastore" : "/datastores/Repositories/con_fhwa_hpms/Ziffel/Empty GeoSections",
+    "datastore" : "/datastores/HPMS/Empty GeoSections",
     "id" : "69cd8fa3-73ba-46e6-abec-36a07025b2c6",
     "openedDataBufferDistance" : 0.0,
     "taskIdentifier" : "69cd8fa3-73ba-46e6-abec-36a07025b2c6"
   }, {
     "kind" : "ApplyActions",
-    "actions" : [ "/actions/Repositories/con_fhwa_hpms/Ziffel/0 - Dynamic Segmentation Section Mapping Build Layer Actions/Build SAMPLE - CREATE" ],
+    "actions" : [ "/actions/HPMS/0 - Dynamic Segmentation Section Mapping Build Layer Actions/Build SAMPLE - CREATE" ],
     "id" : "7a42630b-fb62-4105-93d7-aaef209432e6",
     "taskIdentifier" : "7a42630b-fb62-4105-93d7-aaef209432e6"
   }, {
     "kind" : "CopyTo",
-    "datastore" : "/datastores/Repositories/con_fhwa_hpms/Ziffel/Empty GeoSections",
+    "datastore" : "/datastores/HPMS/Empty GeoSections",
     "id" : "38e6e028-4e0a-4612-9271-ad12392d4167",
     "taskIdentifier" : "38e6e028-4e0a-4612-9271-ad12392d4167"
   } ]

@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/16 - Report Missing TOLL_TYPE",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/16 - TOLL_TYPE Must Exist"
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/16 - Report Missing TOLL_TYPE",
+    "rule" : "/rules/HPMS/3 - Coverage/16 - TOLL_TYPE Must Exist"
   } ]
 }

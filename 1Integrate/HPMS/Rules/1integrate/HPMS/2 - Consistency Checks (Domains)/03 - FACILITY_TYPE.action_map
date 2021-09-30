@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/03 - FACILITY_TYPE",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/03 - FACILITY_TYPE Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/03 - FACILITY_TYPE",
+    "rule" : "/rules/HPMS/2 - Domains/03 - FACILITY_TYPE Domain"
   } ]
 }

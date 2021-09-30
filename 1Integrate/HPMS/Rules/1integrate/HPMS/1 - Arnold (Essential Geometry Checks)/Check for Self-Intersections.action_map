@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "Links RULE \"Check for Self-Intersections\" with ACTION \"Markup Self-Intersections\"",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold (Essential Geometry Checks)/Markup Self-Intersections",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold Essential Geometry Checks/Check for Self-Intersections"
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Self-Intersections",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Self-Intersections"
   } ]
 }

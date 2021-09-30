@@ -37,7 +37,7 @@
               "template_num_params" : "1",
               "classLabel" : "ARNOLD",
               "template_name" : "single part",
-              "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/single part",
+              "template_id" : "ACTION://HPMS/Templates/single part",
               "template_type" : "Action",
               "objLabel" : "",
               "n" : "0"
@@ -141,7 +141,7 @@
               "template_num_params" : "1",
               "classLabel" : "ARNOLD",
               "template_name" : "multi part",
-              "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/multi part",
+              "template_id" : "ACTION://HPMS/Templates/multi part",
               "template_type" : "Action",
               "objLabel" : "",
               "n" : "0"
@@ -1282,7 +1282,7 @@
                 "attributes" : {
                   "template_num_params" : "3",
                   "template_name" : "Schema Mapping - Assign Values",
-                  "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Schema Mapping - Assign Values",
+                  "template_id" : "ACTION://HPMS/Templates/Schema Mapping - Assign Values",
                   "template_type" : "Action"
                 },
                 "predicates" : [ {

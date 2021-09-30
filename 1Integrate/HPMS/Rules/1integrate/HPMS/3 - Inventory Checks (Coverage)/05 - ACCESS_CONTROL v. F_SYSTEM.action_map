@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/05 - Report Missing ACCESS_CONTROL",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/05 - ACCESS_CONTROL Must Exist"
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/05 - Report Missing ACCESS_CONTROL",
+    "rule" : "/rules/HPMS/3 - Coverage/05 - ACCESS_CONTROL Must Exist"
   } ]
 }

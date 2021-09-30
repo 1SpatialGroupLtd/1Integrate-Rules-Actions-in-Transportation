@@ -48,7 +48,7 @@
           "attributes" : {
             "template_num_params" : "1",
             "template_name" : "Invalid Value Numeric(sys.edge & sum 2 objects)",
-            "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Invalid Value Numeric(sys.edge & sum 2 objects)",
+            "template_id" : "ACTION://HPMS/Templates/Invalid Value Numeric(sys.edge & sum 2 objects)",
             "template_type" : "Action"
           },
           "predicates" : [ {

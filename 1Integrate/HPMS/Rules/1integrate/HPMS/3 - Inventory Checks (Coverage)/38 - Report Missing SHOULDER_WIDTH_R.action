@@ -32,7 +32,7 @@
           "attributes" : {
             "template_num_params" : "1",
             "template_name" : "Missing Feature",
-            "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Missing Feature",
+            "template_id" : "ACTION://HPMS/Templates/Missing Feature",
             "template_type" : "Action"
           },
           "predicates" : [ {

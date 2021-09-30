@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/39 - Report Missing SHOULDER_WIDTH_L",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/39 - SHOULDER_WIDTH_L Must Exist"
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/39 - Report Missing SHOULDER_WIDTH_L",
+    "rule" : "/rules/HPMS/3 - Coverage/39 - SHOULDER_WIDTH_L Must Exist"
   } ]
 }

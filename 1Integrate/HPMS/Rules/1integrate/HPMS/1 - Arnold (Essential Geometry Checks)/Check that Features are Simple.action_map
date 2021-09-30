@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "Links RULE \"Check that Features are Simple\" with ACTION \"Markup non-Simple Features\"",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold (Essential Geometry Checks)/Markup non-Simple Features",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold Essential Geometry Checks/Check that Features are Simple"
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup non-Simple Features",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check that Features are Simple"
   } ]
 }

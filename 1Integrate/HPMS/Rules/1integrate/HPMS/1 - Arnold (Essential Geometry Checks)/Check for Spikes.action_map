@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "Links RULE \"Check for Spikes\" with ACTION \"Markup Spikes\"",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold (Essential Geometry Checks)/Markup Spikes",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold Essential Geometry Checks/Check for Spikes"
+    "action" : "/actions/HPMS/1 - Arnold (Essential Geometry Checks)/Markup Spikes",
+    "rule" : "/rules/HPMS/1 - Arnold Essential Geometry Checks/Check for Spikes"
   } ]
 }

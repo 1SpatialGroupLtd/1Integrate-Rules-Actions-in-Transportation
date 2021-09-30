@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/67 - FUTURE_FACILITY",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/67 - FUTURE_FACILITY Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/67 - FUTURE_FACILITY",
+    "rule" : "/rules/HPMS/2 - Domains/67 - FUTURE_FACILITY Domain"
   } ]
 }

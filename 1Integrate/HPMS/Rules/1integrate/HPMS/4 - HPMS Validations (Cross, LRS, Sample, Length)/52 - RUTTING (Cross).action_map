@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/4 -  HPMS Validations (Cross, LRS, Sample, Length)/52 - RUTTING (Cross)",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/52 - RUTTING (Cross)"
+    "action" : "/actions/HPMS/4 -  HPMS Validations (Cross, LRS, Sample, Length)/52 - RUTTING (Cross)",
+    "rule" : "/rules/HPMS/4 - Cross, LRS, Sample, Length/52 - RUTTING (Cross)"
   } ]
 }

@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/26 - K_FACTOR",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/26 - K_FACTOR Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/26 - K_FACTOR",
+    "rule" : "/rules/HPMS/2 - Domains/26 - K_FACTOR Domain"
   } ]
 }

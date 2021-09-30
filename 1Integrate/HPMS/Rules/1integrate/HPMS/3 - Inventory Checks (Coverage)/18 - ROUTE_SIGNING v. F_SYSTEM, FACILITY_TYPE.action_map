@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/18 - Report Missing ROUTE_SIGNING",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/18 - ROUTE_SIGNING Must Exist"
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/18 - Report Missing ROUTE_SIGNING",
+    "rule" : "/rules/HPMS/3 - Coverage/18 - ROUTE_SIGNING Must Exist"
   } ]
 }

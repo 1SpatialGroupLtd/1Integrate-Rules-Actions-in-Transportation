@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/31 - SIGNALS",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/31 - NUMBER_SIGNALS Domain"
+    "action" : "/actions/HPMS/2 - Consistency Checks (Domains)/31 - SIGNALS",
+    "rule" : "/rules/HPMS/2 - Domains/31 - NUMBER_SIGNALS Domain"
   } ]
 }

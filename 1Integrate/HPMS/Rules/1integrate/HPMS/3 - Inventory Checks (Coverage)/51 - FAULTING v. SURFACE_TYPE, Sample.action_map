@@ -2,7 +2,7 @@
   "comments" : "Branch: master\nRecent Commits:\n",
   "description" : "",
   "pairs" : [ {
-    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/51 - Report Missing FAULTING",
-    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/51 - FAULTING Must Exist"
+    "action" : "/actions/HPMS/3 - Inventory Checks (Coverage)/51 - Report Missing FAULTING",
+    "rule" : "/rules/HPMS/3 - Coverage/51 - FAULTING Must Exist"
   } ]
 }
