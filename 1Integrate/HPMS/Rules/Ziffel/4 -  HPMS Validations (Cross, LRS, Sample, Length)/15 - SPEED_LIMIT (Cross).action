@@ -1,0 +1,168 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "SPEED_LIMIT",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "incorrectFeature",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "SPEED_LIMIT"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "correctParameters",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "(divisible by 5 and less than 90) or equal to 999"
+            }
+          } ]
+        }, {
+          "kind" : "SequenceOperation",
+          "attributes" : {
+            "template_num_params" : "1",
+            "template_name" : "Invalid Value Numeric(feature)",
+            "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Invalid Value Numeric(feature)",
+            "template_type" : "Action"
+          },
+          "predicates" : [ {
+            "kind" : "ReportOperation",
+            "attributes" : {
+              "scope" : "per-object",
+              "label" : "Invalid Value Numeric"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "SPEED_LIMIT",
+                "template_param" : "1"
+              }
+            }, {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "SPEED_LIMIT",
+                "template_param" : "1"
+              }
+            } ]
+          }, {
+            "kind" : "CreateObjectOperation",
+            "attributes" : {
+              "classLabel" : "Report",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "geometry",
+                    "classRef" : "SPEED_LIMIT",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "SPEED_LIMIT",
+                    "template_param" : "1"
+                  }
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Note",
+                    "classRef" : "Report"
+                  }
+                }, {
+                  "kind" : "SummedValue",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "name" : "incorrectFeature",
+                      "scope" : "local",
+                      "dataType" : ""
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : " has invalid Value_Numeric (is not "
+                    }
+                  }, {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "name" : "correctParameters",
+                      "scope" : "local",
+                      "dataType" : ""
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : ")."
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

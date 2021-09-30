@@ -1,0 +1,396 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CURVES_A-F object and/or GRADES_A-F object must exist for all Sample objects and (for all F_SYSTEM objects with a Value_Numeric of 1,2,3 or (for all F_SYSTEM objects with a Value_Numeric of 4 and for all URBAN_CODE objects with a Value_Numeric of 99999)).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SAMPLE",
+              "qualifier" : "at least",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SAMPLE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "F_SYSTEM",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "F_SYSTEM",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "F_SYSTEM"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "1"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "3"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "F_SYSTEM",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "F_SYSTEM",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "F_SYSTEM"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "4"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "URBAN_CODE",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "URBAN_CODE",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "URBAN_CODE"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "99999"
+                      }
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_A",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_A",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_B",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_B",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_C",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_C",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_D",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_D",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_E",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_E",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "GRADES_F",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "GRADES_F",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_A",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_A",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_B",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_B",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_C",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_C",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_D",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_D",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_E",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_E",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CURVES_F",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CURVES_F",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

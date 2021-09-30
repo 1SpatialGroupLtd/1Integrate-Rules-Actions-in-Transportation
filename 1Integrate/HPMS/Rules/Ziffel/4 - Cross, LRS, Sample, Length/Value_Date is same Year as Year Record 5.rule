@@ -1,0 +1,61 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "Template",
+      "predicates" : [ {
+        "kind" : "Parameter",
+        "attributes" : {
+          "classLabel" : "IRI",
+          "objLabel" : ""
+        }
+      }, {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "BuiltinFnValue",
+          "attributes" : {
+            "fnName" : "to_real"
+          },
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "re_search"
+            },
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "to_string"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Date",
+                  "classRef" : "IRI"
+                }
+              } ]
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "string",
+                "value" : "\\d\\d\\d\\d"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "EqualsRelation"
+        }, {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Year_Record",
+            "classRef" : "IRI"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : true
+}

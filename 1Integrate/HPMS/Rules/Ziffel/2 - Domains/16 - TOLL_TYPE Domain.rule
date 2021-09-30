@@ -1,0 +1,70 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "TOLL_TYPE objects' Value_Numeric must be in the range 1-2.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "TOLL_TYPE",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "TOLL_TYPE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "TOLL_TYPE"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RangePredicate",
+          "attributes" : {
+            "maxInclusive" : "true",
+            "minInclusive" : "true"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "TOLL_TYPE"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "1"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "2"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

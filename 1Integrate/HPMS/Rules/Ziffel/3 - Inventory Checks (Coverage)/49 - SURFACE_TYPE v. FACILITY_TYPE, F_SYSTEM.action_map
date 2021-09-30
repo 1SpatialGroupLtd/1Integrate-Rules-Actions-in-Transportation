@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/49 - Report Missing SURFACE_TYPE",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/49 - SURFACE_TYPE Must Exist"
+  } ]
+}

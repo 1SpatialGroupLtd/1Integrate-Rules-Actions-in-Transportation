@@ -1,0 +1,100 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "MEDIAN_TYPE object's Value_Numeric must equal 2,3,4,5,6,7 for all MEDIAN_WIDTH objects with a Value_Numeric greater than 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "MEDIAN_WIDTH",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "MEDIAN_WIDTH",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "MEDIAN_WIDTH"
+                }
+              }, {
+                "kind" : "GreaterRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "real",
+                  "value" : "0"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ForAllPredicate",
+          "attributes" : {
+            "classLabel" : "MEDIAN_TYPE",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "MEDIAN_TYPE",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "MEDIAN_TYPE"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "real",
+                "value" : "2"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "real",
+                "value" : "7"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

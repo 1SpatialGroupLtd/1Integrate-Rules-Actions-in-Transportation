@@ -1,0 +1,62 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "DIR_THROUGH_LANES objects' Value_Numeric must be greater than or equal to 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "DIR_THROUGH_LANES",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "DIR_THROUGH_LANES"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "DIR_THROUGH_LANES"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "DIR_THROUGH_LANES"
+            }
+          }, {
+            "kind" : "GreaterRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "0"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

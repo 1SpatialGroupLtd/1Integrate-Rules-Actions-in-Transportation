@@ -1,0 +1,88 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "RUTTING",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "Feature_Class"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "RUTTING"
+            }
+          } ]
+        }, {
+          "kind" : "CreateObjectOperation",
+          "attributes" : {
+            "classLabel" : "Report",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "RUTTING"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Note",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "SummedValue",
+                "predicates" : [ {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "Feature_Class"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : " object is greater than 0."
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

@@ -1,0 +1,266 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CRACKING object's Value_Text must be A,B,C,D where (CRACKING object's Value_Date is not equal to objects' Year_Record and for all F_SYSTEM objects with a Value_Numeric of 1) or (for all NHS objects with a Value_Date less than CRACKING object's Year_Record minus 2).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "F_SYSTEM",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "F_SYSTEM",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "ConditionalPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "CRACKING_PERCENT",
+                  "qualifier" : "at most",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                } ]
+              }, {
+                "kind" : "ForAllPredicate",
+                "attributes" : {
+                  "classLabel" : "CRACKING_PERCENT",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Date",
+                      "classRef" : "CRACKING_PERCENT"
+                    }
+                  }, {
+                    "kind" : "NotEqualsRelation"
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Year_Record",
+                      "classRef" : "CRACKING_PERCENT"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "NHS",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "NHS",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "ConditionalPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "CRACKING_PERCENT",
+                  "qualifier" : "at most",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                } ]
+              }, {
+                "kind" : "ForAllPredicate",
+                "attributes" : {
+                  "classLabel" : "CRACKING_PERCENT",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DifferenceValue",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Year_Record",
+                        "classRef" : "CRACKING_PERCENT"
+                      }
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "2"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "GreaterRelation"
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Date",
+                      "classRef" : "NHS"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ForAllPredicate",
+          "attributes" : {
+            "classLabel" : "CRACKING_PERCENT",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "CRACKING_PERCENT",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Text",
+                  "classRef" : "CRACKING_PERCENT"
+                }
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "A"
+                }
+              } ]
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Text",
+                  "classRef" : "CRACKING_PERCENT"
+                }
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "B"
+                }
+              } ]
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Text",
+                  "classRef" : "CRACKING_PERCENT"
+                }
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "C"
+                }
+              } ]
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Text",
+                  "classRef" : "CRACKING_PERCENT"
+                }
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "string",
+                  "value" : "D"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

@@ -1,0 +1,80 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Checks lines and polygon features to make sure the linework does not selfÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­-intersect.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "ARNOLD"
+              }
+            }, {
+              "kind" : "NotEqualsRelation"
+            }, {
+              "kind" : "NullValue"
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "count_parts"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "ARNOLD"
+                }
+              } ]
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "1"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "find_self_intersections"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "ARNOLD"
+              }
+            } ]
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "NullValue"
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

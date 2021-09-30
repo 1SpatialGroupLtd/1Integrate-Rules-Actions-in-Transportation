@@ -1,0 +1,254 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "THROUGH_LANES object must exist for all FACILITY_TYPE objects with a Value_Numeric of 1,2,4 and (for all F_SYSTEM objects with a Value_Numeric of 1,2,3,4,5 or (for all F_SYSTEM objects with a Value_Numeric of 6 and URBAN_CODE objects with a Value_Numeric less than 99999) or for all NHS objects).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "FACILITY_TYPE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "FACILITY_TYPE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RangePredicate",
+                "attributes" : {
+                  "maxInclusive" : "true",
+                  "minInclusive" : "true"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "FACILITY_TYPE"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "1"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "4"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "FACILITY_TYPE"
+                  }
+                }, {
+                  "kind" : "NotEqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "3"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "F_SYSTEM",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "F_SYSTEM",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "F_SYSTEM"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "1"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "5"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "F_SYSTEM",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "F_SYSTEM",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "F_SYSTEM"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "6"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "URBAN_CODE",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "URBAN_CODE",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "URBAN_CODE"
+                      }
+                    }, {
+                      "kind" : "LessRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "99999"
+                      }
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "NHS",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "NHS",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "THROUGH_LANES",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "THROUGH_LANES",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

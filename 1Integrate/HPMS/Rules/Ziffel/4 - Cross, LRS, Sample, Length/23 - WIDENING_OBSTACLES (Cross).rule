@@ -1,0 +1,208 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "WIDENING_OBSTACLE object's Value_Text must equal A,B,C,D,E,F,G for all WIDENING_POTENTIAL objects with a Value_Numeric less than 9.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "WIDENING_POTENTIAL",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "WIDENING_POTENTIAL",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "WIDENING_POTENTIAL"
+                }
+              }, {
+                "kind" : "LessRelation"
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "9"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "WIDENING_OBSTACLE",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "WIDENING_OBSTACLE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "OrPredicate",
+              "predicates" : [ {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "A"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "B"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "C"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "D"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "E"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "F"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Text",
+                    "classRef" : "WIDENING_OBSTACLE"
+                  }
+                }, {
+                  "kind" : "ContainsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "G"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

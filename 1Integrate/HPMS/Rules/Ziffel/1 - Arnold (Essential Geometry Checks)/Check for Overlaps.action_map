@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check for Overlaps\" with ACTION \"Markup Overlaps\"",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold (Essential Geometry Checks)/Markup Overlaps",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold Essential Geometry Checks/Check for Overlap"
+  } ]
+}

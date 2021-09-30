@@ -1,0 +1,126 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CRACKING_PERCENT object's Value_Numeric must be less than 75 for all SURFACE_TYPE objects with a Value_Numeric of 3,4,5,9,10.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "SURFACE_TYPE",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SURFACE_TYPE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RangePredicate",
+              "attributes" : {
+                "maxInclusive" : "true",
+                "minInclusive" : "true"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "SURFACE_TYPE"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "3"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "5"
+                }
+              } ]
+            }, {
+              "kind" : "RangePredicate",
+              "attributes" : {
+                "maxInclusive" : "true",
+                "minInclusive" : "true"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Numeric",
+                  "classRef" : "SURFACE_TYPE"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "9"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "10"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ForAllPredicate",
+          "attributes" : {
+            "classLabel" : "CRACKING_PERCENT",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "CRACKING_PERCENT",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "CRACKING_PERCENT"
+              }
+            }, {
+              "kind" : "LessRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "75"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

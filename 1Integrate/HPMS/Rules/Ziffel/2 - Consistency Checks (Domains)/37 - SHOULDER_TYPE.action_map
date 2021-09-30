@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/2 - Consistency Checks (Domains)/37 - SHOULDER_TYPE",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/2 - Domains/37 - SHOULDER_TYPE Domain"
+  } ]
+}

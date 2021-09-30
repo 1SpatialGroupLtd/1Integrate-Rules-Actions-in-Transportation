@@ -1,0 +1,866 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CRACKING_PERCENT objects' Value_Numeric must be less than or equal to [%] for all SURFACE_TYPE objects with a Value_Numeric of 2,6,7,8 based on the Value_Numeric of LANE_WIDTH objects.\\n\\nLANE_WIDTH 8 - 81.30%\\nLANE_WIDTH 9 - 72.20%\\nLANE_WIDTH 10 - 65.00%\\nLANE_WIDTH 11 - 59.10%\\nLANE_WIDTH 12 - 54.20%\\nLANE_WIDTH 13 - 50.00%\\nLANE_WIDTH 14 - 46.40%\\nLANE_WIDTH 15 - 43.30%\\nLANE_WIDTH 16 - 40.60%",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SURFACE_TYPE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "SURFACE_TYPE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "OrPredicate",
+                "predicates" : [ {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "SURFACE_TYPE"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "2"
+                    }
+                  } ]
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "SURFACE_TYPE"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "6"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "8"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "LANE_WIDTH",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "LANE_WIDTH",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RangePredicate",
+                "attributes" : {
+                  "maxInclusive" : "true",
+                  "minInclusive" : "true"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "LANE_WIDTH"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "8"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "16"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ConditionalPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "LANE_WIDTH",
+              "qualifier" : "at least",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "LANE_WIDTH",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "LANE_WIDTH"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "8"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "CRACKING_PERCENT",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "CRACKING_PERCENT",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "CRACKING_PERCENT"
+                  }
+                }, {
+                  "kind" : "LessEqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "real",
+                    "value" : "81.30"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ConditionalPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "LANE_WIDTH",
+                "qualifier" : "at least",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "LANE_WIDTH",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "LANE_WIDTH"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "9"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CRACKING_PERCENT",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "CRACKING_PERCENT"
+                    }
+                  }, {
+                    "kind" : "LessEqualsRelation"
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "real",
+                      "value" : "72.20"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ConditionalPredicate",
+              "predicates" : [ {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "LANE_WIDTH",
+                  "qualifier" : "at least",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "LANE_WIDTH",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "LANE_WIDTH"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "integer",
+                        "value" : "10"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ExistsPredicate",
+                "attributes" : {
+                  "classLabel" : "CRACKING_PERCENT",
+                  "qualifier" : "exactly",
+                  "n" : "1",
+                  "objLabel" : ""
+                },
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "ReferentialPredicate",
+                    "attributes" : {
+                      "classRef1" : "CRACKING_PERCENT",
+                      "refName" : "sys:line_to_edge",
+                      "classRef2" : "sys:edge",
+                      "objRef2" : "",
+                      "objRef1" : ""
+                    }
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Numeric",
+                        "classRef" : "CRACKING_PERCENT"
+                      }
+                    }, {
+                      "kind" : "LessEqualsRelation"
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "real",
+                        "value" : "65"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ConditionalPredicate",
+                "predicates" : [ {
+                  "kind" : "ExistsPredicate",
+                  "attributes" : {
+                    "classLabel" : "LANE_WIDTH",
+                    "qualifier" : "at least",
+                    "n" : "1",
+                    "objLabel" : ""
+                  },
+                  "predicates" : [ {
+                    "kind" : "AndPredicate",
+                    "predicates" : [ {
+                      "kind" : "ReferentialPredicate",
+                      "attributes" : {
+                        "classRef1" : "LANE_WIDTH",
+                        "refName" : "sys:line_to_edge",
+                        "classRef2" : "sys:edge",
+                        "objRef2" : "",
+                        "objRef1" : ""
+                      }
+                    }, {
+                      "kind" : "RelationalPredicate",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "LANE_WIDTH"
+                        }
+                      }, {
+                        "kind" : "EqualsRelation"
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "integer",
+                          "value" : "11"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "ExistsPredicate",
+                  "attributes" : {
+                    "classLabel" : "CRACKING_PERCENT",
+                    "qualifier" : "exactly",
+                    "n" : "1",
+                    "objLabel" : ""
+                  },
+                  "predicates" : [ {
+                    "kind" : "AndPredicate",
+                    "predicates" : [ {
+                      "kind" : "ReferentialPredicate",
+                      "attributes" : {
+                        "classRef1" : "CRACKING_PERCENT",
+                        "refName" : "sys:line_to_edge",
+                        "classRef2" : "sys:edge",
+                        "objRef2" : "",
+                        "objRef1" : ""
+                      }
+                    }, {
+                      "kind" : "RelationalPredicate",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Numeric",
+                          "classRef" : "CRACKING_PERCENT"
+                        }
+                      }, {
+                        "kind" : "LessEqualsRelation"
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "real",
+                          "value" : "59.10"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "ConditionalPredicate",
+                  "predicates" : [ {
+                    "kind" : "ExistsPredicate",
+                    "attributes" : {
+                      "classLabel" : "LANE_WIDTH",
+                      "qualifier" : "at least",
+                      "n" : "1",
+                      "objLabel" : ""
+                    },
+                    "predicates" : [ {
+                      "kind" : "AndPredicate",
+                      "predicates" : [ {
+                        "kind" : "ReferentialPredicate",
+                        "attributes" : {
+                          "classRef1" : "LANE_WIDTH",
+                          "refName" : "sys:line_to_edge",
+                          "classRef2" : "sys:edge",
+                          "objRef2" : "",
+                          "objRef1" : ""
+                        }
+                      }, {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "LANE_WIDTH"
+                          }
+                        }, {
+                          "kind" : "EqualsRelation"
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "integer",
+                            "value" : "12"
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "ExistsPredicate",
+                    "attributes" : {
+                      "classLabel" : "CRACKING_PERCENT",
+                      "qualifier" : "exactly",
+                      "n" : "1",
+                      "objLabel" : ""
+                    },
+                    "predicates" : [ {
+                      "kind" : "AndPredicate",
+                      "predicates" : [ {
+                        "kind" : "ReferentialPredicate",
+                        "attributes" : {
+                          "classRef1" : "CRACKING_PERCENT",
+                          "refName" : "sys:line_to_edge",
+                          "classRef2" : "sys:edge",
+                          "objRef2" : "",
+                          "objRef1" : ""
+                        }
+                      }, {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Value_Numeric",
+                            "classRef" : "CRACKING_PERCENT"
+                          }
+                        }, {
+                          "kind" : "LessEqualsRelation"
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "real",
+                            "value" : "54.20"
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "ConditionalPredicate",
+                    "predicates" : [ {
+                      "kind" : "ExistsPredicate",
+                      "attributes" : {
+                        "classLabel" : "LANE_WIDTH",
+                        "qualifier" : "at least",
+                        "n" : "1",
+                        "objLabel" : ""
+                      },
+                      "predicates" : [ {
+                        "kind" : "AndPredicate",
+                        "predicates" : [ {
+                          "kind" : "ReferentialPredicate",
+                          "attributes" : {
+                            "classRef1" : "LANE_WIDTH",
+                            "refName" : "sys:line_to_edge",
+                            "classRef2" : "sys:edge",
+                            "objRef2" : "",
+                            "objRef1" : ""
+                          }
+                        }, {
+                          "kind" : "RelationalPredicate",
+                          "predicates" : [ {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "Value_Numeric",
+                              "classRef" : "LANE_WIDTH"
+                            }
+                          }, {
+                            "kind" : "EqualsRelation"
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "13"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ExistsPredicate",
+                      "attributes" : {
+                        "classLabel" : "CRACKING_PERCENT",
+                        "qualifier" : "exactly",
+                        "n" : "1",
+                        "objLabel" : ""
+                      },
+                      "predicates" : [ {
+                        "kind" : "AndPredicate",
+                        "predicates" : [ {
+                          "kind" : "ReferentialPredicate",
+                          "attributes" : {
+                            "classRef1" : "CRACKING_PERCENT",
+                            "refName" : "sys:line_to_edge",
+                            "classRef2" : "sys:edge",
+                            "objRef2" : "",
+                            "objRef1" : ""
+                          }
+                        }, {
+                          "kind" : "RelationalPredicate",
+                          "predicates" : [ {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "Value_Numeric",
+                              "classRef" : "CRACKING_PERCENT"
+                            }
+                          }, {
+                            "kind" : "LessEqualsRelation"
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "real",
+                              "value" : "50"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ConditionalPredicate",
+                      "predicates" : [ {
+                        "kind" : "ExistsPredicate",
+                        "attributes" : {
+                          "classLabel" : "LANE_WIDTH",
+                          "qualifier" : "at least",
+                          "n" : "1",
+                          "objLabel" : ""
+                        },
+                        "predicates" : [ {
+                          "kind" : "AndPredicate",
+                          "predicates" : [ {
+                            "kind" : "ReferentialPredicate",
+                            "attributes" : {
+                              "classRef1" : "LANE_WIDTH",
+                              "refName" : "sys:line_to_edge",
+                              "classRef2" : "sys:edge",
+                              "objRef2" : "",
+                              "objRef1" : ""
+                            }
+                          }, {
+                            "kind" : "RelationalPredicate",
+                            "predicates" : [ {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "Value_Numeric",
+                                "classRef" : "LANE_WIDTH"
+                              }
+                            }, {
+                              "kind" : "EqualsRelation"
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "14"
+                              }
+                            } ]
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "ExistsPredicate",
+                        "attributes" : {
+                          "classLabel" : "CRACKING_PERCENT",
+                          "qualifier" : "exactly",
+                          "n" : "1",
+                          "objLabel" : ""
+                        },
+                        "predicates" : [ {
+                          "kind" : "AndPredicate",
+                          "predicates" : [ {
+                            "kind" : "ReferentialPredicate",
+                            "attributes" : {
+                              "classRef1" : "CRACKING_PERCENT",
+                              "refName" : "sys:line_to_edge",
+                              "classRef2" : "sys:edge",
+                              "objRef2" : "",
+                              "objRef1" : ""
+                            }
+                          }, {
+                            "kind" : "RelationalPredicate",
+                            "predicates" : [ {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "Value_Numeric",
+                                "classRef" : "CRACKING_PERCENT"
+                              }
+                            }, {
+                              "kind" : "LessEqualsRelation"
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "real",
+                                "value" : "46.40"
+                              }
+                            } ]
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "ConditionalPredicate",
+                        "predicates" : [ {
+                          "kind" : "ExistsPredicate",
+                          "attributes" : {
+                            "classLabel" : "LANE_WIDTH",
+                            "qualifier" : "at least",
+                            "n" : "1",
+                            "objLabel" : ""
+                          },
+                          "predicates" : [ {
+                            "kind" : "AndPredicate",
+                            "predicates" : [ {
+                              "kind" : "ReferentialPredicate",
+                              "attributes" : {
+                                "classRef1" : "LANE_WIDTH",
+                                "refName" : "sys:line_to_edge",
+                                "classRef2" : "sys:edge",
+                                "objRef2" : "",
+                                "objRef1" : ""
+                              }
+                            }, {
+                              "kind" : "RelationalPredicate",
+                              "predicates" : [ {
+                                "kind" : "DynamicValue",
+                                "attributes" : {
+                                  "objRef" : "",
+                                  "propName" : "Value_Numeric",
+                                  "classRef" : "LANE_WIDTH"
+                                }
+                              }, {
+                                "kind" : "EqualsRelation"
+                              }, {
+                                "kind" : "StaticValue",
+                                "attributes" : {
+                                  "datatype" : "integer",
+                                  "value" : "15"
+                                }
+                              } ]
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "ExistsPredicate",
+                          "attributes" : {
+                            "classLabel" : "CRACKING_PERCENT",
+                            "qualifier" : "exactly",
+                            "n" : "1",
+                            "objLabel" : ""
+                          },
+                          "predicates" : [ {
+                            "kind" : "AndPredicate",
+                            "predicates" : [ {
+                              "kind" : "ReferentialPredicate",
+                              "attributes" : {
+                                "classRef1" : "CRACKING_PERCENT",
+                                "refName" : "sys:line_to_edge",
+                                "classRef2" : "sys:edge",
+                                "objRef2" : "",
+                                "objRef1" : ""
+                              }
+                            }, {
+                              "kind" : "RelationalPredicate",
+                              "predicates" : [ {
+                                "kind" : "DynamicValue",
+                                "attributes" : {
+                                  "objRef" : "",
+                                  "propName" : "Value_Numeric",
+                                  "classRef" : "CRACKING_PERCENT"
+                                }
+                              }, {
+                                "kind" : "LessEqualsRelation"
+                              }, {
+                                "kind" : "StaticValue",
+                                "attributes" : {
+                                  "datatype" : "real",
+                                  "value" : "43.30"
+                                }
+                              } ]
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "ConditionalPredicate",
+                          "predicates" : [ {
+                            "kind" : "ExistsPredicate",
+                            "attributes" : {
+                              "classLabel" : "LANE_WIDTH",
+                              "qualifier" : "at least",
+                              "n" : "1",
+                              "objLabel" : ""
+                            },
+                            "predicates" : [ {
+                              "kind" : "AndPredicate",
+                              "predicates" : [ {
+                                "kind" : "ReferentialPredicate",
+                                "attributes" : {
+                                  "classRef1" : "LANE_WIDTH",
+                                  "refName" : "sys:line_to_edge",
+                                  "classRef2" : "sys:edge",
+                                  "objRef2" : "",
+                                  "objRef1" : ""
+                                }
+                              }, {
+                                "kind" : "RelationalPredicate",
+                                "predicates" : [ {
+                                  "kind" : "DynamicValue",
+                                  "attributes" : {
+                                    "objRef" : "",
+                                    "propName" : "Value_Numeric",
+                                    "classRef" : "LANE_WIDTH"
+                                  }
+                                }, {
+                                  "kind" : "EqualsRelation"
+                                }, {
+                                  "kind" : "StaticValue",
+                                  "attributes" : {
+                                    "datatype" : "integer",
+                                    "value" : "16"
+                                  }
+                                } ]
+                              } ]
+                            } ]
+                          }, {
+                            "kind" : "ExistsPredicate",
+                            "attributes" : {
+                              "classLabel" : "CRACKING_PERCENT",
+                              "qualifier" : "exactly",
+                              "n" : "1",
+                              "objLabel" : ""
+                            },
+                            "predicates" : [ {
+                              "kind" : "AndPredicate",
+                              "predicates" : [ {
+                                "kind" : "ReferentialPredicate",
+                                "attributes" : {
+                                  "classRef1" : "CRACKING_PERCENT",
+                                  "refName" : "sys:line_to_edge",
+                                  "classRef2" : "sys:edge",
+                                  "objRef2" : "",
+                                  "objRef1" : ""
+                                }
+                              }, {
+                                "kind" : "RelationalPredicate",
+                                "predicates" : [ {
+                                  "kind" : "DynamicValue",
+                                  "attributes" : {
+                                    "objRef" : "",
+                                    "propName" : "Value_Numeric",
+                                    "classRef" : "CRACKING_PERCENT"
+                                  }
+                                }, {
+                                  "kind" : "LessEqualsRelation"
+                                }, {
+                                  "kind" : "StaticValue",
+                                  "attributes" : {
+                                    "datatype" : "real",
+                                    "value" : "40.60"
+                                  }
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

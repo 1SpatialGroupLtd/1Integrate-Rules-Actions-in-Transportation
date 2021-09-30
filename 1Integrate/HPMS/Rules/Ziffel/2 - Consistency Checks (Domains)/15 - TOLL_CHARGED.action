@@ -1,0 +1,96 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "TOLL_CHARGED",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "attributes" : {
+          "template_num_params" : "1",
+          "template_name" : "Domain Check - Range",
+          "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Domain Check - Range",
+          "template_type" : "Action"
+        },
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "Feature_Class",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "TOLL_CHARGED",
+              "template_param" : "1"
+            }
+          } ]
+        }, {
+          "kind" : "CreateObjectOperation",
+          "attributes" : {
+            "classLabel" : "Report",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "TOLL_CHARGED",
+                  "template_param" : "1"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Note",
+                  "classRef" : "Report"
+                }
+              }, {
+                "kind" : "SummedValue",
+                "predicates" : [ {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "name" : "Feature_Class",
+                    "scope" : "local",
+                    "dataType" : ""
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : " object's Value_Numeric is not in range."
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

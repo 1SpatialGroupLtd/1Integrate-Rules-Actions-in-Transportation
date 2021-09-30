@@ -1,0 +1,40 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Checks all geometries to ensure validity according to the OGC definition. The validity criteria are: \\n-> empty geometries containing no vertices are invalid \\n-> single or multi part point geometries are always valid \\n-> single or multi part line geometries are valid if each line consists of at least two non-identical vertices\\n-> a single-part area geometry is valid if each ring is a valid line with at least three vertices that form a closed shape, the outer ring encloses any inner rings, no ring intersects another ring or itself. A ring may touch another ring at a point, but must not cross it or have any linework in common. A ring must not contain duplicate points",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "ARNOLD",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "BuiltinFnValue",
+          "attributes" : {
+            "fnName" : "is_valid"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "ARNOLD"
+            }
+          } ]
+        }, {
+          "kind" : "EqualsRelation"
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "boolean",
+            "value" : "true"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

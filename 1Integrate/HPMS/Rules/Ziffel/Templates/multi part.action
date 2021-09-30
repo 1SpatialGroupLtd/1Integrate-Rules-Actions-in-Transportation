@@ -1,0 +1,1117 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "Template",
+      "predicates" : [ {
+        "kind" : "Parameter",
+        "attributes" : {
+          "classLabel" : "Sections",
+          "objLabel" : ""
+        }
+      }, {
+        "kind" : "ForPredicateOperation",
+        "attributes" : {
+          "classLabel" : "ARNOLD",
+          "objLabel" : "",
+          "n" : "0"
+        },
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "ARNOLD"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "Sections"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "count_parts"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "ARNOLD"
+                }
+              } ]
+            }, {
+              "kind" : "GreaterEqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "2"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "ForAllElementsOperation",
+          "attributes" : {
+            "classLabel" : "",
+            "objLabel" : "part"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "ARNOLD"
+            }
+          }, {
+            "kind" : "ConditionalOperation",
+            "predicates" : [ {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "NullValue"
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "NullValue"
+              } ]
+            }, {
+              "kind" : "SequenceOperation",
+              "predicates" : [ {
+                "kind" : "ConditionalOperation",
+                "predicates" : [ {
+                  "kind" : "AndPredicate",
+                  "predicates" : [ {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Begin_Point",
+                        "classRef" : "Sections"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "round"
+                      },
+                      "predicates" : [ {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "get_measure_minimum"
+                        },
+                        "predicates" : [ {
+                          "kind" : "ObjectValue",
+                          "attributes" : {
+                            "objRef" : "part",
+                            "classRef" : ""
+                          }
+                        } ]
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "integer",
+                          "value" : "4"
+                        }
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "RelationalPredicate",
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "End_Point",
+                        "classRef" : "Sections"
+                      }
+                    }, {
+                      "kind" : "EqualsRelation"
+                    }, {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "round"
+                      },
+                      "predicates" : [ {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "get_measure_maximum"
+                        },
+                        "predicates" : [ {
+                          "kind" : "ObjectValue",
+                          "attributes" : {
+                            "objRef" : "part",
+                            "classRef" : ""
+                          }
+                        } ]
+                      }, {
+                        "kind" : "StaticValue",
+                        "attributes" : {
+                          "datatype" : "integer",
+                          "value" : "4"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "scope" : "local",
+                      "dataType" : "",
+                      "name" : "segment"
+                    }
+                  }, {
+                    "kind" : "ObjectValue",
+                    "attributes" : {
+                      "objRef" : "part",
+                      "classRef" : ""
+                    }
+                  } ]
+                }, {
+                  "kind" : "ConditionalOperation",
+                  "predicates" : [ {
+                    "kind" : "AndPredicate",
+                    "predicates" : [ {
+                      "kind" : "RangePredicate",
+                      "attributes" : {
+                        "maxInclusive" : "true",
+                        "minInclusive" : "true"
+                      },
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Begin_Point",
+                          "classRef" : "Sections"
+                        }
+                      }, {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "round"
+                        },
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "get_measure_minimum"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          } ]
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "integer",
+                            "value" : "4"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "round"
+                        },
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "get_measure_maximum"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          } ]
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "integer",
+                            "value" : "4"
+                          }
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "RelationalPredicate",
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Begin_Point",
+                          "classRef" : "Sections"
+                        }
+                      }, {
+                        "kind" : "LessRelation"
+                      }, {
+                        "kind" : "BuiltinFnValue",
+                        "attributes" : {
+                          "fnName" : "round"
+                        },
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "get_measure_maximum"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          } ]
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "integer",
+                            "value" : "4"
+                          }
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "ConditionalOperation",
+                    "predicates" : [ {
+                      "kind" : "AndPredicate",
+                      "predicates" : [ {
+                        "kind" : "RangePredicate",
+                        "attributes" : {
+                          "maxInclusive" : "true",
+                          "minInclusive" : "true"
+                        },
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "End_Point",
+                            "classRef" : "Sections"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_maximum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "End_Point",
+                            "classRef" : "Sections"
+                          }
+                        }, {
+                          "kind" : "GreaterRelation"
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ConditionalOperation",
+                      "predicates" : [ {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "is_valid"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "line_segment_from_measures"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            }, {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "Begin_Point",
+                                "classRef" : "Sections"
+                              }
+                            }, {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "End_Point",
+                                "classRef" : "Sections"
+                              }
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "3"
+                              }
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "EqualsRelation"
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "boolean",
+                            "value" : "true"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "scope" : "local",
+                            "dataType" : "",
+                            "name" : "new segment"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "line_segment_from_measures"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          }, {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "Begin_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "End_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "3"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ConditionalOperation",
+                      "predicates" : [ {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "is_valid"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "line_segment_from_measures"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            }, {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "Begin_Point",
+                                "classRef" : "Sections"
+                              }
+                            }, {
+                              "kind" : "BuiltinFnValue",
+                              "attributes" : {
+                                "fnName" : "get_measure_maximum"
+                              },
+                              "predicates" : [ {
+                                "kind" : "ObjectValue",
+                                "attributes" : {
+                                  "objRef" : "part",
+                                  "classRef" : ""
+                                }
+                              } ]
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "3"
+                              }
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "EqualsRelation"
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "boolean",
+                            "value" : "true"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "scope" : "local",
+                            "dataType" : "",
+                            "name" : "new segment"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "line_segment_from_measures"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          }, {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "Begin_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_maximum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "3"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "kind" : "ConditionalOperation",
+                    "predicates" : [ {
+                      "kind" : "AndPredicate",
+                      "predicates" : [ {
+                        "kind" : "RangePredicate",
+                        "attributes" : {
+                          "maxInclusive" : "true",
+                          "minInclusive" : "true"
+                        },
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "End_Point",
+                            "classRef" : "Sections"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_maximum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "End_Point",
+                            "classRef" : "Sections"
+                          }
+                        }, {
+                          "kind" : "GreaterRelation"
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "DynamicValue",
+                          "attributes" : {
+                            "objRef" : "",
+                            "propName" : "Begin_Point",
+                            "classRef" : "Sections"
+                          }
+                        }, {
+                          "kind" : "LessRelation"
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "round"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_maximum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "4"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ConditionalOperation",
+                      "predicates" : [ {
+                        "kind" : "RelationalPredicate",
+                        "predicates" : [ {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "is_valid"
+                          },
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "line_segment_from_measures"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            }, {
+                              "kind" : "BuiltinFnValue",
+                              "attributes" : {
+                                "fnName" : "get_measure_minimum"
+                              },
+                              "predicates" : [ {
+                                "kind" : "ObjectValue",
+                                "attributes" : {
+                                  "objRef" : "part",
+                                  "classRef" : ""
+                                }
+                              } ]
+                            }, {
+                              "kind" : "DynamicValue",
+                              "attributes" : {
+                                "objRef" : "",
+                                "propName" : "End_Point",
+                                "classRef" : "Sections"
+                              }
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "3"
+                              }
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "EqualsRelation"
+                        }, {
+                          "kind" : "StaticValue",
+                          "attributes" : {
+                            "datatype" : "boolean",
+                            "value" : "true"
+                          }
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "scope" : "local",
+                            "dataType" : "",
+                            "name" : "new segment"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "line_segment_from_measures"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "End_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "3"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "kind" : "ConditionalOperation",
+                      "predicates" : [ {
+                        "kind" : "AndPredicate",
+                        "predicates" : [ {
+                          "kind" : "RelationalPredicate",
+                          "predicates" : [ {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "is_valid"
+                            },
+                            "predicates" : [ {
+                              "kind" : "BuiltinFnValue",
+                              "attributes" : {
+                                "fnName" : "line_segment_from_measures"
+                              },
+                              "predicates" : [ {
+                                "kind" : "ObjectValue",
+                                "attributes" : {
+                                  "objRef" : "part",
+                                  "classRef" : ""
+                                }
+                              }, {
+                                "kind" : "BuiltinFnValue",
+                                "attributes" : {
+                                  "fnName" : "get_measure_minimum"
+                                },
+                                "predicates" : [ {
+                                  "kind" : "ObjectValue",
+                                  "attributes" : {
+                                    "objRef" : "part",
+                                    "classRef" : ""
+                                  }
+                                } ]
+                              }, {
+                                "kind" : "BuiltinFnValue",
+                                "attributes" : {
+                                  "fnName" : "get_measure_maximum"
+                                },
+                                "predicates" : [ {
+                                  "kind" : "ObjectValue",
+                                  "attributes" : {
+                                    "objRef" : "part",
+                                    "classRef" : ""
+                                  }
+                                } ]
+                              }, {
+                                "kind" : "StaticValue",
+                                "attributes" : {
+                                  "datatype" : "integer",
+                                  "value" : "3"
+                                }
+                              } ]
+                            } ]
+                          }, {
+                            "kind" : "EqualsRelation"
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "boolean",
+                              "value" : "true"
+                            }
+                          } ]
+                        }, {
+                          "kind" : "RelationalPredicate",
+                          "predicates" : [ {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "Begin_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "LessRelation"
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "round"
+                            },
+                            "predicates" : [ {
+                              "kind" : "BuiltinFnValue",
+                              "attributes" : {
+                                "fnName" : "get_measure_minimum"
+                              },
+                              "predicates" : [ {
+                                "kind" : "ObjectValue",
+                                "attributes" : {
+                                  "objRef" : "part",
+                                  "classRef" : ""
+                                }
+                              } ]
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "4"
+                              }
+                            } ]
+                          } ]
+                        }, {
+                          "kind" : "RelationalPredicate",
+                          "predicates" : [ {
+                            "kind" : "DynamicValue",
+                            "attributes" : {
+                              "objRef" : "",
+                              "propName" : "End_Point",
+                              "classRef" : "Sections"
+                            }
+                          }, {
+                            "kind" : "GreaterRelation"
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "round"
+                            },
+                            "predicates" : [ {
+                              "kind" : "BuiltinFnValue",
+                              "attributes" : {
+                                "fnName" : "get_measure_maximum"
+                              },
+                              "predicates" : [ {
+                                "kind" : "ObjectValue",
+                                "attributes" : {
+                                  "objRef" : "part",
+                                  "classRef" : ""
+                                }
+                              } ]
+                            }, {
+                              "kind" : "StaticValue",
+                              "attributes" : {
+                                "datatype" : "integer",
+                                "value" : "4"
+                              }
+                            } ]
+                          } ]
+                        } ]
+                      }, {
+                        "kind" : "AssignmentOperation",
+                        "predicates" : [ {
+                          "kind" : "TemporaryValue",
+                          "attributes" : {
+                            "scope" : "local",
+                            "dataType" : "",
+                            "name" : "new segment"
+                          }
+                        }, {
+                          "kind" : "BuiltinFnValue",
+                          "attributes" : {
+                            "fnName" : "line_segment_from_measures"
+                          },
+                          "predicates" : [ {
+                            "kind" : "ObjectValue",
+                            "attributes" : {
+                              "objRef" : "part",
+                              "classRef" : ""
+                            }
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_minimum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "BuiltinFnValue",
+                            "attributes" : {
+                              "fnName" : "get_measure_maximum"
+                            },
+                            "predicates" : [ {
+                              "kind" : "ObjectValue",
+                              "attributes" : {
+                                "objRef" : "part",
+                                "classRef" : ""
+                              }
+                            } ]
+                          }, {
+                            "kind" : "StaticValue",
+                            "attributes" : {
+                              "datatype" : "integer",
+                              "value" : "3"
+                            }
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "ConditionalOperation",
+                "predicates" : [ {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "scope" : "local",
+                      "dataType" : "",
+                      "name" : "new segment"
+                    }
+                  }, {
+                    "kind" : "NotEqualsRelation"
+                  }, {
+                    "kind" : "NullValue"
+                  } ]
+                }, {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "TemporaryValue",
+                    "attributes" : {
+                      "scope" : "local",
+                      "dataType" : "",
+                      "name" : "segment"
+                    }
+                  }, {
+                    "kind" : "ConditionalValue",
+                    "predicates" : [ {
+                      "kind" : "RelationalPredicate",
+                      "predicates" : [ {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "scope" : "local",
+                          "dataType" : "",
+                          "name" : "segment"
+                        }
+                      }, {
+                        "kind" : "EqualsRelation"
+                      }, {
+                        "kind" : "NullValue"
+                      } ]
+                    }, {
+                      "kind" : "TemporaryValue",
+                      "attributes" : {
+                        "scope" : "local",
+                        "dataType" : "",
+                        "name" : "new segment"
+                      }
+                    }, {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "union"
+                      },
+                      "predicates" : [ {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "scope" : "local",
+                          "dataType" : "",
+                          "name" : "new segment"
+                        }
+                      }, {
+                        "kind" : "TemporaryValue",
+                        "attributes" : {
+                          "scope" : "local",
+                          "dataType" : "",
+                          "name" : "segment"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "kind" : "AssignmentOperation",
+                "predicates" : [ {
+                  "kind" : "TemporaryValue",
+                  "attributes" : {
+                    "scope" : "local",
+                    "dataType" : "",
+                    "name" : "new segment"
+                  }
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : true
+}

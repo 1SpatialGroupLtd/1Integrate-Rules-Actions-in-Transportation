@@ -1,0 +1,222 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "PCT_PASS_SIGHT object must exist for all Sample objects and for all URBAN_CODE objects with a Value_Numeric of 99999 and for all THROUGH_LANES objects with a Value_Numeric of 2 and for all MEDIAN_TYPE objects with a Value_Numeric of 1,2 and for all SURFACE_TYPE objects with a Value_Numeric greater than 1.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SAMPLE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SAMPLE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "URBAN_CODE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "URBAN_CODE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "URBAN_CODE"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "99999"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "THROUGH_LANES",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "THROUGH_LANES",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "THROUGH_LANES"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "2"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "MEDIAN_TYPE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "MEDIAN_TYPE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RangePredicate",
+                "attributes" : {
+                  "maxInclusive" : "true",
+                  "minInclusive" : "true"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "MEDIAN_TYPE"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "1"
+                  }
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "2"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SURFACE_TYPE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "SURFACE_TYPE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "SURFACE_TYPE"
+                  }
+                }, {
+                  "kind" : "GreaterRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "1"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "PCT_PASS_SIGHT",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "PCT_PASS_SIGHT",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

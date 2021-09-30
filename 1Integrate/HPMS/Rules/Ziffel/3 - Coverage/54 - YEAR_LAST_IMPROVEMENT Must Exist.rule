@@ -1,0 +1,198 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "YEAR_LAST_IMPROVEMENT object's Value_Date must exist (for all SURFACE-TYPE objects with a Value_Numeric of 2,3,4,5,6,7,8,9,10 and for all Sample objects) or (for all YEAR_LAST_CONSTRUCTION objects with a Value_Date less than the YEAR_LAST_CONSTRUCTION object's Year_Record minus 20).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "SURFACE_TYPE",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "SURFACE_TYPE",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "SURFACE_TYPE"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "real",
+                      "value" : "2"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "real",
+                      "value" : "10"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "SAMPLE",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "SAMPLE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "YEAR_LAST_CONSTRUCTION",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "YEAR_LAST_CONSTRUCTION",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "to_real"
+                  },
+                  "predicates" : [ {
+                    "kind" : "BuiltinFnValue",
+                    "attributes" : {
+                      "fnName" : "re_search"
+                    },
+                    "predicates" : [ {
+                      "kind" : "BuiltinFnValue",
+                      "attributes" : {
+                        "fnName" : "to_string"
+                      },
+                      "predicates" : [ {
+                        "kind" : "DynamicValue",
+                        "attributes" : {
+                          "objRef" : "",
+                          "propName" : "Value_Date",
+                          "classRef" : "YEAR_LAST_CONSTRUCTION"
+                        }
+                      } ]
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "string",
+                        "value" : "\\d\\d\\d\\d"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "kind" : "LessRelation"
+                }, {
+                  "kind" : "DifferenceValue",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Year_Record",
+                      "classRef" : "YEAR_LAST_CONSTRUCTION"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "real",
+                      "value" : "20"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ExistsPredicate",
+          "attributes" : {
+            "classLabel" : "YEAR_LAST_IMPROV",
+            "qualifier" : "exactly",
+            "n" : "1",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "YEAR_LAST_IMPROV",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Date",
+                  "classRef" : "YEAR_LAST_IMPROV"
+                }
+              }, {
+                "kind" : "NotEqualsRelation"
+              }, {
+                "kind" : "NullValue"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

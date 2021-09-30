@@ -1,0 +1,42 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "LANE_WIDTH object's Value_Numeric must be greater than 5 and less than 19.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "LANE_WIDTH",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RangePredicate",
+        "attributes" : {
+          "maxInclusive" : "true",
+          "minInclusive" : "true"
+        },
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "LANE_WIDTH"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "6"
+          }
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "18"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

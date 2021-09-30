@@ -1,0 +1,172 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "SIGNAL_TYPE object's Value_Numeric must be null or 5 for all F_SYSTEM objects with a Value_Numeric of 1 and for all URBAN_CODE objects with a Value_Numeric not equal to 99999.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "F_SYSTEM",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "F_SYSTEM",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "F_SYSTEM"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "1"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "URBAN_CODE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "URBAN_CODE",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "URBAN_CODE"
+                  }
+                }, {
+                  "kind" : "NotEqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "99999"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ConditionalPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SIGNAL_TYPE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SIGNAL_TYPE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "SIGNAL_TYPE",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SIGNAL_TYPE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "OrPredicate",
+              "predicates" : [ {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "SIGNAL_TYPE"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "5"
+                  }
+                } ]
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "SIGNAL_TYPE"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "NullValue"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

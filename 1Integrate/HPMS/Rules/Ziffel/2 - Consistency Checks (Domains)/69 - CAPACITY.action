@@ -1,0 +1,227 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "CAPACITY",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "Feature_Class"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "CAPACITY"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "rule name"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "rule_name"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "class name"
+            }
+          }, {
+            "kind" : "ClassValue",
+            "attributes" : {
+              "objRef" : "",
+              "classRef" : "CAPACITY"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "feat_id"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "to_string"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "CAPACITY"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "markupGeom"
+            }
+          }, {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "geometry",
+              "classRef" : "CAPACITY"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "comment"
+            }
+          }, {
+            "kind" : "SummedValue",
+            "predicates" : [ {
+              "kind" : "TemporaryValue",
+              "attributes" : {
+                "scope" : "local",
+                "dataType" : "",
+                "name" : "Feature_Class"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "string",
+                "value" : " is not greater than 0."
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "CreateObjectOperation",
+          "attributes" : {
+            "classLabel" : "MARKUP_LINE",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "SequenceOperation",
+            "predicates" : [ {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "MARKUP_LINE"
+                }
+              }, {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "scope" : "local",
+                  "dataType" : "",
+                  "name" : "markupGeom"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "feat_id",
+                  "classRef" : "MARKUP_LINE"
+                }
+              }, {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "scope" : "local",
+                  "dataType" : "",
+                  "name" : "feat_id"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "class",
+                  "classRef" : "MARKUP_LINE"
+                }
+              }, {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "scope" : "local",
+                  "dataType" : "",
+                  "name" : "class name"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "violation",
+                  "classRef" : "MARKUP_LINE"
+                }
+              }, {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "scope" : "local",
+                  "dataType" : "",
+                  "name" : "rule name"
+                }
+              } ]
+            }, {
+              "kind" : "AssignmentOperation",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "comment",
+                  "classRef" : "MARKUP_LINE"
+                }
+              }, {
+                "kind" : "TemporaryValue",
+                "attributes" : {
+                  "scope" : "local",
+                  "dataType" : "",
+                  "name" : "comment"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

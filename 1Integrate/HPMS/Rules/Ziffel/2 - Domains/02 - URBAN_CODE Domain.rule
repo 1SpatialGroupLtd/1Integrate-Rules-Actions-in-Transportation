@@ -1,0 +1,70 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "URBAN_CODE objects' Value_Numeric must be a whole number in the range 1-99999.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "URBAN_CODE",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "URBAN_CODE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "URBAN_CODE"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RangePredicate",
+          "attributes" : {
+            "maxInclusive" : "true",
+            "minInclusive" : "true"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "URBAN_CODE"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "1"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "99999"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

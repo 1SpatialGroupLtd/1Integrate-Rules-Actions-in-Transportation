@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/43,45,72-75 - Report Missing CURVES_A-F and GRADES_A-F",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/43,45,72-75 - CURVES_A-F and GRADES_A-F Must Exist"
+  } ]
+}

@@ -1,0 +1,99 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "BASE_TYPE objects' Value_Numeric must be a whole number in the range 1-3, or in range 5-8.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "BASE_TYPE",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "BASE_TYPE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "BASE_TYPE"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "BASE_TYPE"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "1"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "3"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "BASE_TYPE"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "5"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "8"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

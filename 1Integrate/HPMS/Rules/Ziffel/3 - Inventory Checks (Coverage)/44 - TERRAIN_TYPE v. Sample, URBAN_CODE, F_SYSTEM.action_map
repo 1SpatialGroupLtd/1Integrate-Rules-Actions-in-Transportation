@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/44 - Report Missing TERRAIN_TYPE",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/44 - TERRAIN_TYPE Must Exist"
+  } ]
+}

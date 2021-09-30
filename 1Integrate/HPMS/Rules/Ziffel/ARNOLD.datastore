@@ -1,0 +1,208 @@
+{
+  "exportClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Begin_Pt"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Comments",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Data_Srce"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "End_Point"
+    }, {
+      "dataType" : "fme_datetime",
+      "name" : "Mod_Time"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Modified_B",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_decimal(1-10,0)",
+      "name" : "OBJECTID"
+    }, {
+      "dataType" : "fme_decimal(1-10,0)",
+      "name" : "OBJECTID_1"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Route_ID",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Sec_Length"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Shape_Length"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "State_Code"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "TestCase",
+      "params" : {
+        "length" : "10"
+      }
+    }, {
+      "dataType" : "fme_datetime",
+      "name" : "ValueDate"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "ValueText",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Value_Num"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Year_Recor"
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "name" : "geometry",
+      "params" : {
+        "cs_wkt" : "GEOGCS[\"WGS84 Lat/Longs\",\n    DATUM[\"WGS_1984\",\n        SPHEROID[\"World Geodetic System of 1984, GEM 10C\",6378137,298.257223563,\n            AUTHORITY[\"EPSG\",\"7030\"]],\n        AUTHORITY[\"EPSG\",\"6326\"]],\n    PRIMEM[\"Greenwich\",0],\n    UNIT[\"degree\",0.0174532925199433],\n    AUTHORITY[\"EPSG\",\"4326\"]]",
+        "dimension_count" : "2",
+        "complex" : "false",
+        "type" : "line",
+        "unit_length" : "111319.4907932736",
+        "space" : "WGS84 Lat/Longs",
+        "srid" : "FME=EPSG:4326,EPSG=4326"
+      }
+    } ],
+    "name" : "ARNOLD"
+  } ],
+  "exportCredentials" : {
+    "Coordinate Reference System" : "",
+    "Destination Files (.gdb)" : "",
+    "For X, Y, Z, M data: Use zero rather than NULL or NaN when writing ignored ordinate" : "",
+    "Export FME Log File" : "",
+    "Force geometry to be written with X, Y, Z, M" : "",
+    "Reverse coordinate axis order (y,x)" : ""
+  },
+  "exportType" : "Esri Geodatabase File (FILEGDB)",
+  "importClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Begin_Pt"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Comments",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Data_Srce"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "End_Point"
+    }, {
+      "dataType" : "fme_datetime",
+      "mappedType" : "Timestamp",
+      "name" : "Mod_Time"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Modified_B",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "mappedType" : "Integer",
+      "name" : "OBJECTID"
+    }, {
+      "dataType" : "fme_int32",
+      "mappedType" : "Integer",
+      "name" : "OBJECTID_1"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Route_ID",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Sec_Length"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Shape_Length"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "State_Code"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "TestCase",
+      "params" : {
+        "length" : "10"
+      }
+    }, {
+      "dataType" : "fme_datetime",
+      "mappedType" : "Timestamp",
+      "name" : "ValueDate"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "ValueText",
+      "params" : {
+        "length" : "80"
+      }
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Value_Num"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "Year_Recor"
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "indexed" : true,
+      "mappedType" : "Geometry",
+      "name" : "geometry",
+      "params" : {
+        "cs_wkt" : "GEOGCS[\"WGS84 Lat/Longs\",\n    DATUM[\"WGS_1984\",\n        SPHEROID[\"World Geodetic System of 1984, GEM 10C\",6378137,298.257223563,\n            AUTHORITY[\"EPSG\",\"7030\"]],\n        AUTHORITY[\"EPSG\",\"6326\"]],\n    PRIMEM[\"Greenwich\",0],\n    UNIT[\"degree\",0.0174532925199433],\n    AUTHORITY[\"EPSG\",\"4326\"]]",
+        "dimension_count" : "2",
+        "complex" : "false",
+        "type" : "line",
+        "unit_length" : "111319.4907932736",
+        "space" : "WGS84 Lat/Longs",
+        "srid" : "FME=EPSG:4326,EPSG=4326"
+      }
+    } ],
+    "name" : "ARNOLD"
+  } ],
+  "importCredentials" : {
+    "Coordinate Reference System" : "",
+    "Clip to envelope" : "",
+    "Import FME Log File" : "",
+    "Exposed attributes" : "",
+    "Fix ring direction and inclusion errors" : "",
+    "For X, Y, Z, M data" : "",
+    "Allow invalid geometries" : "",
+    "Reverse coordinate axis order (y,x)" : "",
+    "Source Files (.gdb)" : "ARNOLDgdb.zip"
+  },
+  "importType" : "Esri Geodatabase File (FILEGDB)",
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : ""
+}

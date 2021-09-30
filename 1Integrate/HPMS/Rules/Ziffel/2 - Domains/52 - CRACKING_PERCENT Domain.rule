@@ -1,0 +1,94 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "CRACKING_PERCENT objects' Value_Numeric must be in the range 0-100.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "CRACKING_PERCENT",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RangePredicate",
+          "attributes" : {
+            "maxInclusive" : "true",
+            "minInclusive" : "true"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "CRACKING_PERCENT"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "real",
+              "value" : "0"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "real",
+              "value" : "100"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "to_integer"
+            },
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "substring"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_string"
+                },
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Date",
+                    "classRef" : "CRACKING_PERCENT"
+                  }
+                } ]
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "0"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "4"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "LessEqualsRelation"
+          }, {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Year_Record",
+              "classRef" : "CRACKING_PERCENT"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

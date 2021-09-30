@@ -1,0 +1,197 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "PSR object's Value_Date must be greater than or equal to its Year_Record minus 2 (for all Sample objects) or (for all F_SYSTEM objects with a Value_Numeric greater than 1 and for all NHS objects with a Value_Numeric of 1,2,3,4,5,6,7,8,9).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "SAMPLE",
+              "qualifier" : "exactly",
+              "n" : "1",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "SAMPLE",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            } ]
+          }, {
+            "kind" : "AndPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "F_SYSTEM",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "F_SYSTEM",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "F_SYSTEM"
+                    }
+                  }, {
+                    "kind" : "GreaterRelation"
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "1"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "NHS",
+                "qualifier" : "exactly",
+                "n" : "1",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "NHS",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RangePredicate",
+                  "attributes" : {
+                    "maxInclusive" : "true",
+                    "minInclusive" : "true"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Numeric",
+                      "classRef" : "NHS"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "1"
+                    }
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "integer",
+                      "value" : "9"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "ForAllPredicate",
+          "attributes" : {
+            "classLabel" : "PSR",
+            "objLabel" : ""
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "PSR",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "to_real"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "re_search"
+                },
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "to_string"
+                  },
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Date",
+                      "classRef" : "PSR"
+                    }
+                  } ]
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "string",
+                    "value" : "\\d\\d\\d\\d"
+                  }
+                } ]
+              } ]
+            }, {
+              "kind" : "GreaterEqualsRelation"
+            }, {
+              "kind" : "DifferenceValue",
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "PSR"
+                }
+              }, {
+                "kind" : "StaticValue",
+                "attributes" : {
+                  "datatype" : "integer",
+                  "value" : "2"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

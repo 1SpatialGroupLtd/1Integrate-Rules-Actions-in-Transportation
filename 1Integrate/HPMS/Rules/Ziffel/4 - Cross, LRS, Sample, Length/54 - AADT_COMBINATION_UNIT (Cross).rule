@@ -1,0 +1,34 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "AADT_COMBINATION_UNIT object's Value_Numeric must be greater than 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "AADT_COMBINATION",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "AADT_COMBINATION"
+          }
+        }, {
+          "kind" : "GreaterRelation"
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "0"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

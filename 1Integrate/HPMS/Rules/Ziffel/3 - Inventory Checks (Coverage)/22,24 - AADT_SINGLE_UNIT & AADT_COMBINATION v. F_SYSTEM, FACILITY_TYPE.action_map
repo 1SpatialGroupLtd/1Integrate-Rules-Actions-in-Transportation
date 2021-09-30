@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/22,24 - Report Missing AADT_SINGLE_UNIT and AADT_COMBINATION",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/22,24 - AADT_SINGLE_UNIT and AADT_COMBINATION Must Exist"
+  } ]
+}

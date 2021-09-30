@@ -1,0 +1,115 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "Template",
+      "predicates" : [ {
+        "kind" : "Parameter",
+        "attributes" : {
+          "classLabel" : "Sections",
+          "objLabel" : ""
+        }
+      }, {
+        "kind" : "ForPredicateOperation",
+        "attributes" : {
+          "classLabel" : "ARNOLD",
+          "objLabel" : "",
+          "n" : "0"
+        },
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "ARNOLD"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Route_ID",
+                "classRef" : "Sections"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "count_parts"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "ARNOLD"
+                }
+              } ]
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "1"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "scope" : "local",
+              "dataType" : "",
+              "name" : "segment"
+            }
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "line_segment_from_measures"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "geometry",
+                "classRef" : "ARNOLD"
+              }
+            }, {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Begin_Point",
+                "classRef" : "Sections"
+              }
+            }, {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "End_Point",
+                "classRef" : "Sections"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "3"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : true
+}

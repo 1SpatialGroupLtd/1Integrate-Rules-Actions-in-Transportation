@@ -1,0 +1,211 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Action",
+    "predicates" : [ {
+      "kind" : "RootOperation",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "SequenceOperation",
+        "predicates" : [ {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "incorrectFeature",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "PSR"
+            }
+          } ]
+        }, {
+          "kind" : "AssignmentOperation",
+          "predicates" : [ {
+            "kind" : "TemporaryValue",
+            "attributes" : {
+              "name" : "correctParameters",
+              "scope" : "local",
+              "dataType" : ""
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "greater than or equal to its Year_Record minus 2"
+            }
+          } ]
+        }, {
+          "kind" : "ForPredicateOperation",
+          "attributes" : {
+            "classLabel" : "PSR",
+            "objLabel" : "",
+            "n" : "0"
+          },
+          "predicates" : [ {
+            "kind" : "ReferentialPredicate",
+            "attributes" : {
+              "classRef1" : "PSR",
+              "refName" : "sys:line_to_edge",
+              "classRef2" : "sys:edge",
+              "objRef2" : "",
+              "objRef1" : ""
+            }
+          }, {
+            "kind" : "SequenceOperation",
+            "attributes" : {
+              "template_num_params" : "2",
+              "template_name" : "Invalid Value Date(sys.edge)",
+              "template_id" : "ACTION://Repositories/con_fhwa_hpms/Ziffel/Templates/Invalid Value Date(sys.edge)",
+              "template_type" : "Action"
+            },
+            "predicates" : [ {
+              "kind" : "ReportOperation",
+              "attributes" : {
+                "scope" : "per-object",
+                "label" : "Invalid Value Numeric"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "geometry",
+                  "classRef" : "sys:edge",
+                  "template_param" : "2"
+                }
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Date",
+                  "classRef" : "PSR",
+                  "template_param" : "1"
+                }
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "PSR",
+                  "template_param" : "1"
+                }
+              } ]
+            }, {
+              "kind" : "CreateObjectOperation",
+              "attributes" : {
+                "classLabel" : "Report",
+                "objLabel" : ""
+              },
+              "predicates" : [ {
+                "kind" : "SequenceOperation",
+                "predicates" : [ {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "geometry",
+                      "classRef" : "Report"
+                    }
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "geometry",
+                      "classRef" : "sys:edge",
+                      "template_param" : "2"
+                    }
+                  } ]
+                }, {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Date",
+                      "classRef" : "Report"
+                    }
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Date",
+                      "classRef" : "PSR",
+                      "template_param" : "1"
+                    }
+                  } ]
+                }, {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Year_Record",
+                      "classRef" : "Report"
+                    }
+                  }, {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Year_Record",
+                      "classRef" : "PSR",
+                      "template_param" : "1"
+                    }
+                  } ]
+                }, {
+                  "kind" : "AssignmentOperation",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Note",
+                      "classRef" : "Report"
+                    }
+                  }, {
+                    "kind" : "SummedValue",
+                    "predicates" : [ {
+                      "kind" : "TemporaryValue",
+                      "attributes" : {
+                        "name" : "incorrectFeature",
+                        "scope" : "local",
+                        "dataType" : ""
+                      }
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "string",
+                        "value" : " has invalid Value_Date (is not "
+                      }
+                    }, {
+                      "kind" : "TemporaryValue",
+                      "attributes" : {
+                        "name" : "correctParameters",
+                        "scope" : "local",
+                        "dataType" : ""
+                      }
+                    }, {
+                      "kind" : "StaticValue",
+                      "attributes" : {
+                        "datatype" : "string",
+                        "value" : ")."
+                      }
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

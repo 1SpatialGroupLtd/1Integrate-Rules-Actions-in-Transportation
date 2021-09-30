@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "Links RULE \"Check that Features are Valid\" with ACTION \"Markup non-Valid Features\"",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold (Essential Geometry Checks)/Markup non-Valid Features",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/1 - Arnold Essential Geometry Checks/Check that Features are Valid"
+  } ]
+}

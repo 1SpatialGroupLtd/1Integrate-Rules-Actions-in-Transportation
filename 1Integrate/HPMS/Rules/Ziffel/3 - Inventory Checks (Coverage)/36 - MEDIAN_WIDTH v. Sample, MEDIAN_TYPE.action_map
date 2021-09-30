@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/36 - Report Missing MEDIAN_WIDTH",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/36 - MEDIAN_WIDTH Must Exist"
+  } ]
+}

@@ -1,0 +1,475 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "IRI, RUTTING, FAULTING, and CRACKING_PERCENT objects' Value_Date must equal their Year_Record if their Value_Text is null and for all F_SYSTEM objects with a Value_Numeric of 1.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "sys:edge",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "ConditionalPredicate",
+        "predicates" : [ {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ExistsPredicate",
+            "attributes" : {
+              "classLabel" : "F_SYSTEM",
+              "n" : "1",
+              "objLabel" : "",
+              "qualifier" : "exactly"
+            },
+            "predicates" : [ {
+              "kind" : "AndPredicate",
+              "predicates" : [ {
+                "kind" : "ReferentialPredicate",
+                "attributes" : {
+                  "classRef1" : "F_SYSTEM",
+                  "refName" : "sys:line_to_edge",
+                  "classRef2" : "sys:edge",
+                  "objRef2" : "",
+                  "objRef1" : ""
+                }
+              }, {
+                "kind" : "RelationalPredicate",
+                "predicates" : [ {
+                  "kind" : "DynamicValue",
+                  "attributes" : {
+                    "objRef" : "",
+                    "propName" : "Value_Numeric",
+                    "classRef" : "F_SYSTEM"
+                  }
+                }, {
+                  "kind" : "EqualsRelation"
+                }, {
+                  "kind" : "StaticValue",
+                  "attributes" : {
+                    "datatype" : "integer",
+                    "value" : "1"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "kind" : "OrPredicate",
+            "predicates" : [ {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "IRI",
+                "n" : "1",
+                "objLabel" : "",
+                "qualifier" : "exactly"
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "IRI",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Text",
+                      "classRef" : "IRI"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "NullValue"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "RUTTING",
+                "n" : "1",
+                "objLabel" : "",
+                "qualifier" : "exactly"
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "RUTTING",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Text",
+                      "classRef" : "RUTTING"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "NullValue"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "FAULTING",
+                "n" : "1",
+                "objLabel" : "",
+                "qualifier" : "exactly"
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "FAULTING",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Text",
+                      "classRef" : "FAULTING"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "NullValue"
+                  } ]
+                } ]
+              } ]
+            }, {
+              "kind" : "ExistsPredicate",
+              "attributes" : {
+                "classLabel" : "CRACKING_PERCENT",
+                "n" : "1",
+                "objLabel" : "",
+                "qualifier" : "exactly"
+              },
+              "predicates" : [ {
+                "kind" : "AndPredicate",
+                "predicates" : [ {
+                  "kind" : "ReferentialPredicate",
+                  "attributes" : {
+                    "classRef1" : "CRACKING_PERCENT",
+                    "refName" : "sys:line_to_edge",
+                    "classRef2" : "sys:edge",
+                    "objRef2" : "",
+                    "objRef1" : ""
+                  }
+                }, {
+                  "kind" : "RelationalPredicate",
+                  "predicates" : [ {
+                    "kind" : "DynamicValue",
+                    "attributes" : {
+                      "objRef" : "",
+                      "propName" : "Value_Text",
+                      "classRef" : "CRACKING_PERCENT"
+                    }
+                  }, {
+                    "kind" : "EqualsRelation"
+                  }, {
+                    "kind" : "NullValue"
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "kind" : "AndPredicate",
+          "predicates" : [ {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "IRI",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "IRI",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_type" : "Rule"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_real"
+                },
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "re_search"
+                  },
+                  "predicates" : [ {
+                    "kind" : "BuiltinFnValue",
+                    "attributes" : {
+                      "fnName" : "to_string"
+                    },
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Date",
+                        "classRef" : "IRI",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : "\\d\\d\\d\\d"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "IRI",
+                  "template_param" : "1"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "RUTTING",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "RUTTING",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_type" : "Rule"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_real"
+                },
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "re_search"
+                  },
+                  "predicates" : [ {
+                    "kind" : "BuiltinFnValue",
+                    "attributes" : {
+                      "fnName" : "to_string"
+                    },
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Date",
+                        "classRef" : "RUTTING",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : "\\d\\d\\d\\d"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "RUTTING",
+                  "template_param" : "1"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "FAULTING",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "FAULTING",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_type" : "Rule"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_real"
+                },
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "re_search"
+                  },
+                  "predicates" : [ {
+                    "kind" : "BuiltinFnValue",
+                    "attributes" : {
+                      "fnName" : "to_string"
+                    },
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Date",
+                        "classRef" : "FAULTING",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : "\\d\\d\\d\\d"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "FAULTING",
+                  "template_param" : "1"
+                }
+              } ]
+            } ]
+          }, {
+            "kind" : "ForAllPredicate",
+            "attributes" : {
+              "classLabel" : "CRACKING_PERCENT",
+              "objLabel" : ""
+            },
+            "predicates" : [ {
+              "kind" : "ReferentialPredicate",
+              "attributes" : {
+                "classRef1" : "CRACKING_PERCENT",
+                "refName" : "sys:line_to_edge",
+                "classRef2" : "sys:edge",
+                "objRef2" : "",
+                "objRef1" : ""
+              }
+            }, {
+              "kind" : "RelationalPredicate",
+              "attributes" : {
+                "template_num_params" : "1",
+                "template_name" : "Value_Date is same Year as Year Record 5",
+                "template_id" : "RULE://Repositories/con_fhwa_hpms/Ziffel/4 - Cross, LRS, Sample, Length/Value_Date is same Year as Year Record 5",
+                "template_type" : "Rule"
+              },
+              "predicates" : [ {
+                "kind" : "BuiltinFnValue",
+                "attributes" : {
+                  "fnName" : "to_real"
+                },
+                "predicates" : [ {
+                  "kind" : "BuiltinFnValue",
+                  "attributes" : {
+                    "fnName" : "re_search"
+                  },
+                  "predicates" : [ {
+                    "kind" : "BuiltinFnValue",
+                    "attributes" : {
+                      "fnName" : "to_string"
+                    },
+                    "predicates" : [ {
+                      "kind" : "DynamicValue",
+                      "attributes" : {
+                        "objRef" : "",
+                        "propName" : "Value_Date",
+                        "classRef" : "CRACKING_PERCENT",
+                        "template_param" : "1"
+                      }
+                    } ]
+                  }, {
+                    "kind" : "StaticValue",
+                    "attributes" : {
+                      "datatype" : "string",
+                      "value" : "\\d\\d\\d\\d"
+                    }
+                  } ]
+                } ]
+              }, {
+                "kind" : "EqualsRelation"
+              }, {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Year_Record",
+                  "classRef" : "CRACKING_PERCENT",
+                  "template_param" : "1"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

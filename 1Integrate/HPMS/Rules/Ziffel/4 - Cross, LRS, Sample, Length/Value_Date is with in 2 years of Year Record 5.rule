@@ -1,0 +1,79 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "Template",
+      "predicates" : [ {
+        "kind" : "Parameter",
+        "attributes" : {
+          "classLabel" : "IRI",
+          "objLabel" : ""
+        }
+      }, {
+        "kind" : "RangePredicate",
+        "attributes" : {
+          "maxInclusive" : "true",
+          "minInclusive" : "true"
+        },
+        "predicates" : [ {
+          "kind" : "BuiltinFnValue",
+          "attributes" : {
+            "fnName" : "to_integer"
+          },
+          "predicates" : [ {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "re_search"
+            },
+            "predicates" : [ {
+              "kind" : "BuiltinFnValue",
+              "attributes" : {
+                "fnName" : "to_string"
+              },
+              "predicates" : [ {
+                "kind" : "DynamicValue",
+                "attributes" : {
+                  "objRef" : "",
+                  "propName" : "Value_Date",
+                  "classRef" : "IRI"
+                }
+              } ]
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "string",
+                "value" : "\\d\\d\\d\\d"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "DifferenceValue",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Year_Record",
+              "classRef" : "IRI"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "2"
+            }
+          } ]
+        }, {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Year_Record",
+            "classRef" : "IRI"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : true
+}

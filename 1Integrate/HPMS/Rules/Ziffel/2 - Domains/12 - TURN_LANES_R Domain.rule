@@ -1,0 +1,70 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "TURN_LANES_R objects' Begin_Point must be a whole number and their Value_Numeric must be in the range 1-6.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "TURN_LANES_R",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "TURN_LANES_R"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "TURN_LANES_R"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "RangePredicate",
+          "attributes" : {
+            "maxInclusive" : "true",
+            "minInclusive" : "true"
+          },
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "TURN_LANES_R"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "1"
+            }
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "integer",
+              "value" : "6"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

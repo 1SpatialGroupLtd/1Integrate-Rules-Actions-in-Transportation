@@ -1,0 +1,179 @@
+{
+  "exportClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Begin_Point",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Data_Item",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "End_Point",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Route_ID",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "State_Code",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_datetime",
+      "name" : "Value_Date",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "Value_Numeric",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Value_Text",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Year_Record",
+      "params" : {
+        "length" : "255"
+      }
+    } ],
+    "name" : "Sections"
+  } ],
+  "exportCredentials" : {
+    "Coordinate Reference System" : "",
+    "Encoding (e.g. UTF-8)" : "",
+    "File extension" : "",
+    "Quote output" : "",
+    "Destination Files (.csv,.gz,.txt)" : "",
+    "Export FME Log File" : "",
+    "Field separator" : "",
+    "Reverse coordinate axis order (y,x)" : "",
+    "End of line (Macintosh | Windows | Unix | System)" : "",
+    "Field names specified in file" : ""
+  },
+  "exportType" : "Comma Separated Value (CSV)",
+  "importClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_varchar",
+      "mappedType" : "Real",
+      "name" : "Begin_Point",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "indexed" : true,
+      "mappedType" : "String",
+      "name" : "Data_Item",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "Real",
+      "name" : "End_Point",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "NatRoute_ID",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "indexed" : true,
+      "mappedType" : "String",
+      "name" : "Route_ID",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "State_Code",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "Timestamp",
+      "name" : "Value_Date",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "indexed" : true,
+      "mappedType" : "Real",
+      "name" : "Value_Numeric",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Value_Text",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Year_Record",
+      "params" : {
+        "length" : "255"
+      }
+    } ],
+    "name" : "Sections"
+  } ],
+  "importCredentials" : {
+    "Coordinate Reference System" : "",
+    "Skip lines" : "",
+    "Allow invalid geometries" : "",
+    "Field names after header" : "",
+    "Source Files (.csv,.gz,.txt)" : "Sections.zip",
+    "Reverse coordinate axis order (y,x)" : "",
+    "Field names specified in file" : "",
+    "Skip footer" : "",
+    "Encoding (e.g. UTF-8)" : "",
+    "Import FME Log File" : "",
+    "Fix ring direction and inclusion errors" : "",
+    "Duplicate delimiters" : "",
+    "Field separator" : "",
+    "Strip quotes" : ""
+  },
+  "importType" : "Comma Separated Value (CSV)",
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "userDefinedClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "Real",
+      "maxOccurs" : 0,
+      "minOccurs" : 0,
+      "name" : "Shape_Length"
+    } ],
+    "name" : "Sections",
+    "unMapped" : true
+  } ]
+}

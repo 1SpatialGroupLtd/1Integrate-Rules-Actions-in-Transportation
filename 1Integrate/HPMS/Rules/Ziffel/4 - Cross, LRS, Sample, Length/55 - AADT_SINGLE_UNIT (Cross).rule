@@ -1,0 +1,34 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "AADT_SINGLE_UNIT object's Value_Numeric must be greater than 0.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "AADT_SINGLE_UNIT",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "RelationalPredicate",
+        "predicates" : [ {
+          "kind" : "DynamicValue",
+          "attributes" : {
+            "objRef" : "",
+            "propName" : "Value_Numeric",
+            "classRef" : "AADT_SINGLE_UNIT"
+          }
+        }, {
+          "kind" : "GreaterRelation"
+        }, {
+          "kind" : "StaticValue",
+          "attributes" : {
+            "datatype" : "integer",
+            "value" : "0"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

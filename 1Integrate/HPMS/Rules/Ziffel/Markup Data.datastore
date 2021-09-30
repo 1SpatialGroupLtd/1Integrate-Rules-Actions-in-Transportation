@@ -1,0 +1,472 @@
+{
+  "exportClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_TABLE"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Note",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "SHAPE_Length"
+    }, {
+      "dataType" : "fme_decimal(1-10,0)",
+      "name" : "Section_Length"
+    }, {
+      "dataType" : "fme_datetime",
+      "name" : "Value_Date"
+    }, {
+      "dataType" : "fme_decimal(1-10,0)",
+      "name" : "Value_Numeric"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "Value_Text",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_decimal(1-10,0)",
+      "name" : "Year_Record"
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "line",
+        "complex" : "false",
+        "srid" : ""
+      }
+    } ],
+    "name" : "Report"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_varchar",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "point",
+        "complex" : "false",
+        "srid" : ""
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_POINT"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "line",
+        "complex" : "false",
+        "srid" : ""
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_decimal(m,n)",
+      "name" : "shape_Length"
+    }, {
+      "dataType" : "fme_varchar",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_LINE"
+  } ],
+  "exportCredentials" : {
+    "Coordinate Reference System" : "",
+    "Destination Files (.gdb)" : "",
+    "For X, Y, Z, M data: Use zero rather than NULL or NaN when writing ignored ordinate" : "",
+    "Export FME Log File" : "",
+    "Force geometry to be written with X, Y, Z, M" : "",
+    "Reverse coordinate axis order (y,x)" : ""
+  },
+  "exportType" : "Esri Geodatabase File (FILEGDB)",
+  "importClasses" : [ {
+    "attrs" : [ {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "mappedType" : "Geometry",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "line",
+        "complex" : "false",
+        "srid" : ""
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "disabled" : true,
+      "mappedType" : "Integer",
+      "name" : "objectid"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "shape_Length"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_LINE"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "mappedType" : "Geometry",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "point",
+        "complex" : "false",
+        "srid" : ""
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "disabled" : true,
+      "mappedType" : "Integer",
+      "name" : "objectid"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_POINT"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "comment",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "feat_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "disabled" : true,
+      "mappedType" : "Integer",
+      "name" : "objectid"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_class",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "rel_f_guid",
+      "params" : {
+        "length" : "255"
+      }
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "violation",
+      "params" : {
+        "length" : "75"
+      }
+    } ],
+    "name" : "MARKUP_TABLE"
+  }, {
+    "attrs" : [ {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "BeginMile"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "EndMile"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Note",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "disabled" : true,
+      "mappedType" : "Integer",
+      "name" : "OBJECTID"
+    }, {
+      "dataType" : "fme_real64",
+      "mappedType" : "Real",
+      "name" : "SHAPE_Length"
+    }, {
+      "dataType" : "fme_int32",
+      "mappedType" : "Integer",
+      "name" : "Section_Length"
+    }, {
+      "dataType" : "fme_datetime",
+      "mappedType" : "Timestamp",
+      "name" : "Value_Date"
+    }, {
+      "dataType" : "fme_int32",
+      "mappedType" : "Integer",
+      "name" : "Value_Numeric"
+    }, {
+      "dataType" : "fme_varchar",
+      "mappedType" : "String",
+      "name" : "Value_Text",
+      "params" : {
+        "length" : "50"
+      }
+    }, {
+      "dataType" : "fme_int32",
+      "mappedType" : "Integer",
+      "name" : "Year_Record"
+    }, {
+      "dataType" : "fme_geometry{0}",
+      "mappedType" : "Geometry",
+      "name" : "geometry",
+      "params" : {
+        "dimension_count" : "2",
+        "type" : "line",
+        "complex" : "false",
+        "srid" : ""
+      }
+    } ],
+    "name" : "Report"
+  } ],
+  "importCredentials" : {
+    "Coordinate Reference System" : "",
+    "Clip to envelope" : "",
+    "Import FME Log File" : "",
+    "Exposed attributes" : "",
+    "Fix ring direction and inclusion errors" : "",
+    "For X, Y, Z, M data" : "",
+    "Allow invalid geometries" : "",
+    "Reverse coordinate axis order (y,x)" : "",
+    "Source Files (.gdb)" : "MarkupReportSchema.gdb.zip"
+  },
+  "importType" : "Esri Geodatabase File (FILEGDB)",
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : ""
+}

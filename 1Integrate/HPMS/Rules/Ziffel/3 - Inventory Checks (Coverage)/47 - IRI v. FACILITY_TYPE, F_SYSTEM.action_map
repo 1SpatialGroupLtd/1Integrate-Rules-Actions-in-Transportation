@@ -1,0 +1,8 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "",
+  "pairs" : [ {
+    "action" : "/actions/Repositories/con_fhwa_hpms/Ziffel/3 - Inventory Checks (Coverage)/47 - Report Missing IRI",
+    "rule" : "/rules/Repositories/con_fhwa_hpms/Ziffel/3 - Coverage/47 - IRI Must Exist"
+  } ]
+}

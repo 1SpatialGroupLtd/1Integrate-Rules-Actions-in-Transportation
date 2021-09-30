@@ -1,0 +1,319 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "OWNERSHIP objects' Value_Numeric must be equal to: 1,2,3,4,11,12,21,25,26,27,31,32,40,50,60,62,63,64,66,67,68,69,70,72,73,74,80.",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "OWNERSHIP",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "AndPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Numeric",
+              "classRef" : "OWNERSHIP"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "BuiltinFnValue",
+            "attributes" : {
+              "fnName" : "floor"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            } ]
+          } ]
+        }, {
+          "kind" : "OrPredicate",
+          "predicates" : [ {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "1"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "4"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "11"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "12"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "21"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "25"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "27"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "31"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "32"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "40"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "50"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "60"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "62"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "64"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "66"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "70"
+              }
+            } ]
+          }, {
+            "kind" : "RangePredicate",
+            "attributes" : {
+              "maxInclusive" : "true",
+              "minInclusive" : "true"
+            },
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "72"
+              }
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "74"
+              }
+            } ]
+          }, {
+            "kind" : "RelationalPredicate",
+            "predicates" : [ {
+              "kind" : "DynamicValue",
+              "attributes" : {
+                "objRef" : "",
+                "propName" : "Value_Numeric",
+                "classRef" : "OWNERSHIP"
+              }
+            }, {
+              "kind" : "EqualsRelation"
+            }, {
+              "kind" : "StaticValue",
+              "attributes" : {
+                "datatype" : "integer",
+                "value" : "80"
+              }
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}

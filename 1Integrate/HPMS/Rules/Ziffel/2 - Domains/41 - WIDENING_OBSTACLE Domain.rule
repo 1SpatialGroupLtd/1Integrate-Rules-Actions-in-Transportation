@@ -1,0 +1,163 @@
+{
+  "comments" : "Branch: master\nRecent Commits:\n",
+  "description" : "WIDENING_OBSTACLE objects' Value_Text must either (contain A, B, C, D, E, F, G ) or (equal X).",
+  "rootTerm" : {
+    "kind" : "Rule",
+    "predicates" : [ {
+      "kind" : "RootPredicate",
+      "attributes" : {
+        "classLabel" : "WIDENING_OBSTACLE",
+        "objLabel" : ""
+      },
+      "predicates" : [ {
+        "kind" : "OrPredicate",
+        "predicates" : [ {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "X"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "A"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "B"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "C"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "D"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "E"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "F"
+            }
+          } ]
+        }, {
+          "kind" : "RelationalPredicate",
+          "predicates" : [ {
+            "kind" : "DynamicValue",
+            "attributes" : {
+              "objRef" : "",
+              "propName" : "Value_Text",
+              "classRef" : "WIDENING_OBSTACLE"
+            }
+          }, {
+            "kind" : "EqualsRelation"
+          }, {
+            "kind" : "StaticValue",
+            "attributes" : {
+              "datatype" : "string",
+              "value" : "G"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "template" : false
+}
