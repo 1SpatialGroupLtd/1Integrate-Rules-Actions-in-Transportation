@@ -2,72 +2,90 @@
   "exportClasses" : [ {
     "attrs" : [ {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Begin_Pt"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Comments",
       "params" : {
         "length" : "80"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Data_Srce"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "End_Point"
     }, {
       "dataType" : "fme_datetime",
+      "mappedType" : "FME_DATETIME",
       "name" : "Mod_Time"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Modified_B",
       "params" : {
         "length" : "80"
       }
     }, {
       "dataType" : "fme_decimal(1-10,0)",
+      "mappedType" : "FME_DECIMAL(1-10,0)",
       "name" : "OBJECTID"
     }, {
       "dataType" : "fme_decimal(1-10,0)",
+      "mappedType" : "FME_DECIMAL(1-10,0)",
       "name" : "OBJECTID_1"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Route_ID",
       "params" : {
         "length" : "80"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Sec_Length"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Shape_Length"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "State_Code"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "TestCase",
       "params" : {
         "length" : "10"
       }
     }, {
       "dataType" : "fme_datetime",
+      "mappedType" : "FME_DATETIME",
       "name" : "ValueDate"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "ValueText",
       "params" : {
         "length" : "80"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Value_Num"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Year_Recor"
     }, {
       "dataType" : "fme_geometry{0}",
+      "mappedType" : "FME_GEOMETRY{0}",
       "name" : "geometry",
       "params" : {
         "cs_wkt" : "GEOGCS[\"WGS84 Lat/Longs\",\n    DATUM[\"WGS_1984\",\n        SPHEROID[\"World Geodetic System of 1984, GEM 10C\",6378137,298.257223563,\n            AUTHORITY[\"EPSG\",\"7030\"]],\n        AUTHORITY[\"EPSG\",\"6326\"]],\n    PRIMEM[\"Greenwich\",0],\n    UNIT[\"degree\",0.0174532925199433],\n    AUTHORITY[\"EPSG\",\"4326\"]]",

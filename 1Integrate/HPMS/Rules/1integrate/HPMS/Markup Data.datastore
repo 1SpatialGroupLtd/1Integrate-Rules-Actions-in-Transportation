@@ -2,42 +2,50 @@
   "exportClasses" : [ {
     "attrs" : [ {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "BeginMile"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "EndMile"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "comment",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "feat_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_f_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "violation",
       "params" : {
         "length" : "75"
@@ -47,39 +55,49 @@
   }, {
     "attrs" : [ {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "BeginMile"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "EndMile"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Note",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "SHAPE_Length"
     }, {
       "dataType" : "fme_decimal(1-10,0)",
+      "mappedType" : "FME_DECIMAL(1-10,0)",
       "name" : "Section_Length"
     }, {
       "dataType" : "fme_datetime",
+      "mappedType" : "FME_DATETIME",
       "name" : "Value_Date"
     }, {
       "dataType" : "fme_decimal(1-10,0)",
+      "mappedType" : "FME_DECIMAL(1-10,0)",
       "name" : "Value_Numeric"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Value_Text",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_decimal(1-10,0)",
+      "mappedType" : "FME_DECIMAL(1-10,0)",
       "name" : "Year_Record"
     }, {
       "dataType" : "fme_geometry{0}",
+      "mappedType" : "FME_GEOMETRY{0}",
       "name" : "geometry",
       "params" : {
         "dimension_count" : "2",
@@ -92,24 +110,28 @@
   }, {
     "attrs" : [ {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "comment",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "feat_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_geometry{0}",
+      "mappedType" : "FME_GEOMETRY{0}",
       "name" : "geometry",
       "params" : {
         "dimension_count" : "2",
@@ -119,18 +141,21 @@
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_f_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "violation",
       "params" : {
         "length" : "75"
@@ -140,30 +165,36 @@
   }, {
     "attrs" : [ {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "BeginMile"
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "EndMile"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "comment",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "feat_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_geometry{0}",
+      "mappedType" : "FME_GEOMETRY{0}",
       "name" : "geometry",
       "params" : {
         "dimension_count" : "2",
@@ -173,21 +204,25 @@
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_class",
       "params" : {
         "length" : "50"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "rel_f_guid",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "shape_Length"
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "violation",
       "params" : {
         "length" : "75"

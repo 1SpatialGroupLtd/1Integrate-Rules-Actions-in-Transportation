@@ -2,54 +2,63 @@
   "exportClasses" : [ {
     "attrs" : [ {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Begin_Point",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Data_Item",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "End_Point",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Route_ID",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "State_Code",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_datetime",
+      "mappedType" : "FME_DATETIME",
       "name" : "Value_Date",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_decimal(m,n)",
+      "mappedType" : "FME_DECIMAL(M,N)",
       "name" : "Value_Numeric",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Value_Text",
       "params" : {
         "length" : "255"
       }
     }, {
       "dataType" : "fme_varchar",
+      "mappedType" : "FME_VARCHAR",
       "name" : "Year_Record",
       "params" : {
         "length" : "255"
